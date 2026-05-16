@@ -113,6 +113,59 @@ img {
 
 
 
+/* Home page */
+.home-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #111 70%);
+}
+
+.home-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.home-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+    color: #fff;
+    letter-spacing: 0.04em;
+}
+
+.home-content > p {
+    color: #888;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.language-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.language-card {
+    display: inline-block;
+    width: 16rem;
+    padding: 0.85rem 0;
+    text-align: center;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #ccc;
+    font-size: 1rem;
+    background-color: #1a1a2e;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.language-card:hover {
+    background-color: #d00;
+    border-color: #d00;
+    color: #fff;
+}
+
 @media screen and (min-width : 768px) {
 
     /* デスクトップ用CSS */

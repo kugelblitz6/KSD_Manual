@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keplerian Space Discovery Manual</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Keplerian Space Discovery Manual</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <div  class="sidebar-contents">
+
+                <nav>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#main-screen">Main Screen</a></li>
+                        <ul>
+                            <li><a href="#main-screen-object-selector">Object Selector</a></li>
+                            <li><a href="#main-screen-time-controls">Time Controls</a></li>
+                        </ul>
+                        <li><a href="#control-keys">Control Keys</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            </div>
+            <div class="main">
+                <div class="content">
+                    <section id="introduction">
+                        <h2>Introduction</h2>
+                        <p>Welcome to the Keplerian Space Discovery Manual. </p>
+
+                        <h2 id="main-screen">Main Screen</h2>
+                        <img src="./img/main_screen-en.jpg" alt="Main Screen">
+
+                        <h3 id="main-screen-object-selector">Object Selector</h3>
+                        <p>You can switch the selected item by left-clicking on the options on the left side of the screen.<br />
+                            You can also select an item as the target by clicking the middle mouse button.</p>
+                        <!--
+画面左側の項目をマウス左クリックすることで、注目選択の切り替えを行うことができます。
+また、マウス中ボタンクリックで、対象をターゲットすることができます。
+-->
+
+                        <h3 id="main-screen-time-controls">Time Controls</h3>
+                        <p>
+                            ・You can accelerate time starting from an altitude of 1 km or higher.<br />
+                            ・"<span style="color: red;">||</span>"stops time, “<span style="color: #0F0;">▶</span>” sets the speed to normal, "<span style="color: #FF0;">▶▶</span>” sets it to 2x, and “<span style="color: orange;">▶▶▶</span>” sets it to 10x.<br />
+                            ・You can stack the effects of "<span style="color: #FF0;">▶▶</span>” and “<span style="color: orange;">▶▶▶</span>” by pressing them repeatedly. For example, pressing "<span style="color: #FF0;">▶▶</span>” three times sets the speed to 8x.<br />
+                        </p>
+                        <!--
+・高度1km以上から時間加速を行うことができます。
+・"||"は時間停止、"▶"は等倍速、"▶▶"は×2倍、"▶▶▶"は×10倍となります。
+・"▶▶"、"▶▶▶"は続けて押すことで、効果を重ねることができます。例えば"▶▶"を3回押すと、×8倍になります。                    
+                    -->
+
+                        <h2 id="control-keys">Control Keys</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 25%;text-align: left;">Control</th>
+                                    <th style="width: 25%;">Keybord</th>
+                                    <th style="width: 25%;">Mouse</th>
+                                    <th style="width: 25%;">Game Pad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: left;">Camera Rotation</td>
+                                    <td>I/K/J/L</td>
+                                    <td>RMB+Drag</td>
+                                    <td>Right thumbstick</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Camera Move</td>
+                                    <td>-</td>
+                                    <td>MMB+Drag</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Camera Dolly</td>
+                                    <td>Home/End</td>
+                                    <td>Wheel</td>
+                                    <td>L/R Trigger</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Camera Zoom</td>
+                                    <td>Page Up/Down</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Camera ExpComp</td>
+                                    <td>Insert/Delete</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Camera Mode Change</td>
+                                    <td>V</td>
+                                    <td>MMB+RMB</td>
+                                    <td>Back button</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Camera Orientation *1</td>
+                                    <td>-</td>
+                                    <td>LMB+Drag</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Camera Roll *1 </td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>L/R Shoulder</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Camera Reset</td>
+                                    <td>-</td>
+                                    <td>LMB+RMB</td>
+                                    <td>Right thumbstick Btn</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Map view</td>
+                                    <td>M</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">UI Show/Hide</td>
+                                    <td>F2</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">SOI Show/Hide</td>
+                                    <td>F3</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Quick Save</td>
+                                    <td>F5</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Quick Load</td>
+                                    <td>F9</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Start Tracking</td>
+                                    <td>O</td>
+                                    <td>RMB on the list</td>
+                                    <td>Y button</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Open Menu</td>
+                                    <td>ESC</td>
+                                    <td>-</td>
+                                    <td>Start button</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Control Panel Open *2</td>
+                                    <td>C</td>
+                                    <td>-</td>
+                                    <td>X button</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Throttle Max *3</td>
+                                    <td>Z</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Throttle Min *3</td>
+                                    <td>X</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Throttle Up *3</td>
+                                    <td>Left Shift</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Throttle Down *3</td>
+                                    <td>Left Ctrl</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Stage Sparation *3</td>
+                                    <td>Space</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Roll *3</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Pitch *3</td>
+                                    <td>W/S</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Yaw *3</td>
+                                    <td>A/D</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">Debug Console</td>
+                                    <td>ALT + F12</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>*1 : CAM Mode other than 'Chase'.</p>
+                        <p>*2 : Only when selecting a spacecraft.</p>
+                        <p>*3 : Only when spacecraft control mode.</p>
+
+
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 Kugelblitz. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Keplerian Space Discovery</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Manual de Keplerian Space Discovery</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <nav class="sidebar-contents">
+                    <ul>
+                        <li><a href="#introduction">1. Introducción</a></li>
+                <li><a href="#quick-start">2. Inicio rápido</a></li>
+                        <li><a href="#main-screen">3. Pantalla principal</a>
+                            <ul>
+                                <li><a href="#main-screen-object-selector">Object Selector</a></li>
+                                <li><a href="#main-screen-time-controls">Time Controls</a></li>
+                                <li><a href="#main-screen-spacecraft-controls">Panel de control de la nave</a></li>
+                                <li><a href="#main-screen-selected-object-information">Objeto seleccionado</a></li>
+                                <li><a href="#main-screen-tracking-object-information">Objeto rastreado</a></li>
+                                <li><a href="#main-screen-filter">Filter</a></li>
+                                <li><a href="#main-screen-camera-controls">Camera Controls</a></li>
+                                <li><a href="#main-screen-navball">Cómo leer el NavBall</a></li>
+                                <li><a href="#main-screen-map-view">Map View</a></li>
+                                <li><a href="#orbit-lines">Cómo leer las líneas de órbita</a></li>
+                                <li><a href="#main-screen-soi">Visualización de la SOI</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#vehicle-assembly-building">4. Edificio de ensamblaje de vehículos</a>
+                            <ul>
+                                <li><a href="#vab-basic-operation">Operaciones básicas</a></li>
+                                <li><a href="#vab-toolbar">Barra de herramientas superior</a></li>
+                                <li><a href="#vab-stage-information">Información de las etapas</a></li>
+                                <li><a href="#vab-save-load">Guardar y cargar</a></li>
+                                <li><a href="#vab-parts-editor">Parts Editor</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#launch-and-flight">5. Lanzamiento y vuelo</a>
+                            <ul>
+                                <li><a href="#launch-preparation">Preparación del lanzamiento</a></li>
+                                <li><a href="#launch-auto">Lanzamiento automático</a></li>
+                                <li><a href="#launch-manual-control">Pilotaje manual</a></li>
+                                <li><a href="#launch-sas">SAS</a></li>
+                                <li><a href="#launch-time-acceleration">Reglas de la aceleración del tiempo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contract">6. Contratos</a>
+                            <ul>
+                                <li><a href="#contract-acceptance">Aceptar un contrato</a></li>
+                                <li><a href="#contract-progress">Objetivos y finalización</a></li>
+                                <li><a href="#contract-rewards">Recompensas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#orbital-basics">7. Nociones de mecánica orbital</a>
+                            <ul>
+                                <li><a href="#keplerian-orbital-elements">Elementos orbitales keplerianos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#reference">8. Referencia</a>
+                            <ul>
+                                <li><a href="#control-keys">Control Keys</a></li>
+                                <li><a href="#launch-sites">Sitios de lanzamiento</a></li>
+                                <li><a href="#glossary">Glosario</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main">
+                <div class="content">
+
+                    <section id="introduction">
+                        <h2>1. Introducción</h2>
+                        <p>Keplerian Space Discovery es un juego de simulación de vuelo espacial en el que montas cohetes, los lanzas y los pones en órbita, ambientado en el Sistema Solar real y con sitios de lanzamiento reales de todo el mundo. El movimiento de los cuerpos celestes y de las naves se calcula a partir de la mecánica orbital kepleriana.</p>
+                    </section>
+
+        <section id="quick-start">
+            <h2>2. Inicio rápido</h2>
+            <p>Al empezar una partida nueva, un tutorial te guía desde los controles de la cámara hasta tu primer lanzamiento. Va señalando dónde hacer clic a continuación, así que seguirlo es la forma recomendada de jugar la primera vez.</p>
+
+            <h3>Tu primer objetivo</h3>
+            <p>En el tutorial aceptas el contrato «Da un primer paso», montas un cohete sencillo y alcanzas una altitud de 15 km. Los pasos principales son los siguientes.</p>
+            <ol>
+                <li>Prueba a girar la cámara, a acercarla, a desplazarla y a restablecer su posición.</li>
+                <li>Acepta el contrato «Da un primer paso» en «Gestión de contratos».</li>
+                <li>En el «Edificio de ensamblaje de vehículos», combina un motor, un depósito y un cono de nariz, y luego guarda el vehículo.</li>
+                <li>Selecciona el Kepler Space Center y lleva el vehículo a la plataforma de lanzamiento desde «PREPARACIÓN DEL LANZAMIENTO».</li>
+                <li>Inicia el lanzamiento automático con «LANZAMIENTO» y cobra la recompensa del contrato en cuanto alcances una altitud de 15 km.</li>
+            </ol>
+            <p>Con esto queda cubierto el ciclo básico del juego. Cumple contratos para ganar recompensas, desarrolla vehículos nuevos y aspira a mayores altitudes y al vuelo orbital.</p>
+        </section>
+
+                    <section id="main-screen">
+                        <h2>3. Pantalla principal</h2>
+                        <img src="./img/main_screen-en.jpg" alt="La pantalla principal">
+
+                        <h3 id="main-screen-object-selector">Object Selector</h3>
+                        <p>Haz clic con el botón izquierdo en una entrada de la lista de la izquierda de la pantalla para cambiar de objeto seleccionado.<br />
+                            Haz clic con el botón central en un objeto para fijarlo como objetivo de seguimiento.</p>
+
+                        <h3 id="main-screen-time-controls">Time Controls</h3>
+                        <p>
+                            - La aceleración del tiempo está disponible a partir de 1 km de altitud.<br />
+                            - «<span style="color: red;">||</span>» pausa el tiempo, «<span style="color: #0F0;">▶</span>» es el tiempo real y «<span style="color: orange;">▶▶▶</span>» es ×10.<br />
+                            - «<span style="color: orange;">▶▶▶</span>» puede pulsarse varias veces para acumular el efecto. Cada pulsación multiplica el ritmo por 10, así que pulsarlo tres veces da ×1000.<br />
+                            - Aun así, el ritmo tiene un tope que depende de la situación y nunca lo supera. Dentro de la atmósfera o con el motor encendido, por ejemplo, el tope es ×4, así que pulsar «<span style="color: orange;">▶▶▶</span>» solo te lleva hasta ×4. Para los topes, consulta «<a href="#launch-time-acceleration">Reglas de la aceleración del tiempo</a>».
+</p>
+
+                        <h3 id="main-screen-spacecraft-controls">Panel de control de la nave</h3>
+                        <img src="./img/spacecraft-controls-navball-en.jpg" alt="Una nave controlable seleccionada, con el panel de control de la nave y el NavBall a la vista">
+                        <p>Al seleccionar una nave controlable se abre el panel de control de la nave. El panel reúne los mandos que necesitas en vuelo, como el SAS (estabilización de actitud), las direcciones de referencia y la separación de etapas.</p>
+                        <p>Para pilotar la nave tú mismo, cambia al modo de pilotaje. Para las teclas del acelerador y de la actitud, consulta «<a href="#launch-manual-control">Pilotaje manual</a>» y, para cada modo del SAS, consulta «<a href="#launch-sas">SAS (estabilización de actitud)</a>».</p>
+
+                        <h3 id="main-screen-selected-object-information">Objeto seleccionado</h3>
+                        <p>En la parte superior derecha de la pantalla se muestra información sobre el cuerpo celeste, la nave o la instalación terrestre seleccionados. El objeto seleccionado es aquel al que mira la cámara y, cuando se trata de una nave, es también la referencia de los mandos de vuelo y del límite de aceleración del tiempo.</p>
+                        <p>De los cuerpos celestes y de los objetos en órbita puedes consultar datos orbitales como el apoapsis y el periastro, el semieje mayor, la excentricidad, la inclinación, el período orbital y la velocidad. Cerca del suelo se muestran la latitud, la longitud y la altitud sobre el nivel del mar, y de las naves se muestran además las velocidades y altitudes propias de la fase de vuelo. Los datos que aparecen dependen del tipo de objeto.</p>
+
+                        <h3 id="main-screen-tracking-object-information">Objeto rastreado</h3>
+                        <p>Al fijar un objetivo de seguimiento, en la parte inferior derecha de la pantalla aparece la información relativa al objeto seleccionado. La distancia, la diferencia de altitud, la velocidad de aproximación, el ángulo de cruce, el ángulo de fase y valores similares te permiten valorar un encuentro orbital o una aproximación. Los valores que no pueden calcularse se muestran como <b>n/a</b>.</p>
+                        <p>Los botones funcionan así.</p>
+                        <table class="desc">
+                            <tbody>
+                                <tr><td>Enfocar</td><td>Cambia el foco de la cámara al objetivo de seguimiento.</td></tr>
+                                <tr><td>Ver detalles</td><td>Abre la información detallada del objetivo de seguimiento.</td></tr>
+                                <tr><td>Dejar de seguir</td><td>Deja de seguir el objetivo actual.</td></tr>
+                            </tbody>
+                        </table>
+                        <p>Haz clic con el botón central en un cuerpo celeste o una nave, o pulsa la tecla O, para empezar a seguirlo.</p>
+
+                        <h3 id="main-screen-filter">Filter</h3>
+                        <p>Abre <b>Filter</b> en la parte superior del Object Selector para elegir qué objetos no celestes, como naves e instalaciones terrestres, se muestran u ocultan. Los objetos ocultos se quitan del Object Selector y de los marcadores en pantalla, y el ajuste se guarda en tus datos de partida.</p>
+                        <p>Los objetos que todavía no están disponibles según tu progreso, o cuya hora de lanzamiento prevista aún no ha llegado, ni siquiera aparecen en la lista del filtro.</p>
+
+                        <h3 id="main-screen-camera-controls">Camera Controls</h3>
+                        <p>Los ajustes de la cámara se abren desde <b>Camera Control</b> en la parte superior de la pantalla. Los controles básicos son: arrastrar con el botón derecho para girar, arrastrar con el central para desplazar y la rueda del ratón para acercarse o alejarse. Pulsa V (o el botón central junto con el derecho) para cambiar de modo de cámara.</p>
+                        <table class="desc">
+                            <thead><tr><th>Modo</th><th>Descripción</th></tr></thead>
+                            <tbody>
+                                <tr><td>Chase</td><td>La cámara normal, que sigue al objeto seleccionado.</td></tr>
+                                <tr><td>Free</td><td>Permite ajustar libremente la orientación y el alabeo de la cámara.</td></tr>
+                                <tr><td>Orbital</td><td>Cambia a una distancia y un ángulo que facilitan ver la órbita entera. No está disponible mientras hay una instalación terrestre seleccionada.</td></tr>
+                            </tbody>
+                        </table>
+                        <p>Home / End también acercan y alejan la cámara, e I / K / J / L también la giran. Page Up / Page Down ajustan el campo de visión, e Insert / Delete ajustan la exposición. Para todos los controles, consulta «<a href="#control-keys">Control Keys</a>».</p>
+
+                        <h3 id="main-screen-navball">Cómo leer el NavBall</h3>
+                        <p>El NavBall muestra la actitud de la nave y un conjunto de direcciones de referencia sobre una esfera. Prograde es la dirección de avance y Retrograde la contraria; Normal / Antinormal son perpendiculares al plano orbital; Radial-Out / Radial-In apuntan justo hacia arriba y justo hacia abajo vistos desde el cuerpo central (Zenith / Nadir). Target / Antitarget apuntan hacia el objetivo de seguimiento y en sentido contrario, y Maneuver es la dirección de encendido que hayas fijado.</p>
+                        <p>Los marcadores basados en la velocidad, como Prograde y Retrograde, están <b>referidos a la velocidad respecto al aire antes de la inserción orbital y a la velocidad inercial después</b>. Se considera lograda la inserción orbital cuando la altitud del periastro supera el límite de la atmósfera del cuerpo central (la línea de Kármán). El mismo cambio se aplica a las direcciones del SAS y al sistema de referencia con el que se dibujan las líneas de órbita.</p>
+                        <p>Para saber para qué sirve cada dirección, consulta «<a href="#launch-sas">SAS (estabilización de actitud)</a>».</p>
+
+                        <h3 id="main-screen-map-view">Map View</h3>
+                        <p>Pulsa M para cambiar a la vista de mapa (la cámara Orbital), que muestra la órbita completa del objeto seleccionado con un campo de visión amplio. Pulsa M otra vez para volver a la cámara Chase normal. En una trayectoria hiperbólica, el alcance de la vista se basa en la SOI del cuerpo central, y la vista de mapa no está disponible mientras hay una instalación terrestre seleccionada.</p>
+                        <p>La vista de mapa es donde planificas un vuelo, comprobando la forma de la órbita, el apoapsis y el periastro, y la posición de los demás objetos. Para saber cómo cambia el sistema de referencia de la línea de órbita en la inserción orbital, consulta «<a href="#orbit-lines">Cómo leer las líneas de órbita</a>».</p>
+                        <img src="./img/map-view-soi-en.jpg" alt="Vista de mapa con la Luna seleccionada, con su línea de órbita verde y su SOI dibujada como una esfera de puntos">
+
+                        <h3 id="orbit-lines">Cómo leer las líneas de órbita</h3>
+                        <p>En pantalla se dibujan dos tipos de línea de órbita.</p>
+                        <p>
+                            -<b>Órbita prevista</b> … la trayectoria que vas a recorrer, calculada a partir de tu posición y velocidad actuales. Mientras el motor está encendido, su forma cambia a cada instante conforme aceleras.<br />
+                            -<b>Órbita real</b> … un registro de la trayectoria que has recorrido realmente (tu estela de vuelo).
+</p>
+                        <p>La forma de dibujar las líneas de órbita cambia automáticamente según la fase del vuelo.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Estado</th>
+                                    <th>Cómo se dibuja</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Durante el lanzamiento o el vuelo balístico (antes de la inserción orbital)</td>
+                                    <td>Dibujada fija respecto al suelo. La base de la estela permanece en la plataforma de lanzamiento, de modo que puedes leer la trayectoria sobre el terreno incluida la rotación del cuerpo; es decir, dónde caerías si siguieras volando así.</td>
+                                </tr>
+                                <tr>
+                                    <td>Después de la inserción orbital</td>
+                                    <td>Dibujada fija en el espacio inercial. Se muestra la forma de la órbita en sí (una elipse), con independencia de la rotación del cuerpo.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>El cambio se produce «cuando la altitud del periastro supera el límite de la atmósfera (la línea de Kármán)», es decir, según el mismo criterio que la inserción orbital. En ese mismo momento, la referencia de los marcadores como Prograde en el <a href="#main-screen-navball">NavBall</a> pasa también de la velocidad respecto al aire a la velocidad inercial.</p>
+                        <p>Cuando las líneas de órbita de varios objetos se superponen, puedes distinguirlas por el color.</p>
+                        <img src="./img/orbit-line-colors-en.jpg" alt="Vista de mapa con las líneas de órbita del objeto seleccionado, el seguido, el señalado con el ratón y los demás dibujadas en colores distintos">
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Color de la línea</th>
+                                    <th>Objeto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-selected"></span>Verde</td>
+                                    <td>El cuerpo celeste o la nave seleccionados actualmente</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-tracking"></span>Amarillo</td>
+                                    <td>El objeto seguido</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-hover"></span>Rojo</td>
+                                    <td>El objeto sobre el que está el puntero, en la lista de objetos de la izquierda o en un marcador de la pantalla</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-other"></span>Otros</td>
+                                    <td>Objetos que no están ni seleccionados, ni seguidos, ni señalados con el puntero</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="main-screen-soi">Visualización de la SOI</h3>
+                        <p>Pulsa F3 para mostrar u ocultar la SOI (esfera de influencia). La SOI es la región dentro de la cual un cuerpo se trata como cuerpo central en el cálculo de la órbita de una nave.</p>
+                        <p>En la captura anterior está seleccionada la Luna: la esfera de puntos que la rodea es su SOI y la línea verde es la órbita de la Luna seleccionada.</p>
+                        <p>Cuando una nave sale de la SOI de su cuerpo padre actual, pasa a una órbita centrada en un cuerpo superior. A la inversa, entrar en la SOI de otro cuerpo, como una luna o un planeta, la cambia a una órbita centrada en ese cuerpo. En los vuelos interplanetarios o translunares, comprobar dónde se encuentra el límite de la SOI con tu órbita prevista facilita mucho seguir la ruta.</p>
+                    </section>
+
+                    <section id="vehicle-assembly-building">
+                        <h2>4. Edificio de ensamblaje de vehículos</h2>
+                        <p>En el Edificio de ensamblaje de vehículos (VAB) combinas piezas para diseñar y guardar tus propios cohetes.</p>
+                        <img src="./img/vab-en.jpg" alt="La pantalla del Edificio de ensamblaje de vehículos (VAB)">
+
+                        <h3 id="vab-basic-operation">Operaciones básicas</h3>
+                        <h4>Colocar una pieza</h4>
+                        <p>
+                            - Haz clic con el botón izquierdo en la pieza que quieras dentro del Parts Selector, a la izquierda de la pantalla.<br />
+                            - Suelta el botón después de hacer clic y mueve el ratón para llevar la pieza adonde quieras (no se mantiene el botón pulsado).<br />
+                            - Vuelve a hacer clic en la posición que quieras y la pieza se coloca ahí.<br />
+                            - Si colocas una pieza cerca de otra ya situada, se acopla y se conecta automáticamente.
+</p>
+                        <p>Las pestañas de diámetro de la parte superior del Parts Selector (1,25 m / 2,5 m / 3,5 m / 5,0 m / 7,5 m / 10,0 m) filtran la lista para mostrar solo las piezas de ese diámetro. El desplegable que hay debajo (Engine, etc.) cambia entre categorías de piezas como Tank o Fairing.</p>
+
+                        <h4>Mover una pieza ya colocada</h4>
+                        <p>Las piezas ya colocadas se toman igual que las nuevas: haz clic con el botón izquierdo para agarrarla, muévela con el botón suelto y vuelve a hacer clic para fijar la nueva posición. Si agarras una pieza conectada, se mueve con ella todas las piezas hijas unidas más allá.</p>
+
+                        <h4>Conectar piezas</h4>
+                        <p>Pon en contacto la pieza que estás moviendo con otra y se conectará automáticamente tomándola como pieza padre. Si colocas una pieza cerca del eje central del vehículo, se acopla al eje, lo que mantiene depósitos y motores bien alineados.</p>
+                        <p>Las piezas que quedan sueltas del vehículo no cuentan como parte de un diseño válido. Al guardar, solo se almacenan las piezas válidas conectadas hasta la pieza raíz.</p>
+
+                        <h4>Eliminar una pieza</h4>
+                        <p>Cuando haces clic con el botón izquierdo para agarrar una pieza, aparece una zona de eliminación en el borde derecho de la pantalla. Lleva la pieza agarrada hasta esa zona para quitarla. También puedes pulsar la tecla Delete mientras sostienes una pieza.</p>
+                        <img src="./img/vab-delete-parts-en.jpg" alt="La zona de eliminación que aparece en el borde derecho de la pantalla mientras se sostiene una pieza">
+
+                        <h3 id="vab-toolbar">Barra de herramientas superior</h3>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Botón</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Move Adjustment (conmutador)</td>
+                                    <td>Cambia cómo se trata la profundidad mientras arrastras una pieza. Normalmente (OFF), la pieza conserva la profundidad que tenía al agarrarla y se mueve por la pantalla a esa profundidad. Con la opción activada (ON), la pieza se mueve con su profundidad alineada con el eje central del vehículo, lo que facilita traer una pieza que está muy al fondo hasta el centro del cohete.</td>
+                                </tr>
+                                <tr>
+                                    <td>AUTO ASSY (conmutador)</td>
+                                    <td>Con la opción activada (ON), al hacer clic en una pieza esta se coloca automáticamente a la izquierda de la pieza actual (la primera pieza se coloca en el origen). Con la opción desactivada (OFF), decides tú dónde va arrastrando el ratón después de hacer clic, como se describe en las operaciones básicas anteriores.</td>
+                                </tr>
+                                <tr>
+                                    <td>New</td>
+                                    <td>Elimina todas las piezas colocadas y empieza el montaje de un cohete nuevo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Save</td>
+                                    <td>Guarda el cohete que estás montando.</td>
+                                </tr>
+                                <tr>
+                                    <td>Load</td>
+                                    <td>Carga un cohete guardado.</td>
+                                </tr>
+                                <tr>
+                                    <td>Texture</td>
+                                    <td>Abre un cuadro de diálogo para gestionar las imágenes (texturas personalizadas) que puedes aplicar a un cohete. Puedes registrar imágenes hechas por ti y luego verlas, añadirlas y eliminarlas.</td>
+                                </tr>
+                                <tr>
+                                    <td>x1 a x6</td>
+                                    <td>Fija cuántas copias de una pieza se colocan de forma radial. Sirve para piezas laterales como los propulsores. Con un valor de x2 o superior, colocar una pieza en el lateral de otra crea varias copias repartidas por igual alrededor del eje central de esa pieza. Una vez colocadas, las copias se tratan como un solo grupo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Horizontal / Vertical (conmutador)</td>
+                                    <td>Cambia cómo se muestra el cohete en montaje. Horizontal lo tumba y Vertical lo pone de pie.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="vab-stage-information">Información de las etapas</h3>
+                        <p>Al seleccionar «Show Stage Information» en la parte inferior de la pantalla se muestran las prestaciones del vehículo actual desglosadas por etapa. Colocar una interetapa divide automáticamente las etapas en ese punto. Vuelve a seleccionar el botón para cerrar el panel.</p>
+                        <img src="./img/vab-stage-information-en.png" alt="El panel de información de las etapas, con el número de piezas, el coste, el delta-V, el impulso específico, el empuje, la masa y la relación empuje-peso de cada etapa">
+                        <table class="desc" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>Dato</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PARTS</td>
+                                    <td>El número de piezas que forman la etapa.</td>
+                                </tr>
+                                <tr>
+                                    <td>COST</td>
+                                    <td>El coste total de las piezas de la etapa.</td>
+                                </tr>
+                                <tr>
+                                    <td>DELTA-V</td>
+                                    <td>Una referencia de cuánto cambio de velocidad puede aportar la etapa. Cuanto mayor es el valor, más puedes alterar tu órbita.</td>
+                                </tr>
+                                <tr>
+                                    <td>ISP</td>
+                                    <td>El impulso específico de los motores, expresado en segundos. Indica con qué eficiencia se convierte el propelente en empuje.</td>
+                                </tr>
+                                <tr>
+                                    <td>THRUST</td>
+                                    <td>El empuje total que producen los motores de la etapa.</td>
+                                </tr>
+                                <tr>
+                                    <td>MASS</td>
+                                    <td>Se muestra como «masa de la etapa / masa total»: la masa de la etapa por sí sola y la masa total incluidas las etapas superiores que tiene que acelerar.</td>
+                                </tr>
+                                <tr>
+                                    <td>Relación empuje-peso (TWR)</td>
+                                    <td>Cuántas veces el peso supone el empuje. Si es de 1,0 o menos en la primera etapa, el empuje no supera al peso y el cohete no puede despegar del suelo.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>La versión actual no tiene ningún botón para alternar entre las prestaciones a nivel del mar y en el vacío.</p>
+
+                        <h3 id="vab-save-load">Guardar y cargar</h3>
+                        <p><b>Save</b> permite introducir un nombre y una descripción y guardar el vehículo actual. Si editas un vehículo que has cargado y lo guardas, se actualizan sus datos guardados. Guardar un vehículo recién montado desde <b>New</b> lo registra como un vehículo distinto.</p>
+                        <p><b>Load</b> permite elegir un vehículo guardado de una lista y cargarlo en el VAB. Solo se guardan las piezas válidas conectadas hasta la pieza raíz.</p>
+
+                        <h3 id="vab-parts-editor">Parts Editor</h3>
+                        <p>Haz clic con el botón derecho en una pieza colocada para abrir el Parts Editor a la derecha de la pantalla. Ahí puedes editar el color de la pieza, el aspecto de su material, su patrón de superficie y su orientación. Los cambios se aplican de inmediato a la pieza en pantalla y se guardan pieza a pieza al guardar el vehículo.</p>
+                        <img src="./img/vab-parts-editor-en.png" alt="El Parts Editor, con el que se cambian el material de la superficie, el color, la textura, el mapa normal y la orientación de la pieza">
+                        <table class="desc" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>Dato</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Copy Color</td>
+                                    <td>Copia temporalmente el color y los ajustes de material de la pieza actual. Sirve para aplicar el mismo aspecto a otra pieza.</td>
+                                </tr>
+                                <tr>
+                                    <td>Paste Color</td>
+                                    <td>Aplica a la pieza en edición el color y los ajustes de material copiados con Copy Color. No puede seleccionarse mientras no se haya copiado nada.</td>
+                                </tr>
+                                <tr>
+                                    <td>Metallic</td>
+                                    <td>Ajusta el aspecto metálico de la superficie. Los valores altos hacen que refleje la luz del entorno como el metal.</td>
+                                </tr>
+                                <tr>
+                                    <td>Roughness</td>
+                                    <td>Ajusta la rugosidad de la superficie. Los valores bajos dan un brillo más intenso; los altos, un reflejo más suave y difuso.</td>
+                                </tr>
+                                <tr>
+                                    <td>Unpainted / White / Black / Orange</td>
+                                    <td>Los ajustes de color predefinidos. Unpainted devuelve la pieza a su color original.</td>
+                                </tr>
+                                <tr>
+                                    <td>Red / Green / Blue</td>
+                                    <td>Crea tu propio color de superficie con los deslizadores de rojo, verde y azul.</td>
+                                </tr>
+                                <tr>
+                                    <td>Surface Texture</td>
+                                    <td>Selecciona una imagen para superponer a la superficie de la pieza. None no usa ninguna imagen. Aquí también pueden elegirse las texturas personalizadas registradas desde Texture en la barra de herramientas superior.</td>
+                                </tr>
+                                <tr>
+                                    <td>Surface Normal Map</td>
+                                    <td>Selecciona el relieve fino de la superficie. Flat no añade relieve; las demás opciones añaden el sombreado de un patrón de superficie sin cambiar la forma.</td>
+                                </tr>
+                                <tr>
+                                    <td>Invert</td>
+                                    <td>Invierte la orientación de delante hacia atrás de la pieza. Úsalo cuando quieras montar del revés un motor, un cono de nariz o algo similar.</td>
+                                </tr>
+                                <tr>
+                                    <td>Edit End</td>
+                                    <td>Termina la edición y cierra el Parts Editor.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="note">
+                            <strong>Alcance de los ajustes de superficie:</strong>
+                            El color y el material se aplican a las superficies del modelo de la pieza marcadas como modificables. En algunas piezas, unas pocas caras conservan su material o su color original.
+</div>
+                    </section>
+
+                    <section id="launch-and-flight">
+                        <h2>5. Lanzamiento y vuelo</h2>
+
+                        <h3 id="launch-preparation">Preparación del lanzamiento</h3>
+                        <p>Selecciona un sitio de lanzamiento y abre «PREPARACIÓN DEL LANZAMIENTO» para elegir el cohete y la carga útil que vas a usar, y para fijar la órbita objetivo y el perfil de vuelo del lanzamiento automático.</p>
+                        <img src="./img/launch-preparation-en.jpg" alt="La pantalla de preparación del lanzamiento, donde eliges un cohete y una carga útil y ajustas los parámetros de la secuencia de lanzamiento">
+
+                        <p>Elige el cohete y la carga útil en las listas de la izquierda. La entrada del cohete muestra su coste de lanzamiento, cuántas veces ha volado y la fecha de su último vuelo. En la parte superior de la pantalla puedes cambiar el nombre del cohete y de la carga útil, y consultar el coste del lanzamiento, tus fondos actuales y tus fondos después del lanzamiento. En la versión actual puedes lanzar incluso cuando los fondos posteriores al lanzamiento serían negativos.</p>
+
+                        <h4>Parámetro de secuencia de lanzamiento</h4>
+                        <p>Fijan los objetivos que usa el lanzamiento automático. Los valores se guardan por cohete y se reutilizan la próxima vez que selecciones el mismo.</p>
+
+                        <svg class="figure" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esquema de una trayectoria de lanzamiento que muestra la relación entre Inicio del turno, Fin del turno, Pitchover Angle y la altitud de apogeo">
+                            <defs>
+                                <marker id="launch-arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M 0 0 L 8 4 L 0 8 z" fill="#00d060" />
+                                </marker>
+                                <marker id="launch-arrow-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M 0 0 L 8 4 L 0 8 z" fill="#aaa" />
+                                </marker>
+                            </defs>
+                            <line x1="25" y1="335" x2="655" y2="335" stroke="#ddd" stroke-width="3" />
+                            <text x="28" y="360" fill="#bbb" font-size="14">Superficie</text>
+                            <circle cx="115" cy="335" r="5" fill="#fff" />
+                            <text x="115" y="382" fill="#ddd" font-size="14" text-anchor="middle">Plataforma</text>
+
+                            <path d="M 115 335 C 116 270, 126 212, 162 160 C 213 87, 313 63, 440 65 C 520 66, 585 55, 628 50" fill="none" stroke="#00d060" stroke-width="3" marker-end="url(#launch-arrow-green)" />
+                            <text x="135" y="245" fill="#00d060" font-size="14">Giro gravitacional</text>
+                            <text x="338" y="88" fill="#00d060" font-size="14">Aceleración hacia la horizontal</text>
+
+                            <circle cx="120" cy="250" r="5" fill="#ffcc00" />
+                            <line x1="45" y1="250" x2="120" y2="250" stroke="#ffcc00" stroke-dasharray="5,4" />
+                            <line x1="45" y1="335" x2="45" y2="250" stroke="#aaa" marker-end="url(#launch-arrow-gray)" />
+                            <text x="54" y="288" fill="#ffcc00" font-size="14">Inicio del turno</text>
+
+                            <circle cx="270" cy="74" r="5" fill="#ff9800" />
+                            <line x1="45" y1="74" x2="270" y2="74" stroke="#ff9800" stroke-dasharray="5,4" />
+                            <line x1="45" y1="246" x2="45" y2="74" stroke="#aaa" marker-end="url(#launch-arrow-gray)" />
+                            <text x="54" y="102" fill="#ff9800" font-size="14">Fin del turno</text>
+
+                            <line x1="120" y1="250" x2="120" y2="205" stroke="#888" stroke-dasharray="4,3" />
+                            <path d="M 120 222 A 28 28 0 0 1 135 228" fill="none" stroke="#5bc0eb" stroke-width="2" />
+                            <text x="142" y="218" fill="#5bc0eb" font-size="14">Pitchover Angle</text>
+
+                            <circle cx="628" cy="50" r="6" fill="#f06" />
+                            <line x1="628" y1="50" x2="628" y2="25" stroke="#f06" />
+                            <text x="620" y="20" fill="#f06" font-size="14" text-anchor="end">El apogeo de la órbita prevista alcanza la altitud objetivo</text>
+                            <text x="620" y="38" fill="#ddd" font-size="13" text-anchor="end">Corte del motor, vuelo por inercia</text>
+
+                            <text x="340" y="385" fill="#888" font-size="13" text-anchor="middle">Esquema: altitudes, distancias y trayectoria no están a escala</text>
+                        </svg>
+
+                        <svg class="figure" viewBox="0 -20 680 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esquema de una órbita que muestra la relación entre la altitud de apogeo objetivo y la de perigeo objetivo">
+                            <ellipse cx="330" cy="184" rx="250" ry="200" fill="none" stroke="#00d060" stroke-width="3" />
+                            <circle cx="180" cy="184" r="45" fill="#3a6ea5" stroke="#7ac0ff" stroke-width="2" />
+                            <text x="180" y="190" fill="#fff" font-size="14" text-anchor="middle">Cuerpo central</text>
+
+                            <circle cx="580" cy="184" r="6" fill="#ff9800" />
+                            <line x1="580" y1="184" x2="580" y2="112" stroke="#ff9800" stroke-width="2" />
+                            <text x="570" y="102" fill="#ff9800" font-size="15" text-anchor="end">Apogeo (objetivo)</text>
+
+                            <circle cx="80" cy="184" r="6" fill="#ffcc00" />
+                            <line x1="80" y1="184" x2="80" y2="274" stroke="#ffcc00" stroke-width="2" />
+                            <text x="90" y="295" fill="#ffcc00" font-size="15">Perigeo (objetivo)</text>
+                            <text x="340" y="395" fill="#888" font-size="13" text-anchor="middle">Esquema: la forma de la órbita y las altitudes no están a escala</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Dato</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Apogeo</td>
+                                    <td>La altitud de apoapsis que buscas para la órbita. Durante el ascenso, el motor se corta en cuanto el apoapsis de la órbita prevista alcanza esta altitud, y el vehículo sigue por inercia hacia el apoapsis.</td>
+                                </tr>
+                                <tr>
+                                    <td>Perigeo</td>
+                                    <td>La altitud de periastro que buscas para la órbita. El motor se vuelve a encender cerca del apoapsis y eleva la órbita hasta que el periastro alcanza esta altitud.</td>
+                                </tr>
+                                <tr>
+                                    <td>Acimut</td>
+                                    <td>La dirección horizontal hacia la que se inclina el vehículo después del despegue. Se indica con 0° para el norte, 90° para el este, 180° para el sur y 270° para el oeste. La latitud del sitio de lanzamiento y el acimut determinan juntos la inclinación orbital que puedes alcanzar.</td>
+                                </tr>
+                                <tr>
+                                    <td>Inicio del turno</td>
+                                    <td>La altitud a la que empieza el giro gravitacional. El vehículo sube casi vertical hasta esta altitud, después gira sobre su eje para alinearse con el acimut y empieza a inclinarse poco a poco.</td>
+                                </tr>
+                                <tr>
+                                    <td>Fin del turno</td>
+                                    <td>La altitud a la que termina el giro gravitacional. El vehículo se va acercando poco a poco a la horizontal a medida que se aproxima a esta altitud. Si el apoapsis de la órbita prevista alcanza antes la altitud objetivo, el vehículo pasa en ese momento al ajuste del apoapsis.</td>
+                                </tr>
+                                <tr>
+                                    <td>Pitchover Angle</td>
+                                    <td>El ángulo con el que el vehículo se separa por primera vez de la vertical al empezar el giro gravitacional. Los valores próximos a 0° inician el giro con suavidad desde una actitud casi vertical; los valores mayores inclinan el vehículo con más fuerza desde una fase temprana.</td>
+                                </tr>
+                                <tr>
+                                    <td>Altitud máxima</td>
+                                    <td>La altitud de apoapsis más alta que se admite durante el ajuste del periastro. Si el apoapsis supera este valor y al mismo tiempo el periastro está por encima de «Altitud mínima», el motor se corta y la inserción orbital se da por completada aunque no se haya alcanzado el objetivo de «Perigeo».</td>
+                                </tr>
+                                <tr>
+                                    <td>Altitud mínima</td>
+                                    <td>Se usa junto con «Altitud máxima»: la altitud de periastro más baja a la que puede completarse la inserción orbital. El periastro objetivo normal se fija con «Perigeo».</td>
+                                </tr>
+                                <tr>
+                                    <td>Separación forzada de la primera etapa</td>
+                                    <td>Cuando está activada la opción «Forzar la separación de la primera etapa cuando se alcance la altitud de apogeo especificada», la primera etapa se suelta en cuanto el apoapsis de la órbita prevista alcanza la altitud indicada, aunque quede propelente.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note">
+                            <strong>Una referencia para ajustarlos:</strong>
+                            Con un cohete que uses por primera vez, lánzalo una vez con los valores por defecto y observa qué órbita consigues. Si no llegas a la órbita objetivo, comprueba también el empuje, el propelente y el escalonamiento del vehículo, y evita cambiar mucho a la vez la altitud de inicio del giro y el ángulo de basculamiento.
+</div>
+
+                        <p>Cuando los ajustes estén listos, selecciona «Ir al sitio de lanzamiento». El cohete y la carga útil elegidos se llevan a la plataforma de lanzamiento y pasas a la pantalla de lanzamiento.</p>
+
+                        <h3 id="launch-auto">Lanzamiento automático</h3>
+                        <p>El lanzamiento se realiza automáticamente hasta la inserción orbital; tú solo indicas la órbita objetivo. La secuencia sigue el mismo desarrollo que un cohete real.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Fase</th>
+                                    <th>Qué ocurre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. Despegue</td>
+                                    <td>Los motores se encienden. El vehículo abandona la plataforma en cuanto el empuje supera su peso.</td>
+                                </tr>
+                                <tr>
+                                    <td>2. Ascenso vertical</td>
+                                    <td>El vehículo sube en línea recta hasta unos 1 km.</td>
+                                </tr>
+                                <tr>
+                                    <td>3. Giro sobre el eje (alineación con el acimut)</td>
+                                    <td>El vehículo gira sobre su eje para alinearse con el acimut de lanzamiento.</td>
+                                </tr>
+                                <tr>
+                                    <td>4. Giro gravitacional</td>
+                                    <td>A medida que sube la altitud, el vehículo se va inclinando y empieza a acelerar hacia la horizontal.</td>
+                                </tr>
+                                <tr>
+                                    <td>5. Ajuste del apoapsis y MECO</td>
+                                    <td>En cuanto el apoapsis (Ap) alcanza la altitud objetivo, se corta el motor principal y a continuación se separa la etapa.</td>
+                                </tr>
+                                <tr>
+                                    <td>6. Vuelo por inercia</td>
+                                    <td>El vehículo sube por inercia hacia el apoapsis. Durante esta fase se aplica automáticamente aceleración del tiempo, que vuelve al tiempo real cuando se acerca el reencendido.</td>
+                                </tr>
+                                <tr>
+                                    <td>7. Reencendido y ajuste del periastro</td>
+                                    <td>Poco antes del apoapsis se vuelve a encender el motor, que eleva el periastro (Pe) hasta la altitud objetivo y circulariza la órbita.</td>
+                                </tr>
+                                <tr>
+                                    <td>8. Inserción orbital completada</td>
+                                    <td>El motor se corta en cuanto el periastro alcanza la altitud objetivo. La secuencia de lanzamiento ha terminado.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Durante el vuelo también ocurren automáticamente los siguientes eventos.</p>
+                        <p>
+                            -<b>Separación de los propulsores</b> … los propulsores se sueltan cuando se quedan sin propelente.<br />
+                            -<b>Separación de la cofia</b> … la cofia se suelta hacia los 100 km, una vez que el vehículo ha salido de la atmósfera.
+</p>
+                        <p>Durante un lanzamiento automático puedes cambiar libremente la aceleración del tiempo y mover la cámara. Justo antes de los momentos interesantes, como una separación o un reencendido, la aceleración del tiempo vuelve sola al tiempo real.</p>
+
+                        <h3 id="launch-manual-control">Pilotaje manual</h3>
+                        <p>Selecciona una nave y cambia al modo de pilotaje para volarla directamente con el teclado.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Acción</th>
+                                    <th>Tecla</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Subir / bajar el acelerador</td>
+                                    <td>Left Shift / Left Ctrl</td>
+                                    <td>Sube y baja el empuje en pequeños pasos.</td>
+                                </tr>
+                                <tr>
+                                    <td>Acelerador al máximo</td>
+                                    <td>Z</td>
+                                    <td>Lleva el empuje directamente al 100 %.</td>
+                                </tr>
+                                <tr>
+                                    <td>Corte del acelerador</td>
+                                    <td>X</td>
+                                    <td>Pone el empuje a 0 (corte del motor).</td>
+                                </tr>
+                                <tr>
+                                    <td>Cabeceo</td>
+                                    <td>W / S</td>
+                                    <td>Orienta el morro hacia arriba y hacia abajo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Guiñada</td>
+                                    <td>A / D</td>
+                                    <td>Orienta el morro hacia la izquierda y hacia la derecha.</td>
+                                </tr>
+                                <tr>
+                                    <td>Alabeo</td>
+                                    <td>Q / E</td>
+                                    <td>Hace girar el vehículo alrededor de su propio eje.</td>
+                                </tr>
+                                <tr>
+                                    <td>Separación de etapas</td>
+                                    <td>Space</td>
+                                    <td>Suelta la etapa actual.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>La rapidez con que responde la actitud depende del momento de inercia y del empuje del vehículo. Ten en cuenta que un vehículo pesado, o una etapa superior con poco empuje, solo cambia de actitud lentamente.</p>
+
+                        <h3 id="launch-sas">SAS (estabilización de actitud)</h3>
+                        <p>El SAS mantiene la nave apuntando automáticamente en la dirección que elijas. Están disponibles los modos siguientes.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Modo</th>
+                                    <th>Dirección</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Prograde</td>
+                                    <td>La dirección de avance. Úsalo al acelerar para elevar la órbita.</td>
+                                </tr>
+                                <tr>
+                                    <td>Retrograde</td>
+                                    <td>La contraria a la dirección de avance. Úsalo al frenar para bajar la órbita.</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal</td>
+                                    <td>Perpendicular al plano orbital. Sirve para cambiar la inclinación orbital.</td>
+                                </tr>
+                                <tr>
+                                    <td>Antinormal</td>
+                                    <td>La contraria a Normal.</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith</td>
+                                    <td>En sentido opuesto al centro del cuerpo central (justo hacia arriba).</td>
+                                </tr>
+                                <tr>
+                                    <td>Nadir</td>
+                                    <td>Hacia el centro del cuerpo central (justo hacia abajo).</td>
+                                </tr>
+                                <tr>
+                                    <td>Target</td>
+                                    <td>La dirección del objeto fijado como objetivo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Antitarget</td>
+                                    <td>La contraria a la dirección del objetivo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>La dirección de encendido de la maniobra que hayas fijado.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Las direcciones basadas en la velocidad, como Prograde y Retrograde, cambian automáticamente:<b>referidas a la velocidad respecto al aire (velocidad relativa a la atmósfera) antes de la inserción orbital, y a la velocidad inercial después</b>. Esto siempre coincide con los <a href="#main-screen-navball">marcadores que se muestran en el NavBall</a>.</p>
+
+                        <h3 id="launch-time-acceleration">Reglas de la aceleración del tiempo</h3>
+                        <p>La aceleración máxima del tiempo la determinan automáticamente la altitud y el estado de vuelo de la nave seleccionada. Las condiciones se comprueban de arriba abajo y se aplica la primera que se cumple.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Estado</th>
+                                    <th>Ritmo máximo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Otra nave a menos de 200 m</td>
+                                    <td>×1 (solo tiempo real)</td>
+                                </tr>
+                                <tr>
+                                    <td>Otra nave a menos de 1 km</td>
+                                    <td>Hasta ×4</td>
+                                </tr>
+                                <tr>
+                                    <td>Por debajo de 1 km (salvo durante el lanzamiento)</td>
+                                    <td>×1 (solo tiempo real)</td>
+                                </tr>
+                                <tr>
+                                    <td>Desde 1 km hasta el borde de la atmósfera, o con el motor encendido</td>
+                                    <td>Hasta ×4</td>
+                                </tr>
+                                <tr>
+                                    <td>Bien lejos de la atmósfera y sin encender el motor</td>
+                                    <td>Se calcula automáticamente a partir del período orbital (hasta un ritmo que completa una órbita en unos diez segundos)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            - Si habías fijado un ritmo por encima del tope, se reduce automáticamente hasta él.<br />
+                            - El aterrizaje y el contacto entre naves solo se detectan a tiempo real, y por eso el tope baja a baja altitud y durante una aproximación cercana. Un lanzamiento no está sujeto a la detección de contactos, así que puedes acelerar hasta ×4 desde el momento del despegue.<br />
+                            - Durante un lanzamiento automático se fija automáticamente un ritmo adecuado a cada fase (×2 durante el giro gravitacional, ×4 durante el ajuste del apoapsis, hasta ×60 en vuelo por inercia, etc.). Si cambias el ritmo tú mismo, prevalece tu ajuste.<br />
+                            - Justo antes de eventos como una separación de etapa, la separación de la cofia o un reencendido, el ritmo vuelve solo al tiempo real para que no te los pierdas.
+</p>
+                    </section>
+
+                    <section id="contract">
+                        <h2>6. Contratos</h2>
+                        <p>Los contratos son los objetivos que cumples —un vuelo o una misión determinados— para obtener recompensas. Los fondos y los puntos que ganas te permiten hacer crecer tu organización y pasar a misiones más exigentes.</p>
+                        <img src="./img/contract-management-en.jpg" alt="La pantalla de gestión de contratos con el contrato «Da un primer paso» seleccionado">
+
+                        <h3 id="contract-acceptance">Aceptar un contrato</h3>
+                        <ol>
+                            <li>Abre el menú de la esquina inferior derecha de la pantalla y selecciona «Gestión de contratos».</li>
+                            <li>Elige en la «Lista de contratos» el contrato que quieras consultar.</li>
+                            <li>Comprueba la descripción del contrato, sus «&lt;Condiciones&gt;» y sus «&lt;Recompensas&gt;».</li>
+                            <li>Selecciona «Celebrar un contrato» para aceptarlo.</li>
+                        </ol>
+                        <p>Activa «Mostrar solo los contratos aceptados» para ver únicamente los contratos que tienes en curso. Para renunciar a uno, selecciónalo y elige «Cancelación del contrato».</p>
+
+                        <h3 id="contract-progress">Objetivos y finalización</h3>
+                        <p>El progreso de un contrato aceptado se comprueba automáticamente, también en vuelo. Cuando un contrato tiene varias condiciones, hay que cumplirlas todas.</p>
+                        <p>Al completar un contrato aparece una pantalla de finalización. Selecciona «OBTÉN RECOMPENSAS» para ver el resultado. En el primer contrato, «Da un primer paso», el objetivo es poner un cohete en la plataforma de lanzamiento y alcanzar una altitud de 15 km o más.</p>
+                        <img src="./img/contract-completion-en.jpg" alt="Un contrato completado, con la recompensa lista para cobrar">
+                        <p>Al seleccionar «OBTÉN RECOMPENSAS» se muestran los puntos obtenidos y tus niveles actuales. Compruébalos y cierra la pantalla con «OK».</p>
+                        <img src="./img/contract-reward-en.jpg" alt="La pantalla de recompensa que aparece tras completar un contrato">
+
+                        <div class="note">
+                            <strong>Consejo:</strong>
+                            Antes de aceptar un contrato, comprueba qué vehículo necesita, a qué cuerpo celeste se refiere y qué altitud exige.
+</div>
+
+                        <h3 id="contract-rewards">Recompensas</h3>
+                        <p>Cada contrato lleva asociadas las siguientes recompensas. Algunas pueden valer 0 puntos.</p>
+                        <table class="desc contract-rewards-table">
+                            <thead>
+                                <tr>
+                                    <th>Recompensa</th>
+                                    <th>Para qué sirve</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Capital</td>
+                                    <td>Se gasta como coste de un lanzamiento. No hace falta para construir un vehículo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Ingeniería</td>
+                                    <td>Necesaria para subir tu nivel de ingeniería y desbloquear piezas más avanzadas.</td>
+                                </tr>
+                                <tr>
+                                    <td>Ciencia</td>
+                                    <td>Necesaria para subir tu nivel científico y hacer que estén disponibles ciertas piezas y ciertos objetivos.</td>
+                                </tr>
+                                <tr>
+                                    <td>Funcionamiento</td>
+                                    <td>Sube tu nivel de funcionamiento. A medida que sube, hay más sitios de lanzamiento disponibles.</td>
+                                </tr>
+                                <tr>
+                                    <td>Confianza</td>
+                                    <td>Sube tu nivel de confianza. A medida que sube, hay más tipos de contrato entre los que elegir.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note">
+                            <strong>Sobre los fondos:</strong>
+                            En la versión actual puedes lanzar aunque no tengas fondos suficientes, y se permite que tu saldo quede en negativo. Por tanto, la falta de dinero nunca puede impedirte avanzar.
+</div>
+
+                        <div class="note">
+                            <strong>Repetir el mismo contrato:</strong>
+                            La primera vez que completas un tipo de contrato recibes la recompensa íntegra; la segunda, el 75 %, y a partir de la tercera, el 50 %. Consulta las cifras reales en «&lt;Recompensas&gt;» de la pantalla de gestión de contratos.
+</div>
+                    </section>
+
+                    <section id="orbital-basics">
+                        <h2>7. Nociones de mecánica orbital</h2>
+
+                        <h3 id="keplerian-orbital-elements">Elementos orbitales keplerianos</h3>
+                        <p>La órbita de una nave o de un cuerpo celeste se describe con un conjunto de seis números, los elementos orbitales keplerianos. De ellos toma su nombre este juego, y en ellos se apoya toda la información orbital que muestra. Los seis elementos se entienden mejor si se agrupan en tres bloques según su función.</p>
+
+                        <svg class="figure" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esquema de los elementos que determinan la forma de una órbita elíptica">
+                            <ellipse cx="320" cy="170" rx="220" ry="130" fill="none" stroke="#7ac0ff" stroke-width="2" />
+                            <line x1="100" y1="170" x2="540" y2="170" stroke="#666" stroke-dasharray="5,4" />
+                            <circle cx="498" cy="170" r="18" fill="#3a6ea5" stroke="#7ac0ff" />
+                            <text x="498" y="205" fill="#ddd" font-size="14" text-anchor="middle">Cuerpo central</text>
+                            <circle cx="210" cy="57" r="5" fill="#fff" />
+                            <text x="210" y="40" fill="#ddd" font-size="14" text-anchor="middle">Nave</text>
+                            <circle cx="540" cy="170" r="4" fill="#f80" />
+                            <text x="546" y="152" fill="#f80" font-size="14">Periastro (Pe)</text>
+                            <circle cx="100" cy="170" r="4" fill="#f80" />
+                            <text x="95" y="152" fill="#f80" font-size="14" text-anchor="end">Apoapsis (Ap)</text>
+                            <line x1="316" y1="166" x2="324" y2="174" stroke="#ddd" />
+                            <line x1="316" y1="174" x2="324" y2="166" stroke="#ddd" />
+                            <text x="310" y="196" fill="#999" font-size="13" text-anchor="end">Centro de la elipse</text>
+                            <line x1="328" y1="215" x2="532" y2="215" stroke="#ddd" />
+                            <polygon points="320,215 330,211 330,219" fill="#ddd" />
+                            <polygon points="540,215 530,211 530,219" fill="#ddd" />
+                            <text x="430" y="238" fill="#ddd" font-size="14" text-anchor="middle">a (semieje mayor)</text>
+                            <text x="320" y="330" fill="#999" font-size="13" text-anchor="middle">Cuanto mayor es la excentricidad e, más se aleja el centro de la elipse del foco (e = 0 da un círculo)</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Significado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">Forma y tamaño de la órbita</td>
+                                </tr>
+                                <tr>
+                                    <td>Semieje mayor a</td>
+                                    <td>El tamaño de la órbita: la mitad del diámetro mayor de la elipse. Cuanto mayor es, más alta es la órbita; de este valor se deduce también el período orbital.</td>
+                                </tr>
+                                <tr>
+                                    <td>Excentricidad e</td>
+                                    <td>Lo achatada que es la órbita. 0 da un círculo perfecto y los valores entre 0 y 1, una elipse. A partir de 1 la órbita ya no se cierra y el objeto escapa de la gravedad del cuerpo central.</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">Orientación del plano orbital</td>
+                                </tr>
+                                <tr>
+                                    <td>Inclinación i</td>
+                                    <td>La inclinación del plano orbital respecto al plano ecuatorial. 0° pasa por encima del ecuador; 90° es una órbita polar que pasa sobre los polos norte y sur. Más allá de 90°, la órbita es retrógrada y va en contra de la rotación del cuerpo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Longitud del nodo ascendente Ω</td>
+                                    <td>La dirección, medida desde la dirección de referencia, del punto en que la órbita cruza el plano ecuatorial de sur a norte (el nodo ascendente). Fija hacia dónde mira el plano orbital inclinado.</td>
+                                </tr>
+                                <tr>
+                                    <td>Argumento del periastro ω</td>
+                                    <td>Dónde se sitúa el periastro, medido a lo largo de la órbita desde el nodo ascendente. Fija la orientación de la elipse dentro del plano orbital.</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">Posición sobre la órbita</td>
+                                </tr>
+                                <tr>
+                                    <td>Anomalía media M</td>
+                                    <td>Un ángulo que indica dónde te encuentras dentro de una revolución. Crece a ritmo constante con el tiempo, y 360° es una órbita completa.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <svg class="figure" viewBox="0 0 640 455" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esquema de los tres ángulos que determinan la orientación del plano orbital">
+                            <!-- 3Dモデル: 傾斜角35°・昇交点方位角50°の円軌道(半径225)を仰角約17°のカメラで正射影 -->
+                            <!-- 赤道面（軌道と同じ半径225。半径を揃えることで2つの楕円が昇交点・降交点で正確に交差する） -->
+                            <ellipse cx="320" cy="230" rx="225" ry="65.6" fill="none" stroke="#888" stroke-dasharray="6,4" />
+                            <text x="280" y="318" fill="#888" font-size="14">Plano ecuatorial</text>
+                            <!-- 軌道面 -->
+                            <ellipse cx="320" cy="230" rx="225" ry="133" fill="none" stroke="#7ac0ff" stroke-width="2" transform="rotate(33 320 230)" />
+                            <text x="68" y="170" fill="#7ac0ff" font-size="14">Plano orbital</text>
+                            <!-- 交線（昇交点(465,180)と降交点(175,280)を結ぶ線。両点とも2つの楕円の交差点上） -->
+                            <line x1="93" y1="309" x2="547" y2="151" stroke="#ddd" stroke-dasharray="3,3" />
+                            <text x="87" y="320" fill="#999" font-size="13" text-anchor="end">Nodo desc.</text>
+                            <circle cx="320" cy="230" r="26" fill="#3a6ea5" />
+                            <text x="320" y="276" fill="#ddd" font-size="14" text-anchor="middle">Cuerpo central</text>
+                            <text x="553" y="156" fill="#ddd" font-size="14">Nodo asc.</text>
+                            <!-- 基準方向（赤道面内の矢印） -->
+                            <line x1="320" y1="230" x2="467" y2="304" stroke="#ddd" />
+                            <polygon points="467,304 454,304 459,295" fill="#ddd" />
+                            <text x="450" y="330" fill="#ddd" font-size="13" text-anchor="middle">Dirección de referencia</text>
+                            <path d="M 382 262 A 70 70 0 0 0 386 207" fill="none" stroke="#ff0" stroke-width="2" />
+                            <text x="406" y="240" fill="#ff0" font-size="15" text-anchor="middle">Ω</text>
+                            <!-- 近点（軌道上、昇交点から55°）と中心からの動径線（ωの終端を示す） -->
+                            <line x1="320" y1="230" x2="287" y2="72" stroke="#ddd" />
+                            <circle cx="287" cy="72" r="5" fill="#f80" />
+                            <text x="287" y="54" fill="#f80" font-size="14" text-anchor="middle">Periastro</text>
+                            <path d="M 410 199 A 95 95 0 0 0 301 137" fill="none" stroke="#f80" stroke-width="2" />
+                            <text x="378" y="140" fill="#f80" font-size="15" text-anchor="middle">ω</text>
+                            <!-- 傾斜角i（手前側＝降交点付近で、赤道面と軌道面の曲線をつなぐ弧で示す。両端は各楕円上） -->
+                            <path d="M 139 269 A 39 39 0 0 1 150 248" fill="none" stroke="#0f0" stroke-width="2" />
+                            <text x="128" y="252" fill="#0f0" font-size="15" text-anchor="middle">i</text>
+                            <text x="320" y="442" fill="#999" font-size="13" text-anchor="middle">La inclinación i, la longitud del nodo ascendente Ω y el argumento del periastro ω fijan el plano y la elipse</text>
+                        </svg>
+
+                        <p>
+                            - Las altitudes del apoapsis (Ap) y del periastro (Pe) se deducen del semieje mayor a y de la excentricidad e. La órbita objetivo de un <a href="#launch-auto">lanzamiento automático</a> se indica igualmente mediante las altitudes de apoapsis y de periastro.<br />
+                            - La inclinación más baja a la que se puede llegar directamente desde un lanzamiento es <b>la latitud del sitio de lanzamiento</b>. Cuanto más cerca del ecuador está un sitio de lanzamiento, más libertad tienes para elegir la órbita.<br />
+                            - Lanzar hacia el este convierte directamente la velocidad de rotación del cuerpo en aceleración adicional (unos 465 m/s en el ecuador terrestre). Por eso tantos sitios de lanzamiento tienen mar abierto al este.
+</p>
+
+                    </section>
+
+                    <section id="reference">
+                        <h2>8. Referencia</h2>
+
+                        <h3 id="control-keys">Control Keys</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Acción</th>
+                                    <th>Teclado</th>
+                                    <th>Ratón</th>
+                                    <th>Mando</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Girar la cámara</td>
+                                    <td>I/K/J/L</td>
+                                    <td>Botón derecho + arrastrar</td>
+                                    <td>Stick derecho</td>
+                                </tr>
+                                <tr>
+                                    <td>Desplazar la cámara</td>
+                                    <td>-</td>
+                                    <td>Botón central + arrastrar</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Acercar y alejar la cámara</td>
+                                    <td>Home/End</td>
+                                    <td>Rueda</td>
+                                    <td>Gatillo L/R</td>
+                                </tr>
+                                <tr>
+                                    <td>Campo de visión</td>
+                                    <td>Page Up/Down</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Exposición de la cámara</td>
+                                    <td>Insert/Delete</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Cambiar de modo de cámara</td>
+                                    <td>V</td>
+                                    <td>Botón central + botón derecho</td>
+                                    <td>Botón Back</td>
+                                </tr>
+                                <tr>
+                                    <td>Orientación de la cámara *1</td>
+                                    <td>-</td>
+                                    <td>Botón izquierdo + arrastrar</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Alabeo de la cámara *1</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>Botón L/R</td>
+                                </tr>
+                                <tr>
+                                    <td>Restablecer la cámara</td>
+                                    <td>-</td>
+                                    <td>Botón izquierdo + botón derecho</td>
+                                    <td>Stick derecho (pulsar)</td>
+                                </tr>
+                                <tr>
+                                    <td>Map View</td>
+                                    <td>M</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Mostrar/ocultar la interfaz</td>
+                                    <td>F2</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Mostrar/ocultar las SOI</td>
+                                    <td>F3</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Guardado rápido</td>
+                                    <td>F5</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Carga rápida</td>
+                                    <td>F9</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Empezar a seguir</td>
+                                    <td>O</td>
+                                    <td>Clic derecho en la lista</td>
+                                    <td>Botón Y</td>
+                                </tr>
+                                <tr>
+                                    <td>Abrir el menú</td>
+                                    <td>ESC</td>
+                                    <td>-</td>
+                                    <td>Botón Start</td>
+                                </tr>
+                                <tr>
+                                    <td>Abrir el panel de control *2</td>
+                                    <td>C</td>
+                                    <td>-</td>
+                                    <td>Botón X</td>
+                                </tr>
+                                <tr>
+                                    <td>Acelerador al máximo *3</td>
+                                    <td>Z</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Corte del acelerador *3</td>
+                                    <td>X</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Subir el acelerador *3</td>
+                                    <td>Left Shift</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Bajar el acelerador *3</td>
+                                    <td>Left Ctrl</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Separación de etapas *3</td>
+                                    <td>Space</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Alabeo *3</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Cabeceo *3</td>
+                                    <td>W/S</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Guiñada *3</td>
+                                    <td>A/D</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Consola de depuración</td>
+                                    <td>ALT + F12</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>*1 : Cuando el modo de cámara no es «Chase».</p>
+                        <p>*2 : Solo mientras hay una nave seleccionada.</p>
+                        <p>*3 : Solo en el modo de pilotaje de la nave.</p>
+
+                        <h3 id="launch-sites">Sitios de lanzamiento</h3>
+                        <p>Los sitios de lanzamiento disponibles en el juego. Las fechas de fundación y las coordenadas son los valores registrados en los datos del juego.</p>
+                        <div class="note">
+                            <strong>Desbloquear sitios de lanzamiento:</strong>
+                            No todos los sitios de lanzamiento se muestran desde el principio. A medida que ganas puntos de funcionamiento con las recompensas de los contratos y subes tu nivel de funcionamiento, se van desbloqueando más sitios de lanzamiento.
+</div>
+                        <table class="desc launch-sites-table">
+                            <thead>
+                                <tr>
+                                    <th>Sitio de lanzamiento</th>
+                                    <th>Fundado</th>
+                                    <th>Latitud</th>
+                                    <th>Longitud</th>
+                                    <th>Notas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kepler Space Center</td>
+                                    <td>1950/01/01</td>
+                                    <td>0,00° N</td>
+                                    <td>1,00° E</td>
+                                    <td>Un centro espacial ficticio que solo aparece en este juego.</td>
+                                </tr>
+                                <tr>
+                                    <td>Kennedy Space Center</td>
+                                    <td>1962/07/01</td>
+                                    <td>28,52° N</td>
+                                    <td>80,65° O</td>
+                                    <td>Un gran sitio de lanzamiento usado durante mucho tiempo como base de la exploración lunar, el transbordador espacial y el vuelo espacial tripulado.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cape Canaveral Space Force Station</td>
+                                    <td>1950/07/24</td>
+                                    <td>28,49° N</td>
+                                    <td>80,58° O</td>
+                                    <td>Un sitio de lanzamiento importante, usado para los cohetes más diversos desde los inicios de la astronáutica hasta hoy.</td>
+                                </tr>
+                                <tr>
+                                    <td>SpaceX Starbase</td>
+                                    <td>2002/05/06</td>
+                                    <td>26,00° N</td>
+                                    <td>97,15° O</td>
+                                    <td>Un sitio dedicado al desarrollo, la construcción, los ensayos y el lanzamiento de Starship y Super Heavy.</td>
+                                </tr>
+                                <tr>
+                                    <td>Vandenberg Space Force Base</td>
+                                    <td>1941/01/01</td>
+                                    <td>34,73° N</td>
+                                    <td>120,56° O</td>
+                                    <td>Con mar abierto al sur, este sitio se presta a los lanzamientos a órbitas polares y heliosíncronas.</td>
+                                </tr>
+                                <tr>
+                                    <td>Wallops Flight Facility</td>
+                                    <td>1945/01/01</td>
+                                    <td>37,94° N</td>
+                                    <td>75,46° O</td>
+                                    <td>Un sitio de investigación y ensayos que acoge cohetes sonda, globos científicos y pequeñas misiones orbitales.</td>
+                                </tr>
+                                <tr>
+                                    <td>Kodiak Launch Complex</td>
+                                    <td>1998/01/01</td>
+                                    <td>57,44° N</td>
+                                    <td>152,34° O</td>
+                                    <td>Un sitio rodeado de mar, adecuado para órbitas muy inclinadas y polares.</td>
+                                </tr>
+                                <tr>
+                                    <td>Guiana Space Centre</td>
+                                    <td>1964/04/14</td>
+                                    <td>5,23° N</td>
+                                    <td>52,76° O</td>
+                                    <td>Su cercanía al ecuador lo hace idóneo para las órbitas de transferencia geoestacionaria, que aprovechan la rotación terrestre.</td>
+                                </tr>
+                                <tr>
+                                    <td>Jiuquan Satellite Launch Center</td>
+                                    <td>1958/01/01</td>
+                                    <td>40,95° N</td>
+                                    <td>100,29° E</td>
+                                    <td>Un sitio de lanzamiento interior, conocido por las naves tripuladas y los satélites en órbita baja.</td>
+                                </tr>
+                                <tr>
+                                    <td>Taiyuan Satellite Launch Center</td>
+                                    <td>1966/01/01</td>
+                                    <td>38,84° N</td>
+                                    <td>111,60° E</td>
+                                    <td>Un sitio interior que asume numerosos lanzamientos de satélites a órbitas polares y heliosíncronas.</td>
+                                </tr>
+                                <tr>
+                                    <td>Wenchang Space Launch Site</td>
+                                    <td>2014/10/18</td>
+                                    <td>19,61° N</td>
+                                    <td>110,95° E</td>
+                                    <td>Un sitio costero de baja latitud, usado para grandes cohetes y misiones al espacio profundo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Xichang Satellite Launch Center</td>
+                                    <td>1982/01/01</td>
+                                    <td>28,24° N</td>
+                                    <td>102,02° E</td>
+                                    <td>Un sitio usado para satélites en órbita de transferencia geoestacionaria y para sondas lunares y planetarias.</td>
+                                </tr>
+                                <tr>
+                                    <td>Tanegashima Space Center</td>
+                                    <td>1969/10/01</td>
+                                    <td>30,40° N</td>
+                                    <td>130,98° E</td>
+                                    <td>Un sitio costero con instalaciones de montaje, ensayo y lanzamiento de grandes cohetes.</td>
+                                </tr>
+                                <tr>
+                                    <td>Uchinoura Space Center</td>
+                                    <td>1963/12/09</td>
+                                    <td>31,25° N</td>
+                                    <td>131,07° E</td>
+                                    <td>Un sitio situado entre colinas, desde el que se lanzan y siguen cohetes sonda, satélites científicos y sondas.</td>
+                                </tr>
+                                <tr>
+                                    <td>Hokkaido Spaceport</td>
+                                    <td>2021/04/20</td>
+                                    <td>42,50° N</td>
+                                    <td>143,44° E</td>
+                                    <td>Un puerto espacial comercial abierto a usuarios privados, que acoge cohetes sonda y, en el futuro, lanzamientos orbitales.</td>
+                                </tr>
+                                <tr>
+                                    <td>Spaceport Kii</td>
+                                    <td>2021/01/01</td>
+                                    <td>33,54° N</td>
+                                    <td>135,89° E</td>
+                                    <td>Un sitio construido expresamente como base de lanzamiento del pequeño cohete de propergol sólido KAIROS.</td>
+                                </tr>
+                                <tr>
+                                    <td>Naro Space Center</td>
+                                    <td>2009/06/11</td>
+                                    <td>34,43° N</td>
+                                    <td>127,53° E</td>
+                                    <td>Un centro espacial costero dedicado al desarrollo y el lanzamiento de cohetes como el Naro y el Nuri.</td>
+                                </tr>
+                                <tr>
+                                    <td>Sohae Satellite Launching Station</td>
+                                    <td>2012/03/01</td>
+                                    <td>39,66° N</td>
+                                    <td>124,71° E</td>
+                                    <td>Un sitio costero con instalaciones de lanzamiento de satélites y bancos de ensayo para grandes cohetes.</td>
+                                </tr>
+                                <tr>
+                                    <td>Baikonur Cosmodrome</td>
+                                    <td>1955/06/02</td>
+                                    <td>45,96° N</td>
+                                    <td>63,30° E</td>
+                                    <td>El cosmódromo histórico desde el que partieron el primer satélite artificial y el primer vuelo tripulado.</td>
+                                </tr>
+                                <tr>
+                                    <td>Plesetsk Cosmodrome</td>
+                                    <td>1957/07/15</td>
+                                    <td>62,92° N</td>
+                                    <td>40,57° E</td>
+                                    <td>Un cosmódromo de alta latitud, muy adecuado para órbitas polares y muy inclinadas.</td>
+                                </tr>
+                                <tr>
+                                    <td>Vostochny Cosmodrome</td>
+                                    <td>2011/08/01</td>
+                                    <td>51,88° N</td>
+                                    <td>128,33° E</td>
+                                    <td>Un cosmódromo relativamente nuevo, preparado para lanzamientos de Soyuz, Angará y otros.</td>
+                                </tr>
+                                <tr>
+                                    <td>Rocket Lab Launch Complex 1</td>
+                                    <td>2016/09/26</td>
+                                    <td>39,26° S</td>
+                                    <td>177,87° E</td>
+                                    <td>Un sitio de lanzamiento privado que opera el cohete Electron, pensado para lanzamientos frecuentes de satélites pequeños.</td>
+                                </tr>
+                                <tr>
+                                    <td>Satish Dhawan Space Centre</td>
+                                    <td>1971/10/09</td>
+                                    <td>13,71° N</td>
+                                    <td>80,23° E</td>
+                                    <td>Un gran centro espacial con varias plataformas de lanzamiento, desde el que despegan el PSLV, el GSLV y el LVM3.</td>
+                                </tr>
+                                <tr>
+                                    <td>Andøya Space</td>
+                                    <td>1962/08/18</td>
+                                    <td>69,29° N</td>
+                                    <td>16,02° E</td>
+                                    <td>Un sitio con una larga trayectoria en cohetes sonda y en el estudio de la atmósfera y las auroras, hoy también equipado para lanzamientos orbitales.</td>
+                                </tr>
+                                <tr>
+                                    <td>Semnan Space Center</td>
+                                    <td>2006/11/02</td>
+                                    <td>35,23° N</td>
+                                    <td>53,92° E</td>
+                                    <td>Un sitio interior dedicado al lanzamiento y ensayo de pequeños lanzadores de satélites.</td>
+                                </tr>
+                                <tr>
+                                    <td>Palmachim Airbase</td>
+                                    <td>1988/09/19</td>
+                                    <td>31,90° N</td>
+                                    <td>34,69° E</td>
+                                    <td>Conocido por sus lanzamientos a órbitas retrógradas, ya que los cohetes se envían hacia el oeste sobre el mar.</td>
+                                </tr>
+                                <tr>
+                                    <td>Aunt Effie's Farm</td>
+                                    <td>1926/03/16</td>
+                                    <td>42,22° N</td>
+                                    <td>71,81° O</td>
+                                    <td>No es propiamente un sitio de lanzamiento, sino el campo donde Robert Goddard lanzó en 1926 el primer cohete de propergol líquido del mundo.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="glossary">Glosario</h3>
+                        <p>Los principales términos usados en este manual y en el juego.</p>
+                        <table class="desc glossary-table">
+                            <thead>
+                                <tr>
+                                    <th>Término</th>
+                                    <th>Significado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">Órbitas y vuelo</td>
+                                </tr>
+                                <tr>
+                                    <td>Apoapsis (Ap)</td>
+                                    <td>El punto de la órbita más alejado del cuerpo central. Durante un lanzamiento, la aceleración del ascenso eleva el apoapsis de la órbita prevista hasta la altitud objetivo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Periastro (Pe)</td>
+                                    <td>El punto de la órbita más cercano al cuerpo central. Acelerar cerca del apoapsis para elevar el periastro por encima de la atmósfera da una órbita estable.</td>
+                                </tr>
+                                <tr>
+                                    <td>Elementos orbitales keplerianos</td>
+                                    <td>Los seis números que describen el tamaño, la forma y la orientación de una órbita, así como tu posición sobre ella. Para más detalle, consulta «<a href="#keplerian-orbital-elements">Elementos orbitales keplerianos</a>».</td>
+                                </tr>
+                                <tr>
+                                    <td>Semieje mayor (a)</td>
+                                    <td>El valor que describe el tamaño de una órbita. Equivale a la mitad del diámetro mayor de la elipse y determina también el período orbital.</td>
+                                </tr>
+                                <tr>
+                                    <td>Excentricidad (e)</td>
+                                    <td>Lo achatada que está una órbita. 0 da un círculo, los valores entre 0 y 1 una elipse, y a partir de 1 una trayectoria de escape abierta.</td>
+                                </tr>
+                                <tr>
+                                    <td>Inclinación (i)</td>
+                                    <td>La inclinación del plano orbital respecto al plano ecuatorial del cuerpo central. 0° es una órbita ecuatorial y 90°, una órbita polar.</td>
+                                </tr>
+                                <tr>
+                                    <td>Longitud del nodo ascendente (LAN / Ω)</td>
+                                    <td>La dirección del nodo ascendente, donde la órbita cruza el plano ecuatorial de sur a norte. Fija hacia dónde mira el plano orbital.</td>
+                                </tr>
+                                <tr>
+                                    <td>Argumento del periastro (ω)</td>
+                                    <td>El ángulo medido a lo largo de la órbita desde el nodo ascendente hasta el periastro. Fija hacia dónde apunta la elipse dentro del plano orbital.</td>
+                                </tr>
+                                <tr>
+                                    <td>Anomalía media (M)</td>
+                                    <td>Un ángulo que relaciona con el tiempo la posición de un cuerpo o de una nave a lo largo de una órbita.</td>
+                                </tr>
+                                <tr>
+                                    <td>SOI (Sphere of Influence, esfera de influencia)</td>
+                                    <td>La región dentro de la cual la gravedad de un cuerpo se trata como central para los cálculos de órbita. Entrar en la SOI de otro cuerpo cambia el cuerpo central de tu órbita.</td>
+                                </tr>
+                                <tr>
+                                    <td>Línea de Kármán</td>
+                                    <td>La altitud que se toma como límite entre la atmósfera y el espacio. En este juego, la inserción orbital se da por completada en cuanto la altitud del periastro supera la línea de Kármán del cuerpo central.</td>
+                                </tr>
+                                <tr>
+                                    <td>Inserción orbital</td>
+                                    <td>Poner una nave en una órbita que le permita seguir girando alrededor del cuerpo central. En este juego significa que la altitud del periastro está por encima de la línea de Kármán.</td>
+                                </tr>
+                                <tr>
+                                    <td>Vuelo balístico</td>
+                                    <td>Vuelo bajo la sola acción de la gravedad, con los motores apagados, antes de la inserción orbital. Si se deja así, la nave vuelve a caer hacia el cuerpo central.</td>
+                                </tr>
+                                <tr>
+                                    <td>Vuelo por inercia</td>
+                                    <td>Un tramo de vuelo con el motor apagado, en el que la nave se mueve por su propia velocidad y por la gravedad. En un lanzamiento automático designa el período entre el ajuste del apoapsis y el reencendido.</td>
+                                </tr>
+                                <tr>
+                                    <td>Giro gravitacional</td>
+                                    <td>Una técnica de lanzamiento en la que el vehículo se va inclinando durante el ascenso, aprovechando la gravedad para pasar suavemente del ascenso vertical a la aceleración horizontal.</td>
+                                </tr>
+                                <tr>
+                                    <td>Acimut</td>
+                                    <td>El ángulo que indica una dirección de avance en el plano horizontal. En los ajustes de lanzamiento de este juego, el norte es 0°, el este 90°, el sur 180° y el oeste 270°.</td>
+                                </tr>
+                                <tr>
+                                    <td>Circularización</td>
+                                    <td>Acelerar en el sentido del avance cerca del apoapsis para elevar el periastro y reducir la diferencia entre ambas altitudes.</td>
+                                </tr>
+                                <tr>
+                                    <td>Rendezvous</td>
+                                    <td>Aproximarse a otra nave u objeto en órbita e igualar su posición y su velocidad.</td>
+                                </tr>
+                                <tr>
+                                    <td>ΔV (delta-V)</td>
+                                    <td>El cambio de velocidad que una nave puede producir con su propelente, o el que exige una maniobra orbital. Cuanto mayor es, mayor es el cambio de órbita que puedes hacer.</td>
+                                </tr>
+                                <tr>
+                                    <td>Velocidad inercial / velocidad respecto al aire</td>
+                                    <td>La velocidad inercial se mide respecto al propio espacio; la velocidad respecto al aire, respecto a la atmósfera en rotación. La aerodinámica del lanzamiento y el NavBall usan la velocidad respecto al aire; los cálculos de órbita, la velocidad inercial.</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">Vehículos</td>
+                                </tr>
+                                <tr>
+                                    <td>Empuje</td>
+                                    <td>La fuerza con la que un motor acelera una nave. Para despegar, el empuje tiene que superar el peso que actúa sobre el vehículo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Impulso específico (Isp)</td>
+                                    <td>Una medida, en segundos, de la eficiencia con que un motor convierte el propelente en empuje. Cuanto mayor es el valor, más eficiente es el motor.</td>
+                                </tr>
+                                <tr>
+                                    <td>Relación empuje-peso (TWR)</td>
+                                    <td>La relación entre el empuje y el peso del vehículo. A 1,0 o menos en el suelo, el empuje no supera al peso y el vehículo no puede despegar.</td>
+                                </tr>
+                                <tr>
+                                    <td>Etapa</td>
+                                    <td>Una sección del cohete que se suelta en vuelo. Separar los motores y depósitos agotados aligera el vehículo restante.</td>
+                                </tr>
+                                <tr>
+                                    <td>Propulsor</td>
+                                    <td>Un motor auxiliar añadido al costado del vehículo, sobre todo para reforzar el empuje al principio del lanzamiento. Se suelta una vez agotado su propelente.</td>
+                                </tr>
+                                <tr>
+                                    <td>Desacoplador</td>
+                                    <td>Una pieza que une las etapas entre sí y las libera en vuelo. En el VAB, las etapas se dividen en la posición de cada desacoplador.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cofia</td>
+                                    <td>Una cubierta que protege la carga útil de la resistencia del aire y del calentamiento durante el lanzamiento. Se suelta una vez que el vehículo ha salido de la atmósfera.</td>
+                                </tr>
+                                <tr>
+                                    <td>Carga útil</td>
+                                    <td>El satélite, la sonda o cualquier otra carga que transporta un cohete.</td>
+                                </tr>
+                                <tr>
+                                    <td>MECO</td>
+                                    <td>Abreviatura de Main Engine Cut Off (corte del motor principal). En un lanzamiento automático ocurre cuando el apoapsis de la órbita prevista alcanza la altitud objetivo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Q</td>
+                                    <td>El punto del vuelo en que la presión dinámica es máxima. La carga aerodinámica sobre el vehículo, debida a la densidad del aire y a la velocidad respecto al aire, es aquí la mayor de todas.</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">Pantalla y controles</td>
+                                </tr>
+                                <tr>
+                                    <td>NavBall</td>
+                                    <td>El instrumento que muestra la actitud de la nave sobre una esfera, junto con direcciones de referencia como la dirección de avance, el plano orbital y el objetivo.</td>
+                                </tr>
+                                <tr>
+                                    <td>SAS</td>
+                                    <td>La función de mantenimiento de actitud que mantiene la nave apuntando automáticamente en la dirección que elijas.</td>
+                                </tr>
+                                <tr>
+                                    <td>Prograde / Retrograde</td>
+                                    <td>Prograde es la dirección de avance y Retrograde, la contraria. Acelerar en prógrado eleva la órbita; acelerar en retrógrado la baja.</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal / Antinormal</td>
+                                    <td>Las dos direcciones perpendiculares al plano orbital. Acelerar en ellas cambia la inclinación orbital.</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith / Nadir</td>
+                                    <td>Justo hacia arriba, alejándose del centro del cuerpo central, y justo hacia abajo, hacia él.</td>
+                                </tr>
+                                <tr>
+                                    <td>Target / Antitarget</td>
+                                    <td>La dirección hacia el objetivo de seguimiento y la contraria.</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>La dirección de encendido de una maniobra orbital que hayas fijado. Puede usarse como dirección objetivo en el NavBall y con el SAS.</td>
+                                </tr>
+                                <tr>
+                                    <td>Map View</td>
+                                    <td>La vista que sirve para consultar la órbita completa del objeto seleccionado, su apoapsis y su periastro, y su posición respecto a los demás objetos.</td>
+                                </tr>
+                                <tr>
+                                    <td>Aceleración del tiempo</td>
+                                    <td>La función que acelera el paso del tiempo dentro del juego. El ritmo máximo disponible depende de tu altitud y de tu estado de vuelo.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kugelblitz. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

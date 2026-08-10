@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keplerian Space Discovery 手册</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Keplerian Space Discovery 手册</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <nav class="sidebar-contents">
+                    <ul>
+                        <li><a href="#introduction">1. 前言</a></li>
+                <li><a href="#quick-start">2. 快速上手</a></li>
+                        <li><a href="#main-screen">3. 主界面</a>
+                            <ul>
+                                <li><a href="#main-screen-object-selector">Object Selector</a></li>
+                                <li><a href="#main-screen-time-controls">Time Controls</a></li>
+                                <li><a href="#main-screen-spacecraft-controls">航天器操作面板</a></li>
+                                <li><a href="#main-screen-selected-object-information">选中对象信息</a></li>
+                                <li><a href="#main-screen-tracking-object-information">追踪对象信息</a></li>
+                                <li><a href="#main-screen-filter">Filter</a></li>
+                                <li><a href="#main-screen-camera-controls">Camera Controls</a></li>
+                                <li><a href="#main-screen-navball">NavBall 的看法</a></li>
+                                <li><a href="#main-screen-map-view">Map View</a></li>
+                                <li><a href="#orbit-lines">轨道线的看法</a></li>
+                                <li><a href="#main-screen-soi">SOI 显示</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#vehicle-assembly-building">4. 航天器装配大楼</a>
+                            <ul>
+                                <li><a href="#vab-basic-operation">基本操作</a></li>
+                                <li><a href="#vab-toolbar">顶部工具栏</a></li>
+                                <li><a href="#vab-stage-information">级信息</a></li>
+                                <li><a href="#vab-save-load">保存与读取</a></li>
+                                <li><a href="#vab-parts-editor">Parts Editor</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#launch-and-flight">5. 发射与飞行</a>
+                            <ul>
+                                <li><a href="#launch-preparation">发射准备</a></li>
+                                <li><a href="#launch-auto">自动发射</a></li>
+                                <li><a href="#launch-manual-control">手动操纵</a></li>
+                                <li><a href="#launch-sas">SAS</a></li>
+                                <li><a href="#launch-time-acceleration">时间加速规则</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contract">6. 合同</a>
+                            <ul>
+                                <li><a href="#contract-acceptance">接受合同</a></li>
+                                <li><a href="#contract-progress">达成条件与完成</a></li>
+                                <li><a href="#contract-rewards">奖励</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#orbital-basics">7. 轨道基础知识</a>
+                            <ul>
+                                <li><a href="#keplerian-orbital-elements">开普勒轨道要素</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#reference">8. 参考资料</a>
+                            <ul>
+                                <li><a href="#control-keys">Control Keys</a></li>
+                                <li><a href="#launch-sites">发射场一览</a></li>
+                                <li><a href="#glossary">术语表</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main">
+                <div class="content">
+
+                    <section id="introduction">
+                        <h2>1. 前言</h2>
+                        <p>《Keplerian Space Discovery》是一款航天飞行模拟游戏，以真实的太阳系和世界各地真实存在的发射场为舞台，让你组装火箭、发射并送入轨道。天体和航天器的运动依据开普勒轨道力学计算。</p>
+                    </section>
+
+        <section id="quick-start">
+            <h2>2. 快速上手</h2>
+            <p>开始新游戏后，会有一段教程带你从操作摄像机一直做到第一次火箭发射。教程会在画面上标出下一步该点哪里，因此初次游玩时建议跟着教程进行。</p>
+
+            <h3>第一个目标</h3>
+            <p>在教程中，你会接下合同“迈出第一步”，组装一枚简单的火箭，并到达 15 km 的高度。主要流程如下。</p>
+            <ol>
+                <li>试着旋转、缩放、平移摄像机，并重置其位置。</li>
+                <li>在“合同管理”中接下合同“迈出第一步”。</li>
+                <li>在“航天器装配大楼”中，把发动机、燃料箱和头锥组合起来，然后保存箭体。</li>
+                <li>选择 Kepler Space Center，从“发射准备”把箭体送到发射台。</li>
+                <li>用“发射”开始自动发射，到达 15 km 高度后领取合同奖励。</li>
+            </ol>
+            <p>到这里，游戏的基本流程就走完了。完成合同获取奖励，开发新的箭体，向更高的高度和环绕轨道进发吧。</p>
+        </section>
+
+                    <section id="main-screen">
+                        <h2>3. 主界面</h2>
+                        <img src="./img/main_screen-en.jpg" alt="主界面">
+
+                        <h3 id="main-screen-object-selector">Object Selector</h3>
+                        <p>用鼠标左键点击画面左侧列表中的条目，即可切换选中的对象。<br />
+                            用鼠标中键点击对象，可将其设为追踪目标。</p>
+
+                        <h3 id="main-screen-time-controls">Time Controls</h3>
+                        <p>
+                            - 时间加速在 1 km 以上的高度才能使用。<br />
+                            - “<span style="color: red;">||</span>”为暂停时间，“<span style="color: #0F0;">▶</span>”为一倍速，“<span style="color: orange;">▶▶▶</span>”为 ×10 倍速。<br />
+                            - “<span style="color: orange;">▶▶▶</span>”可以连续按下叠加效果。每按一次乘以 10 倍，按三次即为 ×1000 倍。<br />
+                            - 不过各种情况下都有倍率上限，不会超过该上限。例如在大气层内或发动机点火期间上限为 ×4，因此即便按下“<span style="color: orange;">▶▶▶</span>”也只能提高到 ×4。上限规则请参阅“<a href="#launch-time-acceleration">时间加速规则</a>”。
+</p>
+
+                        <h3 id="main-screen-spacecraft-controls">航天器操作面板</h3>
+                        <img src="./img/spacecraft-controls-navball-en.jpg" alt="选中可操作的航天器后显示航天器操作面板和 NavBall 的画面">
+                        <p>选中可操作的航天器后，会打开航天器操作面板。面板上集中了飞行所需的操作，例如 SAS（姿态自动保持）、姿态目标和分级分离等。</p>
+                        <p>若要直接操纵航天器，请切换到操纵模式。用键盘控制风门和姿态的方法请参阅“<a href="#launch-manual-control">手动操纵</a>”，SAS 的各个模式请参阅“<a href="#launch-sas">SAS（姿态自动保持）</a>”。</p>
+
+                        <h3 id="main-screen-selected-object-information">选中对象信息</h3>
+                        <p>画面右上方会显示当前选中的天体、航天器或地面设施的信息。选中对象是摄像机的注视目标；选中航天器时，它还会成为飞行操作和时间加速上限的判定基准。</p>
+                        <p>对于天体和轨道上的对象，可以查看远拱点与近拱点、轨道半长轴、轨道偏心率、轨道倾角、轨道周期、速度等轨道信息。在地面附近会显示纬度、经度和海拔高度，对航天器还会显示与飞行状态相应的速度和高度。显示项目因对象种类而异。</p>
+
+                        <h3 id="main-screen-tracking-object-information">追踪对象信息</h3>
+                        <p>指定追踪目标后，画面右下方会显示相对于选中对象的信息。距离、高度差、接近速度、交叉角、相位角等数值可用来判断交会或接近的情况。无法计算的项目会显示为 <b>n/a</b>。</p>
+                        <p>此外，各按钮的功能如下。</p>
+                        <table class="desc">
+                            <tbody>
+                                <tr><td>聚焦</td><td>把注视目标切换到追踪目标。</td></tr>
+                                <tr><td>查看详情</td><td>打开追踪目标的详细信息。</td></tr>
+                                <tr><td>结束追踪</td><td>结束当前的追踪。</td></tr>
+                            </tbody>
+                        </table>
+                        <p>用鼠标中键点击天体或航天器，或者按 O 键，即可开始追踪。</p>
+
+                        <h3 id="main-screen-filter">Filter</h3>
+                        <p>打开 Object Selector 上方的 <b>Filter</b>，即可从列表中选择航天器、地面设施等非天体对象并设置其显示或隐藏。隐藏的对象会从 Object Selector 和画面上的标记中排除，该设置会保存到存档数据中。</p>
+                        <p>因游戏进度尚未解锁的对象，以及尚未到达预定发射时刻的对象，不会出现在筛选列表中。</p>
+
+                        <h3 id="main-screen-camera-controls">Camera Controls</h3>
+                        <p>从画面上方的 <b>Camera Control</b> 可以打开摄像机设置。基本操作为：右键拖动旋转，中键拖动平移，滚轮拉近或拉远。按 V 键（或同时按下中键和右键）切换摄像机模式。</p>
+                        <table class="desc">
+                            <thead><tr><th>模式</th><th>说明</th></tr></thead>
+                            <tbody>
+                                <tr><td>Chase</td><td>以选中对象为基准跟随的普通摄像机。</td></tr>
+                                <tr><td>Free</td><td>可以自由调整摄像机的朝向和横滚。</td></tr>
+                                <tr><td>Orbital</td><td>切换到便于观察整条轨道的距离和角度。选中地面设施时无法使用。</td></tr>
+                            </tbody>
+                        </table>
+                        <p>Home / End 也可以拉近和拉远，I / K / J / L 也可以旋转。Page Up / Page Down 调整视角，Insert / Delete 调整曝光。全部操作请参阅“<a href="#control-keys">Control Keys</a>”。</p>
+
+                        <h3 id="main-screen-navball">NavBall 的看法</h3>
+                        <p>NavBall 在球面上显示航天器的姿态和各个基准方向。Prograde 是前进方向，Retrograde 是其反方向；Normal / Antinormal 垂直于轨道面；Radial-Out / Radial-In 表示从母天体看去的正上方与正下方（Zenith / Nadir）。Target / Antitarget 是追踪目标的方向及其反方向，Maneuver 则是所设定的点火方向。</p>
+                        <p>Prograde / Retrograde 等以速度为基准的标记，<b>入轨前以空速为基准，入轨后以惯性速度为基准</b>。入轨的判定条件是近拱点高度超过母天体的大气层界面（卡门线）。该切换与 SAS 的姿态目标以及轨道线的显示基准保持一致。</p>
+                        <p>各个方向的用途请参阅“<a href="#launch-sas">SAS（姿态自动保持）</a>”。</p>
+
+                        <h3 id="main-screen-map-view">Map View</h3>
+                        <p>按 M 键切换到 Map View（Orbital 摄像机），即可以宽广的视野查看选中对象的整条轨道。再按一次 M 键返回普通的 Chase 摄像机。在双曲线轨道上，显示范围以母天体的 SOI 为基准确定；选中地面设施时无法切换到 Map View。</p>
+                        <p>在 Map View 中，可以一边确认轨道的形状、远拱点与近拱点，以及与其他对象的位置关系，一边制定飞行计划。关于入轨前后轨道线显示基准的变化，请参阅“<a href="#orbit-lines">轨道线的看法</a>”。</p>
+                        <img src="./img/map-view-soi-en.jpg" alt="选中月球后显示绿色轨道线和由点构成的球状 SOI 的 Map View">
+
+                        <h3 id="orbit-lines">轨道线的看法</h3>
+                        <p>画面上会显示两种轨道线。</p>
+                        <p>
+                            -<b>预定轨道</b> … 根据当前位置和速度计算出的、接下来要飞行的路径。发动机点火期间，其形状会随加速而时刻变化。<br />
+                            -<b>实际轨道</b> … 实际飞过的路径的记录（飞行轨迹）。
+</p>
+                        <p>轨道线的显示方式会随飞行状态自动切换。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>状态</th>
+                                    <th>显示方式</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>发射中、弹道飞行中（入轨前）</td>
+                                    <td>固定于地面的显示。轨迹的起点始终停留在发射台上，可以读出包含天体自转在内的对地路径（照这样飞下去会落在哪里）。</td>
+                                </tr>
+                                <tr>
+                                    <td>入轨后</td>
+                                    <td>固定于惯性空间的显示。与天体自转无关，显示的是轨道本身的形状（椭圆）。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>切换的时机是“近拱点高度超过大气层界面（卡门线）时”，这与入轨的判定相同。与此同时，<a href="#main-screen-navball">NavBall</a> 上 Prograde 等标记的基准也会从对空基准切换为惯性基准。</p>
+                        <p>当多个对象的轨道线重叠时，可以通过颜色来区分对象。</p>
+                        <img src="./img/orbit-line-colors-en.jpg" alt="用颜色区分选中中、追踪中、悬停中以及其他对象轨道线的 Map View">
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>轨道线颜色</th>
+                                    <th>对象</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-selected"></span>绿色</td>
+                                    <td>当前选中的天体或航天器</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-tracking"></span>黄色</td>
+                                    <td>追踪对象</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-hover"></span>红色</td>
+                                    <td>鼠标指针悬停的对象，可以是左侧对象列表中的条目，也可以是画面上的标记</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-other"></span>其他</td>
+                                    <td>既未被选中、也未被追踪、也未被悬停的对象</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="main-screen-soi">SOI 显示</h3>
+                        <p>按 F3 键可切换 SOI（Sphere of Influence：引力影响球）的显示。SOI 是在航天器的轨道计算中，把该天体视为中心天体的范围。</p>
+                        <p>上面的画面中选中的是月球，围绕月球的点构成的球体就是它的 SOI，绿色的线则表示选中的月球的轨道。</p>
+                        <p>当航天器离开当前母天体的 SOI 时，会转入以更上一级天体为中心的轨道。反之，进入月球或行星等其他天体的 SOI 时，则会切换为以该天体为中心的轨道。在行星际飞行或地月转移中，确认 SOI 边界与预定轨道的衔接处，会更容易把握航线。</p>
+                    </section>
+
+                    <section id="vehicle-assembly-building">
+                        <h2>4. 航天器装配大楼</h2>
+                        <p>在航天器装配大楼（VAB）中，你可以组合部件，设计并保存属于自己的火箭。</p>
+                        <img src="./img/vab-en.jpg" alt="航天器装配大楼（VAB）的画面">
+
+                        <h3 id="vab-basic-operation">基本操作</h3>
+                        <h4>放置部件</h4>
+                        <p>
+                            - 用鼠标左键从画面左侧的 Parts Selector 中选择要放置的部件。<br />
+                            - 点击后松开按键，移动鼠标把部件拖到想要放置的位置（不是按住不放地移动）。<br />
+                            - 在目标位置再次点击，部件就会确定放置在该处。<br />
+                            - 若在已放置的部件附近放置，会自动吸附并连接。
+</p>
+                        <p>切换 Parts Selector 上方的直径选项卡（1.25 m / 2.5 m / 3.5 m / 5.0 m / 7.5 m / 10.0 m），列表中就只会显示对应直径的部件。此外，切换其下方的下拉菜单（Engine 等），可以在 Tank、Fairing 等部件类别之间切换。</p>
+
+                        <h4>移动已放置的部件</h4>
+                        <p>已放置的部件也和新放置时一样，用左键抓取，松开按键后移动，再次左键点击即可确定位置。若抓取的是已连接的部件，比它更靠前连接的子部件也会一起移动。</p>
+
+                        <h4>连接部件</h4>
+                        <p>让移动中的部件接触到另一个部件，就会以该部件为父级自动连接。放置在箭体中心轴附近时会吸附到中心线上，便于把燃料箱和发动机等对齐。</p>
+                        <p>与箭体脱离的部件不会被视为有效的箭体构成。保存时只会保存从根部件连接过来的有效部件。</p>
+
+                        <h4>删除部件</h4>
+                        <p>用左键抓取部件后，画面右端会显示删除区域。把抓取的部件移到删除区域，即可删除该部件。在抓取部件的状态下按 Delete 键也可以删除。</p>
+                        <img src="./img/vab-delete-parts-en.jpg" alt="抓取部件时显示在画面右端的删除区域">
+
+                        <h3 id="vab-toolbar">顶部工具栏</h3>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>按钮</th>
+                                    <th>说明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Move Adjustment （开关）</td>
+                                    <td>切换拖动部件时纵深方向距离的处理方式。通常（OFF）情况下，部件会保持抓取时的纵深距离，沿着画面移动。设为 ON 后，部件会在纵深距离对齐到箭体中心轴的状态下移动，便于把处于纵深处的部件重新拉回箭体中心附近。</td>
+                                </tr>
+                                <tr>
+                                    <td>AUTO ASSY （开关）</td>
+                                    <td>为 ON 时，点击部件会自动放置在当前部件的左侧（第一个部件放置在原点）。为 OFF 时，则在点击后由你自己拖动鼠标决定放置位置（与上述基本操作相同）。</td>
+                                </tr>
+                                <tr>
+                                    <td>New</td>
+                                    <td>删除当前放置的所有部件，开始组装新的火箭。</td>
+                                </tr>
+                                <tr>
+                                    <td>Save</td>
+                                    <td>保存正在组装的火箭。</td>
+                                </tr>
+                                <tr>
+                                    <td>Load</td>
+                                    <td>读取已保存的火箭。</td>
+                                </tr>
+                                <tr>
+                                    <td>Texture</td>
+                                    <td>打开用于管理可贴到火箭上的图像（自定义纹理）的对话框。你可以登记自制的图像，并进行浏览、删除和添加。</td>
+                                </tr>
+                                <tr>
+                                    <td>x1～x6</td>
+                                    <td>切换沿放射方向放置部件的数量。用于放置助推器等侧面部件。设为 x2 以上后，把部件放置在目标部件的侧面时，会以目标部件的中心轴为基准等间隔地同时放置多个。放置后，这些复制出的部件会作为一个组来处理。</td>
+                                </tr>
+                                <tr>
+                                    <td>Horizontal / Vertical （开关）</td>
+                                    <td>切换正在组装的火箭的显示方向。Horizontal 为水平放置，Vertical 为垂直放置。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="vab-stage-information">级信息</h3>
+                        <p>选择画面下方的“Show Stage Information”，即可按级显示当前箭体的性能信息。放置级间段后，会以该位置为界自动划分各级。再次选择该按钮即可关闭面板。</p>
+                        <img src="./img/vab-stage-information-en.png" alt="按级显示部件数量、费用、Delta-V、比冲、推力、质量和推重比的级信息面板">
+                        <table class="desc" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>项目</th>
+                                    <th>说明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PARTS</td>
+                                    <td>构成该级的部件数量。</td>
+                                </tr>
+                                <tr>
+                                    <td>COST</td>
+                                    <td>该级所含部件的费用总和。</td>
+                                </tr>
+                                <tr>
+                                    <td>DELTA-V</td>
+                                    <td>该级所能提供的速度变化量的大致标准。数值越大，可以改变的轨道幅度就越大。</td>
+                                </tr>
+                                <tr>
+                                    <td>ISP</td>
+                                    <td>发动机的比冲。以秒为单位表示把推进剂转换为推力的效率。</td>
+                                </tr>
+                                <tr>
+                                    <td>THRUST</td>
+                                    <td>该级发动机产生的总推力。</td>
+                                </tr>
+                                <tr>
+                                    <td>MASS</td>
+                                    <td>以“本级质量 / 总质量”的形式，显示该级自身的质量，以及包含该级需要加速的上面级在内的总质量。</td>
+                                </tr>
+                                <tr>
+                                    <td>推重比（TWR）</td>
+                                    <td>表示推力是重量的多少倍。第一级在 1.0 以下时，推力不足以超过重量，无法从地面起飞。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>当前版本没有用于切换海平面性能与真空性能显示的按钮。</p>
+
+                        <h3 id="vab-save-load">保存与读取</h3>
+                        <p><b>Save</b> 后，可以输入箭体名称和说明并保存当前箭体。若编辑读取来的箭体后再保存，该箭体的保存内容会被更新。从 <b>New</b> 保存新组装的箭体时，会登记为另一个箭体。</p>
+                        <p><b>Load</b> 后，可以从列表中选择已保存的箭体并读取到 VAB 中。保存的对象只有从根部件连接过来的有效部件。</p>
+
+                        <h3 id="vab-parts-editor">Parts Editor</h3>
+                        <p>在已放置的部件上点击鼠标右键，画面右侧会显示 Parts Editor。你可以编辑部件的颜色、材质观感、表面花纹和朝向。改动会立即反映到画面上的部件，保存箭体时会作为各部件的设置一并保存。</p>
+                        <img src="./img/vab-parts-editor-en.png" alt="用于更改表面材质、颜色、纹理、法线贴图和部件朝向的 Parts Editor">
+                        <table class="desc" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>项目</th>
+                                    <th>说明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Copy Color</td>
+                                    <td>临时复制当前部件的颜色和表面材质设置。用于把相同外观应用到其他部件。</td>
+                                </tr>
+                                <tr>
+                                    <td>Paste Color</td>
+                                    <td>把用 Copy Color 复制的颜色和表面材质设置应用到正在编辑的部件。未复制任何设置时无法选择。</td>
+                                </tr>
+                                <tr>
+                                    <td>Metallic</td>
+                                    <td>调整表面的金属感。数值越大，越会像金属那样反射周围的光线。</td>
+                                </tr>
+                                <tr>
+                                    <td>Roughness</td>
+                                    <td>调整表面的粗糙度。数值越小光泽越强，数值越大反射越模糊、观感越沉稳。</td>
+                                </tr>
+                                <tr>
+                                    <td>Unpainted / White / Black / Orange</td>
+                                    <td>预置的颜色方案。Unpainted 会恢复为部件原本的颜色。</td>
+                                </tr>
+                                <tr>
+                                    <td>Red / Green / Blue</td>
+                                    <td>用滑块调整红、绿、蓝三个分量，制作任意的表面颜色。</td>
+                                </tr>
+                                <tr>
+                                    <td>Surface Texture</td>
+                                    <td>选择叠加到部件表面的图像。None 表示不使用图像。也可以选择从顶部工具栏的 Texture 中登记的自定义纹理。</td>
+                                </tr>
+                                <tr>
+                                    <td>Surface Normal Map</td>
+                                    <td>选择表面细微凹凸的表现方式。Flat 不添加凹凸，其他项目会在不改变形状的前提下加上表面花纹的明暗。</td>
+                                </tr>
+                                <tr>
+                                    <td>Invert</td>
+                                    <td>翻转部件的前后朝向。想把发动机、头锥等的安装方向调转时使用。</td>
+                                </tr>
+                                <tr>
+                                    <td>Edit End</td>
+                                    <td>结束编辑并关闭 Parts Editor。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="note">
+                            <strong>表面设置的适用范围：</strong>
+                            颜色和材质会应用到部件模型中设定为可更改的表面。视部件而定，部分面可能会保留原本的材质或颜色。
+</div>
+                    </section>
+
+                    <section id="launch-and-flight">
+                        <h2>5. 发射与飞行</h2>
+
+                        <h3 id="launch-preparation">发射准备</h3>
+                        <p>选择发射场并打开“发射准备”，即可选择要使用的运载火箭和有效载荷，并设定自动发射的目标轨道与飞行路径。</p>
+                        <img src="./img/launch-preparation-en.jpg" alt="选择运载火箭与有效载荷，并设定启动序列参数的发射准备画面">
+
+                        <p>从左侧列表中选择运载火箭和有效载荷。运载火箭一栏会显示发射费用、发射次数和最后一次飞行日期。画面上方可以修改运载火箭名称和有效载荷名称，并确认发射费用、当前资金以及发射后的资金。在当前版本中，即使发射后资金变为负数也可以发射。</p>
+
+                        <h4>启动序列参数</h4>
+                        <p>设定自动发射所使用的目标值。设定值按运载火箭分别保存，下次选择同一运载火箭时会继续沿用。</p>
+
+                        <svg class="figure" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="表示转弯起始高度、转弯结束高度、Pitchover Angle 与远点高度关系的发射路径示意图">
+                            <defs>
+                                <marker id="launch-arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M 0 0 L 8 4 L 0 8 z" fill="#00d060" />
+                                </marker>
+                                <marker id="launch-arrow-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M 0 0 L 8 4 L 0 8 z" fill="#aaa" />
+                                </marker>
+                            </defs>
+                            <line x1="25" y1="335" x2="655" y2="335" stroke="#ddd" stroke-width="3" />
+                            <text x="28" y="360" fill="#bbb" font-size="14">地表</text>
+                            <circle cx="115" cy="335" r="5" fill="#fff" />
+                            <text x="115" y="382" fill="#ddd" font-size="14" text-anchor="middle">发射台</text>
+
+                            <path d="M 115 335 C 116 270, 126 212, 162 160 C 213 87, 313 63, 440 65 C 520 66, 585 55, 628 50" fill="none" stroke="#00d060" stroke-width="3" marker-end="url(#launch-arrow-green)" />
+                            <text x="135" y="245" fill="#00d060" font-size="14">重力转弯</text>
+                            <text x="338" y="88" fill="#00d060" font-size="14">向水平方向加速</text>
+
+                            <circle cx="120" cy="250" r="5" fill="#ffcc00" />
+                            <line x1="45" y1="250" x2="120" y2="250" stroke="#ffcc00" stroke-dasharray="5,4" />
+                            <line x1="45" y1="335" x2="45" y2="250" stroke="#aaa" marker-end="url(#launch-arrow-gray)" />
+                            <text x="54" y="288" fill="#ffcc00" font-size="14">转弯起始高度</text>
+
+                            <circle cx="270" cy="74" r="5" fill="#ff9800" />
+                            <line x1="45" y1="74" x2="270" y2="74" stroke="#ff9800" stroke-dasharray="5,4" />
+                            <line x1="45" y1="246" x2="45" y2="74" stroke="#aaa" marker-end="url(#launch-arrow-gray)" />
+                            <text x="54" y="102" fill="#ff9800" font-size="14">转弯结束高度</text>
+
+                            <line x1="120" y1="250" x2="120" y2="205" stroke="#888" stroke-dasharray="4,3" />
+                            <path d="M 120 222 A 28 28 0 0 1 135 228" fill="none" stroke="#5bc0eb" stroke-width="2" />
+                            <text x="142" y="218" fill="#5bc0eb" font-size="14">Pitchover Angle</text>
+
+                            <circle cx="628" cy="50" r="6" fill="#f06" />
+                            <line x1="628" y1="50" x2="628" y2="25" stroke="#f06" />
+                            <text x="620" y="20" fill="#f06" font-size="14" text-anchor="end">预定轨道的远点到达目标高度</text>
+                            <text x="620" y="38" fill="#ddd" font-size="13" text-anchor="end">发动机关机，转入滑行</text>
+
+                            <text x="340" y="385" fill="#888" font-size="13" text-anchor="middle">示意图：高度、距离和路径的比例并不一致</text>
+                        </svg>
+
+                        <svg class="figure" viewBox="0 -20 680 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="表示目标远点高度与目标近点高度关系的轨道示意图">
+                            <ellipse cx="330" cy="184" rx="250" ry="200" fill="none" stroke="#00d060" stroke-width="3" />
+                            <circle cx="180" cy="184" r="45" fill="#3a6ea5" stroke="#7ac0ff" stroke-width="2" />
+                            <text x="180" y="190" fill="#fff" font-size="14" text-anchor="middle">母天体</text>
+
+                            <circle cx="580" cy="184" r="6" fill="#ff9800" />
+                            <line x1="580" y1="184" x2="580" y2="112" stroke="#ff9800" stroke-width="2" />
+                            <text x="570" y="102" fill="#ff9800" font-size="15" text-anchor="end">远点高度（目标）</text>
+
+                            <circle cx="80" cy="184" r="6" fill="#ffcc00" />
+                            <line x1="80" y1="184" x2="80" y2="274" stroke="#ffcc00" stroke-width="2" />
+                            <text x="90" y="295" fill="#ffcc00" font-size="15">近点高度（目标）</text>
+                            <text x="340" y="395" fill="#888" font-size="13" text-anchor="middle">示意图：轨道形状和高度的比例并不一致</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>项目</th>
+                                    <th>说明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>远点高度</td>
+                                    <td>要送入的轨道的目标远拱点高度。上升过程中，当预定轨道的远拱点到达该高度时关闭发动机，随后滑行至远拱点附近。</td>
+                                </tr>
+                                <tr>
+                                    <td>近点高度</td>
+                                    <td>要送入的轨道的目标近拱点高度。在远拱点附近重新点火，把轨道抬升到近拱点到达该高度为止。</td>
+                                </tr>
+                                <tr>
+                                    <td>方位角</td>
+                                    <td>发射后箭体倾倒的水平方向。以北为 0°、东为 90°、南为 180°、西为 270° 来指定。发射场的纬度与方位角共同决定了可以送入的轨道倾角。</td>
+                                </tr>
+                                <tr>
+                                    <td>转弯起始高度</td>
+                                    <td>开始重力转弯的高度。在此高度之前几乎垂直上升，到达后按方位角横滚，然后开始逐渐倾倒箭体。</td>
+                                </tr>
+                                <tr>
+                                    <td>转弯结束高度</td>
+                                    <td>结束重力转弯的高度。箭体会朝着这一高度逐渐接近水平。若在到达之前预定轨道的远拱点已达到目标高度，则会在该时刻转入远拱点调整。</td>
+                                </tr>
+                                <tr>
+                                    <td>Pitchover Angle</td>
+                                    <td>开始重力转弯时，箭体从垂直姿态开始倾倒的角度。越接近 0°，越会从接近垂直的姿态平缓地开始转弯；数值越大，则会在更早的阶段更大幅度地倾倒箭体。</td>
+                                </tr>
+                                <tr>
+                                    <td>最大海拔高度</td>
+                                    <td>近拱点调整期间允许的远拱点高度上限。若远拱点超过该值，同时近拱点也超过“最低海拔高度”，则即使未达到“近点高度”的目标，也会关闭发动机并完成入轨。</td>
+                                </tr>
+                                <tr>
+                                    <td>最低海拔高度</td>
+                                    <td>与“最大海拔高度”配合使用，是允许完成入轨的近拱点高度下限。通常的目标近拱点高度请在“近点高度”中指定。</td>
+                                </tr>
+                                <tr>
+                                    <td>第一级强制分离</td>
+                                    <td>启用“当达到指定的远地点高度时，强制分离第一级”后，即使推进剂仍有剩余，只要预定轨道的远拱点到达指定高度，就会分离第一级。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note">
+                            <strong>设定的参考：</strong>
+                            对于初次使用的运载火箭，建议先按初始值发射一次并确认轨道。若无法到达目标轨道，请一并确认箭体的推力、推进剂和分级构成，并且不要一次性大幅修改转弯起始高度或初始俯仰角。
+</div>
+
+                        <p>设定完成后，选择“前往发射场”。所选的运载火箭和有效载荷会被安置到发射台上，随后进入发射执行画面。</p>
+
+                        <h3 id="launch-auto">自动发射</h3>
+                        <p>发射只需指定目标轨道，之后直到入轨都会自动进行。整个序列按照与真实火箭相同的流程推进。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>阶段</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. 起飞</td>
+                                    <td>发动机点火。推力超过箭体重量的瞬间离开发射台。</td>
+                                </tr>
+                                <tr>
+                                    <td>2. 垂直上升</td>
+                                    <td>笔直上升到约 1 km 高度。</td>
+                                </tr>
+                                <tr>
+                                    <td>3. 横滚（对准方位角）</td>
+                                    <td>让箭体横滚，把箭体朝向对准发射方位角。</td>
+                                </tr>
+                                <tr>
+                                    <td>4. 重力转弯</td>
+                                    <td>随着高度上升，箭体逐渐倾倒，转入向水平方向的加速。</td>
+                                </tr>
+                                <tr>
+                                    <td>5. 远拱点调整与 MECO</td>
+                                    <td>远拱点（Ap）到达目标高度后关闭主发动机，接着进行分级分离。</td>
+                                </tr>
+                                <tr>
+                                    <td>6. 滑行</td>
+                                    <td>依靠惯性上升到远拱点附近。这段期间会自动加速时间，临近重新点火时会自动恢复为一倍速。</td>
+                                </tr>
+                                <tr>
+                                    <td>7. 重新点火与近拱点调整</td>
+                                    <td>在远拱点稍前方重新点火，把近拱点（Pe）抬升到目标高度，使轨道变圆。</td>
+                                </tr>
+                                <tr>
+                                    <td>8. 入轨完成</td>
+                                    <td>近拱点到达目标高度后关闭发动机。发射序列到此结束。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>除此之外，飞行过程中还会自动执行以下事件。</p>
+                        <p>
+                            -<b>助推器分离</b> … 在助推器的推进剂耗尽时分离。<br />
+                            -<b>整流罩分离</b> … 在飞出大气层的 100 km 高度附近分离。
+</p>
+                        <p>自动发射期间，也可以自由更改时间加速和操作摄像机。在分离、重新点火等看点出现之前，时间加速会自动恢复为一倍速。</p>
+
+                        <h3 id="launch-manual-control">手动操纵</h3>
+                        <p>选中航天器并切换到操纵模式后，即可用键盘直接操纵。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>操作</th>
+                                    <th>按键</th>
+                                    <th>说明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>风门增减</td>
+                                    <td>Left Shift / Left Ctrl</td>
+                                    <td>一点一点地提高或降低推力。</td>
+                                </tr>
+                                <tr>
+                                    <td>风门最大</td>
+                                    <td>Z</td>
+                                    <td>把推力一口气提到 100%。</td>
+                                </tr>
+                                <tr>
+                                    <td>风门切断</td>
+                                    <td>X</td>
+                                    <td>把推力设为 0（发动机关机）。</td>
+                                </tr>
+                                <tr>
+                                    <td>俯仰</td>
+                                    <td>W / S</td>
+                                    <td>让机头朝上或朝下。</td>
+                                </tr>
+                                <tr>
+                                    <td>偏航</td>
+                                    <td>A / D</td>
+                                    <td>让机头朝左或朝右。</td>
+                                </tr>
+                                <tr>
+                                    <td>横滚</td>
+                                    <td>Q / E</td>
+                                    <td>让箭体绕自身轴线旋转。</td>
+                                </tr>
+                                <tr>
+                                    <td>分级分离</td>
+                                    <td>Space</td>
+                                    <td>分离当前的一级。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>姿态变化的响应速度取决于箭体的转动惯量和推力。请注意，较重的箭体或推力较小的上面级，姿态变化会很缓慢。</p>
+
+                        <h3 id="launch-sas">SAS（姿态自动保持）</h3>
+                        <p>使用 SAS 可以让箭体自动持续朝向指定的方向。可用的模式如下。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>模式</th>
+                                    <th>朝向</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Prograde</td>
+                                    <td>前进方向。加速抬升轨道时使用。</td>
+                                </tr>
+                                <tr>
+                                    <td>Retrograde</td>
+                                    <td>前进方向的反向。减速降低轨道时使用。</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal</td>
+                                    <td>垂直于轨道面的方向。改变轨道倾角时使用。</td>
+                                </tr>
+                                <tr>
+                                    <td>Antinormal</td>
+                                    <td>Normal 的反方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith</td>
+                                    <td>远离母天体中心的方向（正上方）。</td>
+                                </tr>
+                                <tr>
+                                    <td>Nadir</td>
+                                    <td>朝向母天体中心的方向（正下方）。</td>
+                                </tr>
+                                <tr>
+                                    <td>Target</td>
+                                    <td>设为目标的对象所在的方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Antitarget</td>
+                                    <td>目标的反方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>所设定的机动的点火方向。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Prograde / Retrograde 等以速度为基准的方向会自动切换：<b>入轨前以空速（相对于大气的速度）为基准，入轨后以惯性速度为基准</b>。这与 <a href="#main-screen-navball">NavBall 上的标记显示</a>始终保持一致。</p>
+
+                        <h3 id="launch-time-acceleration">时间加速规则</h3>
+                        <p>时间加速的上限由选中航天器的高度和飞行状态自动决定。判定自上而下进行，采用最先符合的一条。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>状态</th>
+                                    <th>上限倍率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>其他航天器在 200 m 以内时</td>
+                                    <td>×1（仅一倍速）</td>
+                                </tr>
+                                <tr>
+                                    <td>其他航天器在 1 km 以内时</td>
+                                    <td>最高 ×4</td>
+                                </tr>
+                                <tr>
+                                    <td>高度不足 1 km（发射中除外）</td>
+                                    <td>×1（仅一倍速）</td>
+                                </tr>
+                                <tr>
+                                    <td>高度 1 km 至大气层内，或发动机点火期间</td>
+                                    <td>最高 ×4</td>
+                                </tr>
+                                <tr>
+                                    <td>已充分远离大气层且未点火时</td>
+                                    <td>按轨道周期自动计算（最高可达约 10 秒绕轨道一周的倍率）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            - 若此前设定的倍率超过上限，会自动下调到上限。<br />
+                            - 接地和航天器之间的接触只在一倍速下判定，因此在低高度和接近过程中上限会降低。发射过程不在接触判定范围内，因此从离地起就可以加速到 ×4。<br />
+                            - 自动发射期间会自动设定与各阶段相应的倍率（重力转弯中 ×2，远拱点调整中 ×4，滑行中最高 ×60 等）。若你手动更改倍率，则以手动设定为准。<br />
+                            - 在分级分离、整流罩分离、重新点火等事件之前，会自动恢复为一倍速，以免你错过。
+</p>
+                    </section>
+
+                    <section id="contract">
+                        <h2>6. 合同</h2>
+                        <p>合同是通过完成指定的飞行或任务来获取奖励的目标。用获得的资金和各类点数壮大你的组织，进而挑战更高难度的任务。</p>
+                        <img src="./img/contract-management-en.jpg" alt="选中合同“迈出第一步”的合同管理画面">
+
+                        <h3 id="contract-acceptance">接受合同</h3>
+                        <ol>
+                            <li>打开画面右下方的菜单，选择“合同管理”。</li>
+                            <li>从“合同清单”中选择想要查看的合同。</li>
+                            <li>确认合同的说明、“&lt;达成条件&gt;”和“&lt;奖励&gt;”。</li>
+                            <li>选择“订立合同”后，该合同即进入承接状态。</li>
+                        </ol>
+                        <p>启用“仅显示已接受的合同”，即可只查看正在进行中的合同。若要放弃承接，请选中对应合同并选择“撕毁合同”。</p>
+
+                        <h3 id="contract-progress">达成条件与完成</h3>
+                        <p>承接中的合同会自动判定达成情况，飞行过程中也会判定。对于有多个达成条件的合同，必须满足全部条件。</p>
+                        <p>达成合同后会显示完成画面。请选择“获得奖励”确认结果。在第一个合同“迈出第一步”中，目标是把火箭安置到发射台上，并到达 15 km 以上的高度。</p>
+                        <img src="./img/contract-completion-en.jpg" alt="达成合同、可以领取奖励的状态">
+                        <p>选择“获得奖励”后，会显示获得的各项点数和当前等级。确认内容后选择“OK”关闭画面。</p>
+                        <img src="./img/contract-reward-en.jpg" alt="达成合同后的奖励领取画面">
+
+                        <div class="note">
+                            <strong>提示：</strong>
+                            接受合同之前，先确认所需的箭体、目标天体以及要求的高度等信息吧。
+</div>
+
+                        <h3 id="contract-rewards">奖励</h3>
+                        <p>每个合同都设定了以下奖励。也有奖励为 0 点的项目。</p>
+                        <table class="desc contract-rewards-table">
+                            <thead>
+                                <tr>
+                                    <th>奖励</th>
+                                    <th>主要用途</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>资本</td>
+                                    <td>发射时作为费用消耗。制作箭体本身并不需要。</td>
+                                </tr>
+                                <tr>
+                                    <td>工程学</td>
+                                    <td>用于提升工程等级，从而使用更高级的部件。</td>
+                                </tr>
+                                <tr>
+                                    <td>科学</td>
+                                    <td>用于提升科学等级，从而解锁部分部件和目标。</td>
+                                </tr>
+                                <tr>
+                                    <td>运营</td>
+                                    <td>提升运营等级。运营等级提高后，可显示的发射场会随之增加。</td>
+                                </tr>
+                                <tr>
+                                    <td>置信</td>
+                                    <td>提升信赖等级。信赖等级提高后，可选择的合同种类会随之增加。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note">
+                            <strong>关于资金：</strong>
+                            在当前版本中，即使资金不足也可以发射，余额变为负数也是允许的。因此不会因为资金不足而导致进程卡住。
+</div>
+
+                        <div class="note">
+                            <strong>重复同一合同时：</strong>
+                            首次达成同一种类的合同可获得全额奖励，第二次为 75%，第三次及以后为 50%。实际可获得的数值请在合同管理画面的“&lt;奖励&gt;”中确认。
+</div>
+                    </section>
+
+                    <section id="orbital-basics">
+                        <h2>7. 轨道基础知识</h2>
+
+                        <h3 id="keplerian-orbital-elements">开普勒轨道要素</h3>
+                        <p>航天器和天体的轨道由六个数值组成的“开普勒轨道要素”来表示。它是本作标题的由来，也是游戏中一切轨道信息的基础。把这六个要素按作用分成三组来看，会更容易理解。</p>
+
+                        <svg class="figure" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="决定椭圆轨道形状的各要素示意图">
+                            <ellipse cx="320" cy="170" rx="220" ry="130" fill="none" stroke="#7ac0ff" stroke-width="2" />
+                            <line x1="100" y1="170" x2="540" y2="170" stroke="#666" stroke-dasharray="5,4" />
+                            <circle cx="498" cy="170" r="18" fill="#3a6ea5" stroke="#7ac0ff" />
+                            <text x="498" y="205" fill="#ddd" font-size="14" text-anchor="middle">母天体</text>
+                            <circle cx="210" cy="57" r="5" fill="#fff" />
+                            <text x="210" y="40" fill="#ddd" font-size="14" text-anchor="middle">航天器</text>
+                            <circle cx="540" cy="170" r="4" fill="#f80" />
+                            <text x="546" y="152" fill="#f80" font-size="14">近点（Pe）</text>
+                            <circle cx="100" cy="170" r="4" fill="#f80" />
+                            <text x="95" y="152" fill="#f80" font-size="14" text-anchor="end">远点（Ap）</text>
+                            <line x1="316" y1="166" x2="324" y2="174" stroke="#ddd" />
+                            <line x1="316" y1="174" x2="324" y2="166" stroke="#ddd" />
+                            <text x="310" y="196" fill="#999" font-size="13" text-anchor="end">椭圆中心</text>
+                            <line x1="328" y1="215" x2="532" y2="215" stroke="#ddd" />
+                            <polygon points="320,215 330,211 330,219" fill="#ddd" />
+                            <polygon points="540,215 530,211 530,219" fill="#ddd" />
+                            <text x="430" y="238" fill="#ddd" font-size="14" text-anchor="middle">a（轨道半长轴）</text>
+                            <text x="320" y="330" fill="#999" font-size="13" text-anchor="middle">轨道偏心率 e 越大，椭圆中心与母天体（焦点）的偏离就越大（e = 0 时为圆轨道）</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>要素</th>
+                                    <th>含义</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">轨道的形状与大小</td>
+                                </tr>
+                                <tr>
+                                    <td>轨道半长轴 a</td>
+                                    <td>轨道的大小，相当于椭圆较长一侧直径的一半。数值越大轨道越高，轨道周期也由该值决定。</td>
+                                </tr>
+                                <tr>
+                                    <td>轨道偏心率 e</td>
+                                    <td>轨道的扁平程度。0 为正圆，0～1 之间为椭圆。达到 1 以上后轨道不再闭合，物体会脱离母天体的引力范围。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">轨道面的朝向</td>
+                                </tr>
+                                <tr>
+                                    <td>轨道倾角 i</td>
+                                    <td>轨道面相对于赤道面的倾斜。0° 是在赤道上空环绕的轨道，90° 是经过南北两极上空的极轨道。超过 90° 后，就成为与天体自转方向相反的逆行轨道。</td>
+                                </tr>
+                                <tr>
+                                    <td>升交点经度 Ω</td>
+                                    <td>轨道由南向北穿过赤道面的那一点（升交点），从基准方向量起位于哪个方位。它决定了倾斜的轨道面朝向何方。</td>
+                                </tr>
+                                <tr>
+                                    <td>近心点幅角 ω</td>
+                                    <td>从升交点沿轨道量起，近拱点位于什么位置。它决定了椭圆在轨道面内的朝向。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">轨道上的位置</td>
+                                </tr>
+                                <tr>
+                                    <td>平近点角 M</td>
+                                    <td>表示在一圈轨道中当前位于何处的角度。它随时间按固定比例增加，360° 即为一整圈。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <svg class="figure" viewBox="0 0 640 455" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="决定轨道面朝向的三个角度示意图">
+                            <!-- 3Dモデル: 傾斜角35°・昇交点方位角50°の円軌道(半径225)を仰角約17°のカメラで正射影 -->
+                            <!-- 赤道面（軌道と同じ半径225。半径を揃えることで2つの楕円が昇交点・降交点で正確に交差する） -->
+                            <ellipse cx="320" cy="230" rx="225" ry="65.6" fill="none" stroke="#888" stroke-dasharray="6,4" />
+                            <text x="280" y="318" fill="#888" font-size="14">赤道面</text>
+                            <!-- 軌道面 -->
+                            <ellipse cx="320" cy="230" rx="225" ry="133" fill="none" stroke="#7ac0ff" stroke-width="2" transform="rotate(33 320 230)" />
+                            <text x="68" y="170" fill="#7ac0ff" font-size="14">轨道面</text>
+                            <!-- 交線（昇交点(465,180)と降交点(175,280)を結ぶ線。両点とも2つの楕円の交差点上） -->
+                            <line x1="93" y1="309" x2="547" y2="151" stroke="#ddd" stroke-dasharray="3,3" />
+                            <text x="87" y="320" fill="#999" font-size="13" text-anchor="end">降交点</text>
+                            <circle cx="320" cy="230" r="26" fill="#3a6ea5" />
+                            <text x="320" y="276" fill="#ddd" font-size="14" text-anchor="middle">母天体</text>
+                            <text x="553" y="156" fill="#ddd" font-size="14">升交点</text>
+                            <!-- 基準方向（赤道面内の矢印） -->
+                            <line x1="320" y1="230" x2="467" y2="304" stroke="#ddd" />
+                            <polygon points="467,304 454,304 459,295" fill="#ddd" />
+                            <text x="450" y="330" fill="#ddd" font-size="13" text-anchor="middle">基准方向</text>
+                            <path d="M 382 262 A 70 70 0 0 0 386 207" fill="none" stroke="#ff0" stroke-width="2" />
+                            <text x="406" y="240" fill="#ff0" font-size="15" text-anchor="middle">Ω</text>
+                            <!-- 近点（軌道上、昇交点から55°）と中心からの動径線（ωの終端を示す） -->
+                            <line x1="320" y1="230" x2="287" y2="72" stroke="#ddd" />
+                            <circle cx="287" cy="72" r="5" fill="#f80" />
+                            <text x="287" y="54" fill="#f80" font-size="14" text-anchor="middle">近点</text>
+                            <path d="M 410 199 A 95 95 0 0 0 301 137" fill="none" stroke="#f80" stroke-width="2" />
+                            <text x="378" y="140" fill="#f80" font-size="15" text-anchor="middle">ω</text>
+                            <!-- 傾斜角i（手前側＝降交点付近で、赤道面と軌道面の曲線をつなぐ弧で示す。両端は各楕円上） -->
+                            <path d="M 139 269 A 39 39 0 0 1 150 248" fill="none" stroke="#0f0" stroke-width="2" />
+                            <text x="128" y="252" fill="#0f0" font-size="15" text-anchor="middle">i</text>
+                            <text x="320" y="442" fill="#999" font-size="13" text-anchor="middle">轨道倾角 i、升交点经度 Ω、近心点幅角 ω 三者共同决定轨道面与椭圆的朝向</text>
+                        </svg>
+
+                        <p>
+                            - 远点（Ap）和近点（Pe）的高度由轨道半长轴 a 和轨道偏心率 e 决定。<a href="#launch-auto">自动发射</a>的目标轨道同样以远点高度和近点高度来指定。<br />
+                            - 发射时可以直接进入的轨道倾角，其下限为<b>发射场的纬度</b>。发射场的纬度越低，可选择的轨道自由度就越高。<br />
+                            - 向东发射时，天体的自转速度会直接成为加速的加成（在地球赤道约为 465 m/s）。许多发射场之所以选在东侧临海的地方，正是这个原因。
+</p>
+
+                    </section>
+
+                    <section id="reference">
+                        <h2>8. 参考资料</h2>
+
+                        <h3 id="control-keys">Control Keys</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>操作</th>
+                                    <th>键盘</th>
+                                    <th>鼠标</th>
+                                    <th>手柄</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>旋转摄像机</td>
+                                    <td>I/K/J/L</td>
+                                    <td>鼠标右键 + 拖动</td>
+                                    <td>右摇杆</td>
+                                </tr>
+                                <tr>
+                                    <td>平移摄像机</td>
+                                    <td>-</td>
+                                    <td>鼠标中键 + 拖动</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>拉近拉远摄像机</td>
+                                    <td>Home/End</td>
+                                    <td>滚轮</td>
+                                    <td>L/R 扳机</td>
+                                </tr>
+                                <tr>
+                                    <td>摄像机视角</td>
+                                    <td>Page Up/Down</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>摄像机曝光</td>
+                                    <td>Insert/Delete</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>切换摄像机模式</td>
+                                    <td>V</td>
+                                    <td>鼠标中键 + 鼠标右键</td>
+                                    <td>Back 键</td>
+                                </tr>
+                                <tr>
+                                    <td>摄像机朝向 *1</td>
+                                    <td>-</td>
+                                    <td>鼠标左键 + 拖动</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>摄像机滚转 *1</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>L/R 肩键</td>
+                                </tr>
+                                <tr>
+                                    <td>重置摄像机</td>
+                                    <td>-</td>
+                                    <td>鼠标左键 + 鼠标右键</td>
+                                    <td>按下右摇杆</td>
+                                </tr>
+                                <tr>
+                                    <td>Map View</td>
+                                    <td>M</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>显示/隐藏 UI</td>
+                                    <td>F2</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>显示/隐藏 SOI</td>
+                                    <td>F3</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>快速保存</td>
+                                    <td>F5</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>快速读取</td>
+                                    <td>F9</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>开始追踪</td>
+                                    <td>O</td>
+                                    <td>在列表上单击鼠标右键</td>
+                                    <td>Y 键</td>
+                                </tr>
+                                <tr>
+                                    <td>打开菜单</td>
+                                    <td>ESC</td>
+                                    <td>-</td>
+                                    <td>Start 键</td>
+                                </tr>
+                                <tr>
+                                    <td>打开航天器操作面板 *2</td>
+                                    <td>C</td>
+                                    <td>-</td>
+                                    <td>X 键</td>
+                                </tr>
+                                <tr>
+                                    <td>风门最大 *3</td>
+                                    <td>Z</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>风门切断 *3</td>
+                                    <td>X</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>增加风门 *3</td>
+                                    <td>Left Shift</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>减少风门 *3</td>
+                                    <td>Left Ctrl</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>分级分离 *3</td>
+                                    <td>Space</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>横滚 *3</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>俯仰 *3</td>
+                                    <td>W/S</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>偏航 *3</td>
+                                    <td>A/D</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>调试控制台</td>
+                                    <td>ALT + F12</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>*1 ：摄像机模式不是“Chase”时。</p>
+                        <p>*2 ：仅在选中航天器时。</p>
+                        <p>*3 ：仅在航天器操纵模式下。</p>
+
+                        <h3 id="launch-sites">发射场一览</h3>
+                        <p>游戏中可以使用的发射场一览。建立时间和经纬度采用游戏数据中登记的数值。</p>
+                        <div class="note">
+                            <strong>发射场的解锁：</strong>
+                            并非所有发射场从一开始就会显示。通过合同奖励获得运营点数并提升运营等级后，可显示的发射场会逐步增加。
+</div>
+                        <table class="desc launch-sites-table">
+                            <thead>
+                                <tr>
+                                    <th>发射场名称</th>
+                                    <th>建立时间</th>
+                                    <th>纬度</th>
+                                    <th>经度</th>
+                                    <th>备注</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kepler Space Center</td>
+                                    <td>1950/01/01</td>
+                                    <td>北纬 0.00°</td>
+                                    <td>东经 1.00°</td>
+                                    <td>只在本作中登场的虚构航天中心。</td>
+                                </tr>
+                                <tr>
+                                    <td>Kennedy Space Center</td>
+                                    <td>1962/07/01</td>
+                                    <td>北纬 28.52°</td>
+                                    <td>西经 80.65°</td>
+                                    <td>长期作为登月探测、航天飞机和载人航天基地使用的大型发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Cape Canaveral Space Force Station</td>
+                                    <td>1950/07/24</td>
+                                    <td>北纬 28.49°</td>
+                                    <td>西经 80.58°</td>
+                                    <td>从航天事业初期至今，用于发射各类火箭的大型发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>SpaceX Starbase</td>
+                                    <td>2002/05/06</td>
+                                    <td>北纬 26.00°</td>
+                                    <td>西经 97.15°</td>
+                                    <td>专门用于 Starship 与 Super Heavy 的研发、制造、试验和发射的基地。</td>
+                                </tr>
+                                <tr>
+                                    <td>Vandenberg Space Force Base</td>
+                                    <td>1941/01/01</td>
+                                    <td>北纬 34.73°</td>
+                                    <td>西经 120.56°</td>
+                                    <td>南面向外海敞开，适合发射极轨道和太阳同步轨道的发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Wallops Flight Facility</td>
+                                    <td>1945/01/01</td>
+                                    <td>北纬 37.94°</td>
+                                    <td>西经 75.46°</td>
+                                    <td>承担探空火箭、科学气球和小型轨道任务的研究与试验基地。</td>
+                                </tr>
+                                <tr>
+                                    <td>Kodiak Launch Complex</td>
+                                    <td>1998/01/01</td>
+                                    <td>北纬 57.44°</td>
+                                    <td>西经 152.34°</td>
+                                    <td>四面环海，适合发射高倾角轨道和极轨道的发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Guiana Space Centre</td>
+                                    <td>1964/04/14</td>
+                                    <td>北纬 5.23°</td>
+                                    <td>西经 52.76°</td>
+                                    <td>靠近赤道，便于利用地球自转发射地球同步转移轨道的发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Jiuquan Satellite Launch Center</td>
+                                    <td>1958/01/01</td>
+                                    <td>北纬 40.95°</td>
+                                    <td>东经 100.29°</td>
+                                    <td>以发射载人飞船和低轨道卫星而闻名的内陆发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Taiyuan Satellite Launch Center</td>
+                                    <td>1966/01/01</td>
+                                    <td>北纬 38.84°</td>
+                                    <td>东经 111.60°</td>
+                                    <td>承担大量极轨道和太阳同步轨道卫星发射任务的内陆发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Wenchang Space Launch Site</td>
+                                    <td>2014/10/18</td>
+                                    <td>北纬 19.61°</td>
+                                    <td>东经 110.95°</td>
+                                    <td>位于低纬度海滨，用于大型火箭和深空任务的发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Xichang Satellite Launch Center</td>
+                                    <td>1982/01/01</td>
+                                    <td>北纬 28.24°</td>
+                                    <td>东经 102.02°</td>
+                                    <td>用于发射地球同步转移轨道卫星以及月球、行星探测器的发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Tanegashima Space Center</td>
+                                    <td>1969/10/01</td>
+                                    <td>北纬 30.40°</td>
+                                    <td>东经 130.98°</td>
+                                    <td>配备大型火箭组装、试验和发射设施的海滨发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Uchinoura Space Center</td>
+                                    <td>1963/12/09</td>
+                                    <td>北纬 31.25°</td>
+                                    <td>东经 131.07°</td>
+                                    <td>进行科学探空火箭、科学卫星和探测器发射与跟踪的山间发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Hokkaido Spaceport</td>
+                                    <td>2021/04/20</td>
+                                    <td>北纬 42.50°</td>
+                                    <td>东经 143.44°</td>
+                                    <td>面向民间开放，支持探空火箭以及未来轨道发射的商业航天港。</td>
+                                </tr>
+                                <tr>
+                                    <td>Spaceport Kii</td>
+                                    <td>2021/01/01</td>
+                                    <td>北纬 33.54°</td>
+                                    <td>东经 135.89°</td>
+                                    <td>作为小型固体燃料火箭 KAIROS 的发射基地而建设的专用发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Naro Space Center</td>
+                                    <td>2009/06/11</td>
+                                    <td>北纬 34.43°</td>
+                                    <td>东经 127.53°</td>
+                                    <td>用于罗老号、世界号等火箭研发与发射的海滨航天中心。</td>
+                                </tr>
+                                <tr>
+                                    <td>Sohae Satellite Launching Station</td>
+                                    <td>2012/03/01</td>
+                                    <td>北纬 39.66°</td>
+                                    <td>东经 124.71°</td>
+                                    <td>配备人造卫星发射设施和大型火箭试验设施的海滨发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Baikonur Cosmodrome</td>
+                                    <td>1955/06/02</td>
+                                    <td>北纬 45.96°</td>
+                                    <td>东经 63.30°</td>
+                                    <td>送出了世界首颗人造卫星和首次载人航天飞行的悠久航天基地。</td>
+                                </tr>
+                                <tr>
+                                    <td>Plesetsk Cosmodrome</td>
+                                    <td>1957/07/15</td>
+                                    <td>北纬 62.92°</td>
+                                    <td>东经 40.57°</td>
+                                    <td>位于高纬度，适合发射极轨道和高倾角轨道的航天基地。</td>
+                                </tr>
+                                <tr>
+                                    <td>Vostochny Cosmodrome</td>
+                                    <td>2011/08/01</td>
+                                    <td>北纬 51.88°</td>
+                                    <td>东经 128.33°</td>
+                                    <td>可支持联盟号、安加拉号等发射的较新航天基地。</td>
+                                </tr>
+                                <tr>
+                                    <td>Rocket Lab Launch Complex 1</td>
+                                    <td>2016/09/26</td>
+                                    <td>南纬 39.26°</td>
+                                    <td>东经 177.87°</td>
+                                    <td>运营 Electron 火箭、面向小型卫星高频次发射的民营发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Satish Dhawan Space Centre</td>
+                                    <td>1971/10/09</td>
+                                    <td>北纬 13.71°</td>
+                                    <td>东经 80.23°</td>
+                                    <td>运营 PSLV、GSLV、LVM3 等火箭，配备多个发射台的大型航天中心。</td>
+                                </tr>
+                                <tr>
+                                    <td>Andøya Space</td>
+                                    <td>1962/08/18</td>
+                                    <td>北纬 69.29°</td>
+                                    <td>东经 16.02°</td>
+                                    <td>在探空火箭和大气、极光观测方面积累了丰富经验，并配备轨道发射设施的发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Semnan Space Center</td>
+                                    <td>2006/11/02</td>
+                                    <td>北纬 35.23°</td>
+                                    <td>东经 53.92°</td>
+                                    <td>用于小型卫星运载火箭发射与试验的内陆发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Palmachim Airbase</td>
+                                    <td>1988/09/19</td>
+                                    <td>北纬 31.90°</td>
+                                    <td>东经 34.69°</td>
+                                    <td>因向西侧海面发射而以送入逆行轨道著称的发射场。</td>
+                                </tr>
+                                <tr>
+                                    <td>Aunt Effie's Farm</td>
+                                    <td>1926/03/16</td>
+                                    <td>北纬 42.22°</td>
+                                    <td>西经 71.81°</td>
+                                    <td>并非发射场，而是罗伯特·戈达德在 1926 年发射世界首枚液体燃料火箭的试验地。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="glossary">术语表</h3>
+                        <p>本手册和游戏中使用的主要术语。</p>
+                        <table class="desc glossary-table">
+                            <thead>
+                                <tr>
+                                    <th>术语</th>
+                                    <th>含义</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">轨道与飞行</td>
+                                </tr>
+                                <tr>
+                                    <td>远点（Ap / Apoapsis）</td>
+                                    <td>轨道上距离母天体最远的点。发射时，通过上升过程中的加速把预定轨道的远点高度抬升到目标值。</td>
+                                </tr>
+                                <tr>
+                                    <td>近点（Pe / Periapsis）</td>
+                                    <td>轨道上距离母天体最近的点。在远点附近加速，把近点抬升到大气层之外，就能得到稳定的环绕轨道。</td>
+                                </tr>
+                                <tr>
+                                    <td>开普勒轨道要素</td>
+                                    <td>表示轨道的大小、形状、朝向以及轨道上位置的六个数值。详情请参阅“<a href="#keplerian-orbital-elements">开普勒轨道要素</a>”。</td>
+                                </tr>
+                                <tr>
+                                    <td>轨道半长轴（a）</td>
+                                    <td>表示轨道大小的数值。相当于椭圆较长一侧直径的一半，也会影响轨道周期。</td>
+                                </tr>
+                                <tr>
+                                    <td>轨道偏心率（e）</td>
+                                    <td>表示轨道扁平程度的数值。0 为圆，大于 0 且小于 1 为椭圆，1 以上则为不闭合的逃逸轨道。</td>
+                                </tr>
+                                <tr>
+                                    <td>轨道倾角（i）</td>
+                                    <td>轨道面相对于母天体赤道面的倾斜。0° 为赤道轨道，90° 为极轨道。</td>
+                                </tr>
+                                <tr>
+                                    <td>升交点经度（LAN / Ω）</td>
+                                    <td>表示轨道由南向北穿过赤道面的升交点所在方向，决定轨道面朝向何方。</td>
+                                </tr>
+                                <tr>
+                                    <td>近心点幅角（ω）</td>
+                                    <td>从升交点到近点、沿轨道量出的角度。它决定椭圆在轨道面内朝向何方。</td>
+                                </tr>
+                                <tr>
+                                    <td>平近点角（M）</td>
+                                    <td>把天体或航天器在一圈轨道中的位置与时间对应起来表示的角度。</td>
+                                </tr>
+                                <tr>
+                                    <td>SOI（Sphere of Influence）</td>
+                                    <td>在轨道计算中，把该天体的引力视为中心引力的范围。进入其他天体的 SOI 后，轨道的母天体会随之改变。</td>
+                                </tr>
+                                <tr>
+                                    <td>卡门线</td>
+                                    <td>被视为大气层与宇宙空间分界的高度。在本作中，近点高度超过母天体的卡门线即判定为已入轨。</td>
+                                </tr>
+                                <tr>
+                                    <td>入轨</td>
+                                    <td>把航天器送入能够持续环绕母天体的轨道。在本作中指近点高度已超过卡门线的状态。</td>
+                                </tr>
+                                <tr>
+                                    <td>弹道飞行</td>
+                                    <td>入轨之前，停止推力的航天器仅在引力作用下飞行的状态。放任不管的话会坠回母天体。</td>
+                                </tr>
+                                <tr>
+                                    <td>滑行</td>
+                                    <td>关闭发动机，航天器依靠速度和引力飞行的区间。在自动发射中指从远点调整之后到重新点火之间的阶段。</td>
+                                </tr>
+                                <tr>
+                                    <td>重力转弯</td>
+                                    <td>一边上升一边让箭体逐渐倾倒，利用引力从垂直上升平滑过渡到水平加速的发射方式。</td>
+                                </tr>
+                                <tr>
+                                    <td>方位角</td>
+                                    <td>表示水平面上前进方向的角度。在本作的发射设定中，北为 0°、东为 90°、南为 180°、西为 270°。</td>
+                                </tr>
+                                <tr>
+                                    <td>圆化轨道</td>
+                                    <td>在远点附近沿前进方向加速，抬升近点以缩小其与远点高度之差的操作。</td>
+                                </tr>
+                                <tr>
+                                    <td>交会</td>
+                                    <td>在轨道上接近其他航天器或目标，并使位置与速度相匹配。</td>
+                                </tr>
+                                <tr>
+                                    <td>ΔV（Delta-V）</td>
+                                    <td>航天器利用推进剂所能产生的速度变化量，或者变更轨道所需的速度变化量。数值越大，可以进行的轨道变更幅度就越大。</td>
+                                </tr>
+                                <tr>
+                                    <td>惯性速度 / 空速</td>
+                                    <td>惯性速度是以宇宙空间为基准的速度，空速则是相对于随自转运动的大气的速度。发射过程中的气动力和 NavBall 以空速为基准，轨道计算则以惯性速度为基准。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">箭体</td>
+                                </tr>
+                                <tr>
+                                    <td>推力（Thrust）</td>
+                                    <td>发动机加速航天器的力。若要从地面起飞，推力必须超过作用在箭体上的重力。</td>
+                                </tr>
+                                <tr>
+                                    <td>比冲（Isp）</td>
+                                    <td>以秒为单位表示发动机把推进剂转换为推力效率高低的指标。数值越大，发动机的效率越高。</td>
+                                </tr>
+                                <tr>
+                                    <td>推重比（TWR）</td>
+                                    <td>推力与箭体重量之比。在地面上为 1.0 以下时，推力无法超过重量，因此无法起飞。</td>
+                                </tr>
+                                <tr>
+                                    <td>级</td>
+                                    <td>火箭在飞行中分离使用的单位。分离用完的发动机和燃料箱，可以让剩下的箭体变轻。</td>
+                                </tr>
+                                <tr>
+                                    <td>助推器</td>
+                                    <td>主要为了补充发射初期推力，附加在箭体侧面等处的辅助推进级。推进剂用尽后即分离。</td>
+                                </tr>
+                                <tr>
+                                    <td>分离器</td>
+                                    <td>用于连接各级并在飞行中将其分开的部件。在 VAB 中，以分离器的位置为界划分各级。</td>
+                                </tr>
+                                <tr>
+                                    <td>整流罩</td>
+                                    <td>在发射过程中保护有效载荷免受空气阻力和气动加热影响的外罩。飞出大气层后即分离。</td>
+                                </tr>
+                                <tr>
+                                    <td>有效载荷</td>
+                                    <td>火箭所运送的人造卫星、探测器等载荷。</td>
+                                </tr>
+                                <tr>
+                                    <td>MECO</td>
+                                    <td>Main Engine Cut Off 的缩写，指主发动机停止燃烧。在自动发射中，会在预定轨道的远点到达目标高度时执行。</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Q</td>
+                                    <td>飞行过程中动压达到最大的点。此时由大气密度和空速带来的气动载荷对箭体最大。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">画面与操作</td>
+                                </tr>
+                                <tr>
+                                    <td>NavBall</td>
+                                    <td>在球面上显示航天器的姿态，以及前进方向、轨道面、目标等基准方向的仪表。</td>
+                                </tr>
+                                <tr>
+                                    <td>SAS</td>
+                                    <td>让航天器的姿态自动持续朝向指定方向的姿态保持功能。</td>
+                                </tr>
+                                <tr>
+                                    <td>Prograde / Retrograde</td>
+                                    <td>Prograde 是前进方向，Retrograde 是其反方向。沿前进方向加速会抬升轨道，沿反方向加速则会降低轨道。</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal / Antinormal</td>
+                                    <td>垂直于轨道面的方向及其反方向。沿这些方向加速可以改变轨道倾角。</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith / Nadir</td>
+                                    <td>远离母天体中心的正上方，以及朝向母天体中心的正下方。</td>
+                                </tr>
+                                <tr>
+                                    <td>Target / Antitarget</td>
+                                    <td>朝向追踪目标的方向及其反方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>所设定的轨道变更的点火方向。可在 NavBall 和 SAS 中用作目标方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Map View</td>
+                                    <td>用于查看选中对象的整条轨道、远点与近点，以及与其他对象位置关系的显示。</td>
+                                </tr>
+                                <tr>
+                                    <td>时间加速</td>
+                                    <td>加快游戏内时间流逝的功能。可用的最大倍率会随高度和飞行状态而变化。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kugelblitz. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

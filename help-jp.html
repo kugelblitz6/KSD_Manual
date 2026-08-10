@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keplerian Space Discovery Manual</title>
+    <title>Keplerian Space Discovery マニュアル</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -18,225 +18,686 @@
             <div class="sidebar">
                 <nav class="sidebar-contents">
                     <ul>
-                        <li><a href="#introduction">はじめに</a></li>
-                        <li><a href="#main-screen">メインスクリーン</a></li>
-                        <ul>
-                            <li><a href="#main-screen-object-selector">Object Selector</a></li>
-                            <li><a href="#main-screen-time-controls">Time Controls</a></li>
-                        </ul>
-                        <li><a href="#control-keys">Control Keys</a></li>
+                        <li><a href="#introduction">1. はじめに</a></li>
+                        <li><a href="#quick-start">2. クイックスタート：初めての打ち上げ</a></li>
+                        <li><a href="#main-screen">3. メインスクリーン</a>
+                            <ul>
+                                <li><a href="#main-screen-object-selector">Object Selector</a></li>
+                                <li><a href="#main-screen-time-controls">Time Controls</a></li>
+                                <li><a href="#main-screen-spacecraft-controls">宇宙機操作パネル</a></li>
+                                <li><a href="#main-screen-selected-object-information">選択オブジェクト情報</a></li>
+                                <li><a href="#main-screen-tracking-object-information">追跡オブジェクト情報</a></li>
+                                <li><a href="#main-screen-filter">Filter</a></li>
+                                <li><a href="#main-screen-camera-controls">Camera Controls</a></li>
+                                <li><a href="#main-screen-navball">NavBall の見方</a></li>
+                                <li><a href="#main-screen-map-view">Map View</a></li>
+                                <li><a href="#main-screen-soi">SOI 表示</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#vehicle-assembly-building">4. Vehicle Assembly Building</a>
+                            <ul>
+                                <li><a href="#vab-basic-operation">基本操作</a></li>
+                                <li><a href="#vab-toolbar">上部ツールバー</a></li>
+                                <li><a href="#vab-parts-editor">Parts Editor</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#launch-and-flight">5. 打ち上げと飛行</a>
+                            <ul>
+                                <li><a href="#launch-auto">自動打ち上げ</a></li>
+                                <li><a href="#launch-manual-control">手動操縦</a></li>
+                                <li><a href="#launch-sas">SAS</a></li>
+                                <li><a href="#launch-time-acceleration">時間加速のルール</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contract">6. 契約</a></li>
+                        <li><a href="#orbital-basics">7. 軌道の基礎知識</a>
+                            <ul>
+                                <li><a href="#keplerian-orbital-elements">ケプラー軌道要素</a></li>
+                                <li><a href="#orbit-lines">軌道線の見方</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#reference">8. リファレンス</a>
+                            <ul>
+                                <li><a href="#control-keys">Control Keys</a></li>
+                                <li><a href="#launch-sites">射場一覧</a></li>
+                                <li><a href="#glossary">用語集</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
-
-
             </div>
             <div class="main">
                 <div class="content">
-                <section id="introduction">
-                    <h2>はじめに</h2>
-                    <p>Keplerian Space Discovery のマニュアルです。 </p>
 
-                    <h2 id="main-screen">メインスクリーン</h2>
-                    <img src="./img/main_screen-jp.jpg" alt="Main Screen">
+                    <section id="introduction">
+                        <h2>1. はじめに</h2>
+                        <p>『Keplerian Space Discovery』は、実在の太陽系と世界各地の実在する射場を舞台に、ロケットの組み立て・打ち上げ・軌道投入を行う宇宙飛行シミュレーションゲームです。天体と宇宙機の運動はケプラー軌道力学に基づいて計算されます。</p>
+                        <p class="wip">（準備中：ゲーム概要・動作環境・このマニュアルの読み方）</p>
+                    </section>
 
-                    <h3 id="main-screen-object-selector">Object Selector</h3>
-                    <p>画面左側の項目をマウス左クリックすることで、注目選択の切り替えを行うことができます。<br/>
-マウス中ボタンクリックで、対象をターゲットすることができます。</p>
+                    <section id="quick-start">
+                        <h2>2. クイックスタート：初めての打ち上げ</h2>
+                        <p>まずは1機、軌道に乗せてみましょう。この章では最短の手順だけを説明します。各画面・各操作の詳しい説明は後の章を参照してください。</p>
+                        <p class="wip">（準備中：射場を選ぶ → 機体を選ぶ → 打ち上げ → 軌道投入確認、の流れをスクリーンショット付きで）</p>
+                    </section>
 
+                    <section id="main-screen">
+                        <h2>3. メインスクリーン</h2>
+                        <img src="./img/main_screen-jp.jpg" alt="メインスクリーン">
 
-                    <h3 id="main-screen-time-controls">Time Controls</h3>
-                    <p>
-                        ・高度1km以上から時間加速を行うことができます。<br/>
-                        ・"<span style="color: red;">||</span>"は時間停止、“<span style="color: #0F0;">▶</span>” は等倍速、"<span style="color: #FF0;">▶▶</span>” は×2倍 “<span style="color: orange;">▶▶▶</span>” は×10倍となります。<br/>
-                        ・"<span style="color: #FF0;">▶▶</span>”、“<span style="color: orange;">▶▶▶</span>” は続けて押すことで、効果を重ねることができます。例えば"<span style="color: #FF0;">▶▶</span>"を3回押すと、×8倍になります。.<br/>
-                    </p>
-                    <!--
-・高度1km以上から時間加速を行うことができます。
-・"||"は時間停止、"▶"は等倍速、"▶▶"は×2倍、"▶▶▶"は×10倍となります。
-・"▶▶"、"▶▶▶"は続けて押すことで、効果を重ねることができます。例えば"▶▶"を3回押すと、×8倍になります。                    
-                    -->
+                        <h3 id="main-screen-object-selector">Object Selector</h3>
+                        <p>画面左側の項目をマウス左クリックすることで、注目選択の切り替えを行うことができます。<br />
+                            マウス中ボタンクリックで、対象をターゲットすることができます。</p>
 
-                    <h2 id="control-keys">Control Keys</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 25%;text-align: left;">Control</th>
-                                <th style="width: 25%;">Keybord</th>
-                                <th style="width: 25%;">Mouse</th>
-                                <th style="width: 25%;">Game Pad</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="text-align: left;">Camera Rotation</td>
-                                <td>I/K/J/L</td>
-                                <td>RMB+Drag</td>
-                                <td>Right thumbstick</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Camera Move</td>
-                                <td>-</td>
-                                <td>MMB+Drag</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Camera Dolly</td>
-                                <td>Home/End</td>
-                                <td>Wheel</td>
-                                <td>L/R Trigger</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Camera Zoom</td>
-                                <td>Page Up/Down</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Camera ExpComp</td>
-                                <td>Insert/Delete</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Camera Mode Change</td>
-                                <td>V</td>
-                                <td>MMB+RMB</td>
-                                <td>Back button</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Camera Orientation *1</td>
-                                <td>-</td>
-                                <td>LMB+Drag</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Camera Roll *1 </td>
-                                <td>Q/E</td>
-                                <td>-</td>
-                                <td>L/R Shoulder</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Camera Reset</td>
-                                <td>-</td>
-                                <td>LMB+RMB</td>
-                                <td>Right thumbstick Btn</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Map view</td>
-                                <td>M</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">UI Show/Hide</td>
-                                <td>F2</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">SOI Show/Hide</td>
-                                <td>F3</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Quick Save</td>
-                                <td>F5</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Quick Load</td>
-                                <td>F9</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Start Tracking</td>
-                                <td>O</td>
-                                <td>RMB on the list</td>
-                                <td>Y button</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Open Menu</td>
-                                <td>ESC</td>
-                                <td>-</td>
-                                <td>Start button</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Control Panel Open *2</td>
-                                <td>C</td>
-                                <td>-</td>
-                                <td>X button</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Throttle Max *3</td>
-                                <td>Z</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Throttle Min *3</td>
-                                <td>X</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Throttle Up *3</td>
-                                <td>Left Shift</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Throttle Down *3</td>
-                                <td>Left Ctrl</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Stage Sparation *3</td>
-                                <td>Space</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Roll *3</td>
-                                <td>Q/E</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Pitch *3</td>
-                                <td>W/S</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Yaw *3</td>
-                                <td>A/D</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Debug Console</td>
-                                <td>ALT + F12</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>*1 : CAM Mode other than 'Chase'.</p>
-                    <p>*2 : Only when selecting a spacecraft.</p>
-                    <p>*3 : Only when spacecraft control mode.</p>
+                        <h3 id="main-screen-time-controls">Time Controls</h3>
+                        <p>
+                            ・高度1km以上から時間加速を行うことができます。<br />
+                            ・"<span style="color: red;">||</span>" は時間停止、"<span style="color: #0F0;">▶</span>" は等倍速、"<span style="color: #FF0;">▶▶</span>" は×2倍、"<span style="color: orange;">▶▶▶</span>" は×10倍となります。<br />
+                            ・"<span style="color: #FF0;">▶▶</span>"、"<span style="color: orange;">▶▶▶</span>" は続けて押すことで、効果を重ねることができます。例えば "<span style="color: #FF0;">▶▶</span>" を3回押すと、×8倍になります。<br />
+                            ・状況ごとの倍率上限など、詳しいルールは「<a href="#launch-time-acceleration">時間加速のルール</a>」を参照してください。
+                        </p>
 
+                        <h3 id="main-screen-spacecraft-controls">宇宙機操作パネル</h3>
+                        <p class="wip">（準備中）</p>
 
-                </section>
+                        <h3 id="main-screen-selected-object-information">選択オブジェクト情報</h3>
+                        <p class="wip">（準備中）</p>
+
+                        <h3 id="main-screen-tracking-object-information">追跡オブジェクト情報</h3>
+                        <p class="wip">（準備中）</p>
+
+                        <h3 id="main-screen-filter">Filter</h3>
+                        <p class="wip">（準備中）</p>
+
+                        <h3 id="main-screen-camera-controls">Camera Controls</h3>
+                        <p class="wip">（準備中）</p>
+
+                        <h3 id="main-screen-navball">NavBall の見方</h3>
+                        <p class="wip">（準備中：Prograde / Retrograde 等のマーカーの意味。打ち上げ中は対気基準、軌道上は慣性基準に切り替わること）</p>
+
+                        <h3 id="main-screen-map-view">Map View</h3>
+                        <p class="wip">（準備中）</p>
+
+                        <h3 id="main-screen-soi">SOI 表示</h3>
+                        <p class="wip">（準備中）</p>
+                    </section>
+
+                    <section id="vehicle-assembly-building">
+                        <h2>4. Vehicle Assembly Building（ロケット組み立て工場）</h2>
+                        <p>Vehicle Assembly Building（VAB）では、パーツを組み合わせて自分だけのロケットを設計・保存できます。</p>
+                        <img src="./img/vab-jp.jpg" alt="Vehicle Assembly Building 画面">
+
+                        <h3 id="vab-basic-operation">基本操作</h3>
+                        <p>
+                            ・画面左の Parts Selector から、配置したいパーツをマウス左クリックで選びます。<br />
+                            ・クリックしたらボタンを離し、マウスを動かして配置したい位置までドラッグします（クリックしたまま動かすのではありません）。<br />
+                            ・目的の位置で再度クリックすると、その位置にパーツが確定配置されます。<br />
+                            ・すでに配置されているパーツの近くに配置しようとすると、スナップして自動的に接続されます。
+                        </p>
+                        <p>Parts Selector 上部の直径タブ（1.25m / 2.5m / 3.5m / 5.0m / 7.5m / 10.0m）を切り替えると、その直径に対応するパーツだけが一覧に表示されます。また、その下のプルダウン（Engine など）を切り替えることで、Tank・Fairing といったパーツ種別を切り替えられます。</p>
+
+                        <h3 id="vab-toolbar">上部ツールバー</h3>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>ボタン</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Move Adjustment<br />（トグル）</td>
+                                    <td>パーツをドラッグで移動させるときの、奥方向の距離の扱いを切り替えます。通常（OFF）は、パーツは掴んだときの奥方向の距離を保ったまま画面に沿って動きます。ONにすると、パーツの奥方向の距離が機体の中心軸上に揃えられた状態で移動するようになり、奥まった位置にあるパーツを機体中心付近へ寄せ直す操作がしやすくなります。</td>
+                                </tr>
+                                <tr>
+                                    <td>AUTO ASSY<br />（トグル）</td>
+                                    <td>ONの時は、パーツをクリックすると、今置かれているパーツの左側に自動で配置されます（最初のパーツは原点に配置されます）。OFFの時は、クリック後に自分でマウスドラッグして配置場所を決めます（上記の基本操作の通り）。</td>
+                                </tr>
+                                <tr>
+                                    <td>New</td>
+                                    <td>現在配置されているパーツをすべて削除し、新しいロケットの組み立てを開始します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Save</td>
+                                    <td>組み立て中のロケットを保存します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Load</td>
+                                    <td>保存したロケットを呼び出します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Texture</td>
+                                    <td>ロケットに貼り付ける画像（カスタムテクスチャ）を管理するダイアログを開きます。プレイヤーが自作した画像を登録しておき、閲覧・削除・追加ができます。</td>
+                                </tr>
+                                <tr>
+                                    <td>x1 / x2 / x3 / x4</td>
+                                    <td>パーツを対称に複数配置する数を切り替えます。ブースターなど側面パーツの配置に使います。x2以上に設定した状態で、貼り付け先パーツの側面にパーツを配置すると、貼り付け先パーツの前方ベクトルを軸に、線対称（放射状）に複数個同時配置されます。</td>
+                                </tr>
+                                <tr>
+                                    <td>Horizontal / Vertical<br />（トグル）</td>
+                                    <td>組み立て中のロケットの表示向きを切り替えます。Horizontalで水平配置、Verticalで垂直配置になります。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="vab-parts-editor">Parts Editor</h3>
+                        <p class="wip">（準備中：右側パネルの各項目〈Surface Material・Surface Color・Surface Texture・Surface Normal Map・Parts Orientation〉の説明）</p>
+                    </section>
+
+                    <section id="launch-and-flight">
+                        <h2>5. 打ち上げと飛行</h2>
+
+                        <h3 id="launch-auto">自動打ち上げ</h3>
+                        <p>打ち上げは、目標軌道を指定するだけで軌道投入まで自動で行われます。シーケンスは実際のロケットと同じ流れで進みます。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>フェーズ</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. リフトオフ</td>
+                                    <td>エンジン点火。推力が機体重量を上回った瞬間に発射台を離れます。</td>
+                                </tr>
+                                <tr>
+                                    <td>2. 垂直上昇</td>
+                                    <td>高度約1kmまでまっすぐ上昇します。</td>
+                                </tr>
+                                <tr>
+                                    <td>3. ロール（方位角合わせ）</td>
+                                    <td>機体をロールさせ、打ち上げ方位角に機体の向きを合わせます。</td>
+                                </tr>
+                                <tr>
+                                    <td>4. 重力ターン</td>
+                                    <td>高度が上がるにつれて機体を徐々に倒し、水平方向への加速に移っていきます。</td>
+                                </tr>
+                                <tr>
+                                    <td>5. 遠点調整・MECO</td>
+                                    <td>遠点（Ap）が目標高度に達したらメインエンジンをカットし、続いて段分離を行います。</td>
+                                </tr>
+                                <tr>
+                                    <td>6. 慣性飛行</td>
+                                    <td>遠点付近まで惰性で上昇します。この間は時間加速が自動で入り、再点火が近づくと自動で等倍に戻ります。</td>
+                                </tr>
+                                <tr>
+                                    <td>7. 再点火・近点調整</td>
+                                    <td>遠点の少し手前でエンジンを再点火し、近点（Pe）を目標高度まで持ち上げて軌道を円くします。</td>
+                                </tr>
+                                <tr>
+                                    <td>8. 軌道投入完了</td>
+                                    <td>近点が目標高度に達したらエンジンカット。打ち上げシーケンス終了です。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>このほか、飛行中には次のイベントが自動で実行されます。</p>
+                        <p>
+                            ・<b>ブースター分離</b> … ブースターの推進剤を使い切ったタイミングで分離します。<br />
+                            ・<b>フェアリング分離</b> … 大気圏を抜けた高度100km付近で分離します。
+                        </p>
+                        <p>自動打ち上げ中も、時間加速の変更やカメラ操作は自由に行えます。分離や再点火などの見どころの直前には、時間加速は自動的に等倍へ戻ります。</p>
+
+                        <h3 id="launch-manual-control">手動操縦</h3>
+                        <p>宇宙機を選択して操縦モードにすると、キーボードで直接操縦できます。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>操作</th>
+                                    <th>キー</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>スロットル増減</td>
+                                    <td>Left Shift / Left Ctrl</td>
+                                    <td>推力を少しずつ上げ下げします。</td>
+                                </tr>
+                                <tr>
+                                    <td>スロットル最大</td>
+                                    <td>Z</td>
+                                    <td>推力を一気に100%にします。</td>
+                                </tr>
+                                <tr>
+                                    <td>スロットルカット</td>
+                                    <td>X</td>
+                                    <td>推力を0にします（エンジンカット）。</td>
+                                </tr>
+                                <tr>
+                                    <td>ピッチ</td>
+                                    <td>W / S</td>
+                                    <td>機首を上下に向けます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ヨー</td>
+                                    <td>A / D</td>
+                                    <td>機首を左右に向けます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ロール</td>
+                                    <td>Q / E</td>
+                                    <td>機体軸まわりに回転させます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ステージ分離</td>
+                                    <td>Space</td>
+                                    <td>次のステージを切り離します。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>姿勢変更の応答は機体の慣性モーメントと推力によって決まります。重い機体や推力の小さい上段では、姿勢がゆっくりとしか変わらない点に注意してください。</p>
+
+                        <h3 id="launch-sas">SAS（姿勢自動保持）</h3>
+                        <p>SAS を使うと、指定した方向へ機体の姿勢を自動で向け続けることができます。以下のモードがあります。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>モード</th>
+                                    <th>向く方向</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Prograde（順行）</td>
+                                    <td>進行方向。加速して軌道を上げるときに使います。</td>
+                                </tr>
+                                <tr>
+                                    <td>Retrograde（逆行）</td>
+                                    <td>進行方向の反対。減速して軌道を下げるときに使います。</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal（法線）</td>
+                                    <td>軌道面に垂直な方向。軌道傾斜角を変えるときに使います。</td>
+                                </tr>
+                                <tr>
+                                    <td>Antinormal（反法線）</td>
+                                    <td>Normal の反対方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith（天頂）</td>
+                                    <td>親天体の中心から遠ざかる方向（真上）。</td>
+                                </tr>
+                                <tr>
+                                    <td>Nadir（天底）</td>
+                                    <td>親天体の中心へ向かう方向（真下）。</td>
+                                </tr>
+                                <tr>
+                                    <td>Target</td>
+                                    <td>ターゲットに指定したオブジェクトの方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Antitarget</td>
+                                    <td>ターゲットの反対方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>設定したマニューバの噴射方向。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Prograde / Retrograde などの速度基準の方向は、<b>軌道投入前は対気速度（大気に対する速度）基準、軌道投入後は慣性速度基準</b>に自動で切り替わります。これは <a href="#main-screen-navball">NavBall のマーカー表示</a>と常に一致します。</p>
+
+                        <h3 id="launch-time-acceleration">時間加速のルール</h3>
+                        <p>時間加速の上限は、選択中の宇宙機の高度と飛行状態によって自動的に決まります。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>状態</th>
+                                    <th>上限倍率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>高度1km未満</td>
+                                    <td>×1（等倍のみ）</td>
+                                </tr>
+                                <tr>
+                                    <td>高度1km〜大気圏内、またはエンジン噴射中</td>
+                                    <td>×4まで</td>
+                                </tr>
+                                <tr>
+                                    <td>大気圏を十分に離れ、噴射していないとき</td>
+                                    <td>軌道周期に応じて自動算出（およそ10秒で軌道を1周する倍率まで）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            ・上限を超える倍率を設定していた場合は、自動的に上限まで引き下げられます。<br />
+                            ・自動打ち上げ中は、フェーズに応じた倍率が自動で設定されます（重力ターン中×2、遠点調整中×4、慣性飛行中は最大×60など）。手動で倍率を変更した場合はそちらが優先されます。<br />
+                            ・ステージ分離・フェアリング分離・再点火などの直前には、見逃さないよう自動的に等倍へ戻ります。
+                        </p>
+                    </section>
+
+                    <section id="contract">
+                        <h2>6. 契約</h2>
+                        <p class="wip">（準備中：契約の受け方、種類、報酬）</p>
+                    </section>
+
+                    <section id="orbital-basics">
+                        <h2>7. 軌道の基礎知識</h2>
+
+                        <h3 id="keplerian-orbital-elements">ケプラー軌道要素</h3>
+                        <p>宇宙機や天体の軌道は、6つの数値の組「ケプラー軌道要素」で表されます。このゲームのタイトルの由来であり、ゲーム内のあらゆる軌道情報の基礎です。6つの要素は、役割ごとに3つのグループに分けると理解しやすくなります。</p>
+
+                        <svg class="figure" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="楕円軌道の形を決める要素の図">
+                            <ellipse cx="320" cy="170" rx="220" ry="130" fill="none" stroke="#7ac0ff" stroke-width="2" />
+                            <line x1="100" y1="170" x2="540" y2="170" stroke="#666" stroke-dasharray="5,4" />
+                            <circle cx="498" cy="170" r="18" fill="#3a6ea5" stroke="#7ac0ff" />
+                            <text x="498" y="205" fill="#ddd" font-size="14" text-anchor="middle">親天体</text>
+                            <circle cx="210" cy="57" r="5" fill="#fff" />
+                            <text x="210" y="40" fill="#ddd" font-size="14" text-anchor="middle">宇宙機</text>
+                            <circle cx="540" cy="170" r="4" fill="#f80" />
+                            <text x="546" y="152" fill="#f80" font-size="14">近点（Pe）</text>
+                            <circle cx="100" cy="170" r="4" fill="#f80" />
+                            <text x="95" y="152" fill="#f80" font-size="14" text-anchor="end">遠点（Ap）</text>
+                            <line x1="316" y1="166" x2="324" y2="174" stroke="#ddd" />
+                            <line x1="316" y1="174" x2="324" y2="166" stroke="#ddd" />
+                            <text x="310" y="196" fill="#999" font-size="13" text-anchor="end">楕円の中心</text>
+                            <line x1="328" y1="215" x2="532" y2="215" stroke="#ddd" />
+                            <polygon points="320,215 330,211 330,219" fill="#ddd" />
+                            <polygon points="540,215 530,211 530,219" fill="#ddd" />
+                            <text x="430" y="238" fill="#ddd" font-size="14" text-anchor="middle">a（軌道長半径）</text>
+                            <text x="320" y="330" fill="#999" font-size="13" text-anchor="middle">離心率 e が大きいほど、楕円の中心と親天体（焦点）のずれが大きくなる（e = 0 で円軌道）</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>要素</th>
+                                    <th>意味</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">軌道の形と大きさ</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道長半径 a<br />(Semi-major Axis)</td>
+                                    <td>軌道の大きさ。楕円の長い方の径の半分です。値が大きいほど高い軌道になり、公転周期もこの値で決まります。</td>
+                                </tr>
+                                <tr>
+                                    <td>離心率 e<br />(Eccentricity)</td>
+                                    <td>軌道のつぶれ具合。0 で完全な円、0〜1 で楕円になります。1 以上になると軌道は閉じず、親天体の重力圏から脱出していきます。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">軌道面の向き</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道傾斜角 i<br />(Inclination)</td>
+                                    <td>赤道面に対する軌道面の傾き。0°は赤道上空を回る軌道、90°は北極・南極の上空を通る極軌道です。90°を超えると、天体の自転と逆向きに回る逆行軌道になります。</td>
+                                </tr>
+                                <tr>
+                                    <td>昇交点経度 Ω<br />(Longitude of the Ascending Node)</td>
+                                    <td>軌道が赤道面を南から北へ横切る点（昇交点）が、基準方向から測ってどの方角にあるか。傾いた軌道面がどちらを向いているかを決めます。</td>
+                                </tr>
+                                <tr>
+                                    <td>近点引数 ω<br />(Argument of Periapsis)</td>
+                                    <td>昇交点から軌道に沿って測って、近点がどの位置に来るか。軌道面の中での楕円の向きを決めます。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">軌道上の位置</td>
+                                </tr>
+                                <tr>
+                                    <td>平均近点角 M<br />(Mean Anomaly)</td>
+                                    <td>軌道1周のうち、今どこにいるかを表す角度。時間とともに一定の割合で増えていき、360°で1周です。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <svg class="figure" viewBox="0 0 640 455" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="軌道面の向きを決める3つの角度の図">
+                            <!-- 3Dモデル: 傾斜角35°・昇交点方位角50°の円軌道(半径225)を仰角約17°のカメラで正射影 -->
+                            <!-- 赤道面（軌道と同じ半径225。半径を揃えることで2つの楕円が昇交点・降交点で正確に交差する） -->
+                            <ellipse cx="320" cy="230" rx="225" ry="65.6" fill="none" stroke="#888" stroke-dasharray="6,4" />
+                            <text x="280" y="318" fill="#888" font-size="14">赤道面</text>
+                            <!-- 軌道面 -->
+                            <ellipse cx="320" cy="230" rx="225" ry="133" fill="none" stroke="#7ac0ff" stroke-width="2" transform="rotate(33 320 230)" />
+                            <text x="68" y="170" fill="#7ac0ff" font-size="14">軌道面</text>
+                            <!-- 交線（昇交点(465,180)と降交点(175,280)を結ぶ線。両点とも2つの楕円の交差点上） -->
+                            <line x1="93" y1="309" x2="547" y2="151" stroke="#ddd" stroke-dasharray="3,3" />
+                            <text x="87" y="320" fill="#999" font-size="13" text-anchor="end">降交点</text>
+                            <circle cx="320" cy="230" r="26" fill="#3a6ea5" />
+                            <text x="320" y="276" fill="#ddd" font-size="14" text-anchor="middle">親天体</text>
+                            <text x="553" y="156" fill="#ddd" font-size="14">昇交点</text>
+                            <!-- 基準方向（赤道面内の矢印） -->
+                            <line x1="320" y1="230" x2="467" y2="304" stroke="#ddd" />
+                            <polygon points="467,304 454,304 459,295" fill="#ddd" />
+                            <text x="450" y="330" fill="#ddd" font-size="13" text-anchor="middle">基準方向（春分点の方向）</text>
+                            <path d="M 382 262 A 70 70 0 0 0 386 207" fill="none" stroke="#ff0" stroke-width="2" />
+                            <text x="406" y="240" fill="#ff0" font-size="15" text-anchor="middle">Ω</text>
+                            <!-- 近点（軌道上、昇交点から55°）と中心からの動径線（ωの終端を示す） -->
+                            <line x1="320" y1="230" x2="287" y2="72" stroke="#ddd" />
+                            <circle cx="287" cy="72" r="5" fill="#f80" />
+                            <text x="287" y="54" fill="#f80" font-size="14" text-anchor="middle">近点</text>
+                            <path d="M 410 199 A 95 95 0 0 0 301 137" fill="none" stroke="#f80" stroke-width="2" />
+                            <text x="378" y="140" fill="#f80" font-size="15" text-anchor="middle">ω</text>
+                            <!-- 傾斜角i（手前側＝降交点付近で、赤道面と軌道面の曲線をつなぐ弧で示す。両端は各楕円上） -->
+                            <path d="M 139 269 A 39 39 0 0 1 150 248" fill="none" stroke="#0f0" stroke-width="2" />
+                            <text x="128" y="252" fill="#0f0" font-size="15" text-anchor="middle">i</text>
+                            <text x="320" y="442" fill="#999" font-size="13" text-anchor="middle">軌道傾斜角 i・昇交点経度 Ω・近点引数 ω の3つで、軌道面と楕円の向きが決まる</text>
+                        </svg>
+
+                        <p>
+                            ・遠点（Ap）・近点（Pe）の高度は、軌道長半径 a と離心率 e から決まります。<a href="#launch-auto">自動打ち上げ</a>の目標軌道も遠点・近点高度で指定します。<br />
+                            ・打ち上げでそのまま入れられる軌道傾斜角は、<b>射場の緯度が下限</b>です。低緯度の射場ほど狙える軌道の自由度が高くなります。<br />
+                            ・東向きの打ち上げでは天体の自転速度がそのまま加速のボーナスになります（地球の赤道で約465 m/s）。多くの射場が東側に海が開けた場所にあるのはこのためです。
+                        </p>
+
+                        <h3 id="orbit-lines">軌道線の見方</h3>
+                        <p>画面には2種類の軌道線が表示されます。</p>
+                        <p>
+                            ・<b>予定軌道</b> … 現在の位置と速度から計算した、これから飛ぶ経路。エンジン噴射中は加速に合わせて刻々と形が変わります。<br />
+                            ・<b>実績軌道</b> … 実際に通ってきた経路の記録（飛行の軌跡）。
+                        </p>
+                        <p>軌道線の表示のしかたは、飛行の状態によって自動的に切り替わります。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>状態</th>
+                                    <th>表示のしかた</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>打ち上げ中・弾道飛行中<br />（軌道投入前）</td>
+                                    <td>地面に固定した表示。軌跡の根元は発射台に留まり続け、天体の自転を含めた対地の経路（このまま飛ぶとどこに落ちるか）が読み取れます。</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道投入後</td>
+                                    <td>慣性空間に固定した表示。天体の自転に関係なく、軌道そのものの形（楕円）が表示されます。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>切り替わるタイミングは「近点高度が大気圏界面（カーマンライン）を超えたとき」で、これは軌道投入の判定と同じです。<a href="#main-screen-navball">NavBall</a> の Prograde などのマーカーの基準も、これと同時に対気基準から慣性基準へ切り替わります。</p>
+                        <p class="wip">（準備中：軌道線・マーカーの色分けの凡例。スクリーンショットとあわせて掲載予定）</p>
+                    </section>
+
+                    <section id="reference">
+                        <h2>8. リファレンス</h2>
+
+                        <h3 id="control-keys">Control Keys</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Control</th>
+                                    <th>Keyboard</th>
+                                    <th>Mouse</th>
+                                    <th>Game Pad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Camera Rotation</td>
+                                    <td>I/K/J/L</td>
+                                    <td>RMB+Drag</td>
+                                    <td>Right thumbstick</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera Move</td>
+                                    <td>-</td>
+                                    <td>MMB+Drag</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera Dolly</td>
+                                    <td>Home/End</td>
+                                    <td>Wheel</td>
+                                    <td>L/R Trigger</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera Zoom</td>
+                                    <td>Page Up/Down</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera ExpComp</td>
+                                    <td>Insert/Delete</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera Mode Change</td>
+                                    <td>V</td>
+                                    <td>MMB+RMB</td>
+                                    <td>Back button</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera Orientation *1</td>
+                                    <td>-</td>
+                                    <td>LMB+Drag</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera Roll *1</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>L/R Shoulder</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera Reset</td>
+                                    <td>-</td>
+                                    <td>LMB+RMB</td>
+                                    <td>Right thumbstick Btn</td>
+                                </tr>
+                                <tr>
+                                    <td>Map view</td>
+                                    <td>M</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>UI Show/Hide</td>
+                                    <td>F2</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SOI Show/Hide</td>
+                                    <td>F3</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Quick Save</td>
+                                    <td>F5</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Quick Load</td>
+                                    <td>F9</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Start Tracking</td>
+                                    <td>O</td>
+                                    <td>RMB on the list</td>
+                                    <td>Y button</td>
+                                </tr>
+                                <tr>
+                                    <td>Open Menu</td>
+                                    <td>ESC</td>
+                                    <td>-</td>
+                                    <td>Start button</td>
+                                </tr>
+                                <tr>
+                                    <td>Control Panel Open *2</td>
+                                    <td>C</td>
+                                    <td>-</td>
+                                    <td>X button</td>
+                                </tr>
+                                <tr>
+                                    <td>Throttle Max *3</td>
+                                    <td>Z</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Throttle Min *3</td>
+                                    <td>X</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Throttle Up *3</td>
+                                    <td>Left Shift</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Throttle Down *3</td>
+                                    <td>Left Ctrl</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Stage Separation *3</td>
+                                    <td>Space</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Roll *3</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Pitch *3</td>
+                                    <td>W/S</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Yaw *3</td>
+                                    <td>A/D</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Debug Console</td>
+                                    <td>ALT + F12</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>*1 : カメラモードが「Chase」以外のとき。</p>
+                        <p>*2 : 宇宙機を選択しているときのみ。</p>
+                        <p>*3 : 宇宙機操縦モードのときのみ。</p>
+
+                        <h3 id="launch-sites">射場一覧</h3>
+                        <p class="wip">（準備中：ゲーム内の全射場を名称・国／地域・緯度とともに一覧表で）</p>
+
+                        <h3 id="glossary">用語集</h3>
+                        <p class="wip">（準備中）</p>
+                    </section>
 
                 </div>
-
             </div>
         </div>
-
     </main>
     <footer>
         <p>&copy; 2026 Kugelblitz. All rights reserved.</p>

@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keplerian Space Discovery – Handbuch</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Keplerian Space Discovery – Handbuch</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <nav class="sidebar-contents">
+                    <ul>
+                        <li><a href="#introduction">1. Einführung</a></li>
+                <li><a href="#quick-start">2. Schnellstart</a></li>
+                        <li><a href="#main-screen">3. Hauptbildschirm</a>
+                            <ul>
+                                <li><a href="#main-screen-object-selector">Object Selector</a></li>
+                                <li><a href="#main-screen-time-controls">Time Controls</a></li>
+                                <li><a href="#main-screen-spacecraft-controls">Raumfahrzeugsteuerung</a></li>
+                                <li><a href="#main-screen-selected-object-information">Ausgewähltes Objekt</a></li>
+                                <li><a href="#main-screen-tracking-object-information">Verfolgtes Objekt</a></li>
+                                <li><a href="#main-screen-filter">Filter</a></li>
+                                <li><a href="#main-screen-camera-controls">Camera Controls</a></li>
+                                <li><a href="#main-screen-navball">Den NavBall lesen</a></li>
+                                <li><a href="#main-screen-map-view">Map View</a></li>
+                                <li><a href="#orbit-lines">Die Bahnlinien lesen</a></li>
+                                <li><a href="#main-screen-soi">SOI-Anzeige</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#vehicle-assembly-building">4. Fahrzeugmontagegebäude</a>
+                            <ul>
+                                <li><a href="#vab-basic-operation">Grundlegende Bedienung</a></li>
+                                <li><a href="#vab-toolbar">Obere Werkzeugleiste</a></li>
+                                <li><a href="#vab-stage-information">Stufeninformationen</a></li>
+                                <li><a href="#vab-save-load">Speichern und Laden</a></li>
+                                <li><a href="#vab-parts-editor">Parts Editor</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#launch-and-flight">5. Start und Flug</a>
+                            <ul>
+                                <li><a href="#launch-preparation">Startvorbereitung</a></li>
+                                <li><a href="#launch-auto">Automatischer Start</a></li>
+                                <li><a href="#launch-manual-control">Manuelle Steuerung</a></li>
+                                <li><a href="#launch-sas">SAS</a></li>
+                                <li><a href="#launch-time-acceleration">Regeln der Zeitbeschleunigung</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contract">6. Verträge</a>
+                            <ul>
+                                <li><a href="#contract-acceptance">Einen Vertrag annehmen</a></li>
+                                <li><a href="#contract-progress">Bedingungen und Abschluss</a></li>
+                                <li><a href="#contract-rewards">Belohnungen</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#orbital-basics">7. Grundlagen der Bahnmechanik</a>
+                            <ul>
+                                <li><a href="#keplerian-orbital-elements">Keplersche Bahnelemente</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#reference">8. Referenz</a>
+                            <ul>
+                                <li><a href="#control-keys">Control Keys</a></li>
+                                <li><a href="#launch-sites">Startplätze</a></li>
+                                <li><a href="#glossary">Glossar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main">
+                <div class="content">
+
+                    <section id="introduction">
+                        <h2>1. Einführung</h2>
+                        <p>Keplerian Space Discovery ist eine Raumfahrtsimulation, in der Sie Raketen zusammenbauen, starten und in eine Umlaufbahn bringen – im echten Sonnensystem und von echten Startplätzen aus aller Welt. Die Bewegung der Himmelskörper und Raumfahrzeuge wird nach der keplerschen Bahnmechanik berechnet.</p>
+                    </section>
+
+        <section id="quick-start">
+            <h2>2. Schnellstart</h2>
+            <p>Wenn Sie ein neues Spiel beginnen, führt Sie ein Tutorial von der Kamerasteuerung bis zu Ihrem ersten Raketenstart. Es zeigt jeweils an, wohin Sie als Nächstes klicken müssen; beim ersten Spielen ist es daher der empfohlene Weg.</p>
+
+            <h3>Ihr erstes Ziel</h3>
+            <p>Im Tutorial nehmen Sie den Vertrag „Machen Sie den ersten Schritt“ an, bauen eine einfache Rakete und erreichen eine Höhe von 15 km. Die wichtigsten Schritte sind folgende.</p>
+            <ol>
+                <li>Probieren Sie aus, die Kamera zu drehen, zu zoomen und zu verschieben, und ihre Position zurückzusetzen.</li>
+                <li>Nehmen Sie unter „Vertragsmanagement“ den Vertrag „Machen Sie den ersten Schritt“ an.</li>
+                <li>Setzen Sie im „Fahrzeugmontagegebäude“ ein Triebwerk, einen Tank und eine Spitzenverkleidung zusammen und speichern Sie das Fahrzeug.</li>
+                <li>Wählen Sie das Kepler Space Center aus und bringen Sie das Fahrzeug über „STARTVORBEREITUNG“ zur Startrampe.</li>
+                <li>Beginnen Sie den automatischen Start mit „RAKETENSTART“ und holen Sie die Belohnung ab, sobald Sie 15 km Höhe erreicht haben.</li>
+            </ol>
+            <p>Damit ist der grundlegende Ablauf des Spiels abgedeckt. Erfüllen Sie Verträge, um Belohnungen zu erhalten, entwickeln Sie neue Fahrzeuge und streben Sie größere Höhen und Umlaufbahnen an.</p>
+        </section>
+
+                    <section id="main-screen">
+                        <h2>3. Hauptbildschirm</h2>
+                        <img src="./img/main_screen-en.jpg" alt="Der Hauptbildschirm">
+
+                        <h3 id="main-screen-object-selector">Object Selector</h3>
+                        <p>Klicken Sie mit der linken Maustaste auf einen Eintrag in der Liste am linken Bildschirmrand, um das ausgewählte Objekt zu wechseln.<br />
+                            Ein Klick mit der mittleren Maustaste legt ein Objekt als Verfolgungsziel fest.</p>
+
+                        <h3 id="main-screen-time-controls">Time Controls</h3>
+                        <p>
+                            - Zeitbeschleunigung ist ab einer Höhe von 1 km möglich.<br />
+                            - „<span style="color: red;">||</span>“ hält die Zeit an, „<span style="color: #0F0;">▶</span>“ ist Echtzeit und „<span style="color: orange;">▶▶▶</span>“ ist ×10.<br />
+                            - „<span style="color: orange;">▶▶▶</span>“ lässt sich mehrfach drücken, um die Wirkung zu stapeln. Jeder Druck multipliziert die Rate mit 10; dreimal gedrückt ergibt also ×1000.<br />
+                            - Die Rate ist durch eine von der Situation abhängige Obergrenze gedeckelt und geht nie darüber hinaus. Innerhalb der Atmosphäre oder bei brennendem Triebwerk liegt die Grenze zum Beispiel bei ×4, sodass „<span style="color: orange;">▶▶▶</span>“ Sie nur bis ×4 bringt. Zu den Grenzen siehe „<a href="#launch-time-acceleration">Regeln der Zeitbeschleunigung</a>“.
+</p>
+
+                        <h3 id="main-screen-spacecraft-controls">Raumfahrzeugsteuerung</h3>
+                        <img src="./img/spacecraft-controls-navball-en.jpg" alt="Ein steuerbares Raumfahrzeug ist ausgewählt; zu sehen sind das Steuerungsfeld und der NavBall">
+                        <p>Wenn Sie ein steuerbares Raumfahrzeug auswählen, öffnet sich dessen Steuerungsfeld. Das Feld fasst die im Flug benötigten Bedienelemente zusammen, etwa SAS (Lageregelung), Lageziele und Stufentrennung.</p>
+                        <p>Um das Raumfahrzeug selbst zu fliegen, wechseln Sie in den Steuermodus. Die Tasten für Schub und Lage finden Sie unter „<a href="#launch-manual-control">Manuelle Steuerung</a>“, die einzelnen SAS-Modi unter „<a href="#launch-sas">SAS (Lageregelung)</a>“.</p>
+
+                        <h3 id="main-screen-selected-object-information">Ausgewähltes Objekt</h3>
+                        <p>Oben rechts werden Informationen zum aktuell ausgewählten Himmelskörper, Raumfahrzeug oder Bodenobjekt angezeigt. Das ausgewählte Objekt ist zugleich das, worauf die Kamera blickt; bei einem Raumfahrzeug dient es außerdem als Bezug für die Flugsteuerung und für die Obergrenze der Zeitbeschleunigung.</p>
+                        <p>Bei Himmelskörpern und Objekten in einer Umlaufbahn sehen Sie Bahndaten wie Apoapsis und Periapsis, große Halbachse, Exzentrizität, Bahnneigung, Umlaufzeit und Geschwindigkeit. In Bodennähe werden Breite, Länge und Höhe über dem Meeresspiegel angezeigt, bei Raumfahrzeugen zusätzlich die zur jeweiligen Flugphase passenden Geschwindigkeiten und Höhen. Welche Werte erscheinen, hängt von der Art des Objekts ab.</p>
+
+                        <h3 id="main-screen-tracking-object-information">Verfolgtes Objekt</h3>
+                        <p>Sobald Sie ein Verfolgungsziel festlegen, erscheinen unten rechts die Werte relativ zum ausgewählten Objekt. Entfernung, Höhendifferenz, Annäherungsgeschwindigkeit, Kreuzungswinkel, Phasenwinkel und ähnliche Größen helfen Ihnen, ein Rendezvous oder eine Annäherung einzuschätzen. Werte, die sich nicht berechnen lassen, werden als <b>n/a</b> angezeigt.</p>
+                        <p>Die Schaltflächen haben folgende Funktion.</p>
+                        <table class="desc">
+                            <tbody>
+                                <tr><td>Fokussieren</td><td>Richtet die Kamera auf das Verfolgungsziel aus.</td></tr>
+                                <tr><td>Details anzeigen</td><td>Öffnet ausführliche Informationen zum Verfolgungsziel.</td></tr>
+                                <tr><td>Verfolgung beenden</td><td>Beendet die Verfolgung des aktuellen Ziels.</td></tr>
+                            </tbody>
+                        </table>
+                        <p>Ein Klick mit der mittleren Maustaste auf einen Himmelskörper oder ein Raumfahrzeug – oder die Taste O – startet die Verfolgung.</p>
+
+                        <h3 id="main-screen-filter">Filter</h3>
+                        <p>Über <b>Filter</b> oben im Object Selector wählen Sie aus, welche Objekte außer Himmelskörpern – etwa Raumfahrzeuge und Bodenanlagen – angezeigt oder ausgeblendet werden. Ausgeblendete Objekte verschwinden aus dem Object Selector und von den Markierungen auf dem Bildschirm; die Einstellung wird im Spielstand gespeichert.</p>
+                        <p>Objekte, die im Spielverlauf noch nicht verfügbar sind oder deren geplanter Startzeitpunkt noch nicht erreicht ist, erscheinen gar nicht erst in der Filterliste.</p>
+
+                        <h3 id="main-screen-camera-controls">Camera Controls</h3>
+                        <p>Die Kameraeinstellungen öffnen Sie über <b>Camera Control</b> am oberen Bildschirmrand. Die Grundbedienung: Ziehen mit der rechten Maustaste dreht, Ziehen mit der mittleren Maustaste verschiebt, das Mausrad bewegt näher heran oder weiter weg. Mit V (oder mittlerer und rechter Maustaste zusammen) wechseln Sie den Kameramodus.</p>
+                        <table class="desc">
+                            <thead><tr><th>Modus</th><th>Beschreibung</th></tr></thead>
+                            <tbody>
+                                <tr><td>Chase</td><td>Die normale Kamera, die dem ausgewählten Objekt folgt.</td></tr>
+                                <tr><td>Free</td><td>Erlaubt es, Blickrichtung und Rollwinkel der Kamera frei einzustellen.</td></tr>
+                                <tr><td>Orbital</td><td>Wechselt zu einer Entfernung und Ausrichtung, in der die gesamte Umlaufbahn gut zu erkennen ist. Bei ausgewählter Bodenanlage nicht verfügbar.</td></tr>
+                            </tbody>
+                        </table>
+                        <p>Home / Ende bewegen die Kamera ebenfalls näher heran und weiter weg, I / K / J / L drehen sie ebenfalls. Bild auf / Bild ab stellen den Bildwinkel ein, Einfg / Entf die Belichtung. Alle Bedienelemente finden Sie unter „<a href="#control-keys">Control Keys</a>“.</p>
+
+                        <h3 id="main-screen-navball">Den NavBall lesen</h3>
+                        <p>Der NavBall zeigt die Lage des Raumfahrzeugs und eine Reihe von Bezugsrichtungen auf einer Kugel. Prograde ist die Bewegungsrichtung, Retrograde die Gegenrichtung; Normal / Antinormal stehen senkrecht auf der Bahnebene; Radial-Out / Radial-In zeigen vom Zentralkörper aus gesehen senkrecht nach oben und nach unten (Zenit / Nadir). Target / Antitarget zeigen zum Verfolgungsziel und von ihm weg, Maneuver ist die eingestellte Brennrichtung.</p>
+                        <p>Geschwindigkeitsbezogene Markierungen wie Prograde und Retrograde beziehen sich <b>vor dem Bahneintritt auf die Eigengeschwindigkeit gegenüber der Luft, danach auf die Inertialgeschwindigkeit</b>. Der Bahneintritt gilt als erreicht, sobald die Periapsishöhe die Atmosphärengrenze des Zentralkörpers (die Kármán-Linie) übersteigt. Derselbe Wechsel gilt für die SAS-Lageziele und für das Bezugssystem, in dem die Bahnlinien gezeichnet werden.</p>
+                        <p>Wofür die einzelnen Richtungen gut sind, steht unter „<a href="#launch-sas">SAS (Lageregelung)</a>“.</p>
+
+                        <h3 id="main-screen-map-view">Map View</h3>
+                        <p>Mit M wechseln Sie zur Map View (der Orbital-Kamera), die die gesamte Umlaufbahn des ausgewählten Objekts in weitem Blickfeld zeigt. Ein erneuter Druck auf M kehrt zur normalen Chase-Kamera zurück. Auf einer hyperbolischen Bahn richtet sich der Anzeigebereich nach der SOI des Zentralkörpers; bei ausgewählter Bodenanlage lässt sich die Map View nicht aufrufen.</p>
+                        <p>In der Map View planen Sie den Flug und prüfen dabei die Form der Bahn, Apoapsis und Periapsis sowie die Lage zu anderen Objekten. Wie sich das Bezugssystem der Bahnlinien beim Bahneintritt ändert, steht unter „<a href="#orbit-lines">Die Bahnlinien lesen</a>“.</p>
+                        <img src="./img/map-view-soi-en.jpg" alt="Map View mit ausgewähltem Mond: seine grüne Bahnlinie und seine als Punktkugel dargestellte SOI">
+
+                        <h3 id="orbit-lines">Die Bahnlinien lesen</h3>
+                        <p>Auf dem Bildschirm werden zwei Arten von Bahnlinien gezeichnet.</p>
+                        <p>
+                            -<b>Geplante Bahn</b> … der Weg, den Sie gleich fliegen werden, berechnet aus Ihrer aktuellen Position und Geschwindigkeit. Während das Triebwerk brennt, ändert sich ihre Form mit jeder Beschleunigung fortlaufend.<br />
+                            -<b>Tatsächliche Bahn</b> … eine Aufzeichnung des tatsächlich geflogenen Wegs (Ihre Flugspur).
+</p>
+                        <p>Wie die Bahnlinien gezeichnet werden, wechselt automatisch mit der Flugphase.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Zustand</th>
+                                    <th>Darstellung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Während des Starts oder im ballistischen Flug (vor dem Bahneintritt)</td>
+                                    <td>Bodenfest gezeichnet. Der Anfang der Spur bleibt an der Startrampe, sodass Sie den Weg über Grund einschließlich der Eigendrehung des Körpers ablesen können – also, wo Sie aufkämen, wenn Sie so weiterflögen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Nach dem Bahneintritt</td>
+                                    <td>Im Inertialraum fest gezeichnet. Gezeigt wird die Form der Bahn selbst (eine Ellipse), unabhängig von der Eigendrehung des Körpers.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Der Wechsel erfolgt, „sobald die Periapsishöhe die Atmosphärengrenze (die Kármán-Linie) übersteigt“ – dieselbe Bedingung wie für den Bahneintritt. Im selben Moment wechselt auch der Bezug der Markierungen wie Prograde auf dem <a href="#main-screen-navball">NavBall</a> von der Luft- zur Inertialgeschwindigkeit.</p>
+                        <p>Überlagern sich die Bahnlinien mehrerer Objekte, lassen sie sich an der Farbe unterscheiden.</p>
+                        <img src="./img/orbit-line-colors-en.jpg" alt="Map View mit den Bahnlinien des ausgewählten, des verfolgten, des überfahrenen und der übrigen Objekte in verschiedenen Farben">
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Farbe der Bahnlinie</th>
+                                    <th>Objekt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-selected"></span>Grün</td>
+                                    <td>Der aktuell ausgewählte Himmelskörper oder das ausgewählte Raumfahrzeug</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-tracking"></span>Gelb</td>
+                                    <td>Das verfolgte Objekt</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-hover"></span>Rot</td>
+                                    <td>Das Objekt, über dem der Zeiger steht – in der Objektliste links oder auf einer Markierung im Bild</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-other"></span>Sonstige</td>
+                                    <td>Objekte, die weder ausgewählt noch verfolgt noch überfahren sind</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="main-screen-soi">SOI-Anzeige</h3>
+                        <p>Mit F3 schalten Sie die Anzeige der SOI (Sphere of Influence, Einflusssphäre) um. Die SOI ist der Bereich, in dem ein Körper bei der Bahnberechnung eines Raumfahrzeugs als Zentralkörper behandelt wird.</p>
+                        <p>Im Bild oben ist der Mond ausgewählt: die ihn umgebende Punktkugel ist seine SOI, die grüne Linie die Bahn des ausgewählten Mondes.</p>
+                        <p>Verlässt ein Raumfahrzeug die SOI seines derzeitigen Zentralkörpers, geht es auf eine Bahn um einen übergeordneten Körper über. Umgekehrt wechselt es beim Eintritt in die SOI eines anderen Körpers – etwa eines Mondes oder Planeten – auf eine Bahn um diesen Körper. Bei interplanetaren oder translunaren Flügen ist die Route deutlich leichter zu verfolgen, wenn Sie prüfen, wo die SOI-Grenze auf Ihre geplante Bahn trifft.</p>
+                    </section>
+
+                    <section id="vehicle-assembly-building">
+                        <h2>4. Fahrzeugmontagegebäude</h2>
+                        <p>Im Fahrzeugmontagegebäude (VAB) setzen Sie Bauteile zusammen, um eigene Raketen zu entwerfen und zu speichern.</p>
+                        <img src="./img/vab-en.jpg" alt="Der Bildschirm des Fahrzeugmontagegebäudes (VAB)">
+
+                        <h3 id="vab-basic-operation">Grundlegende Bedienung</h3>
+                        <h4>Ein Bauteil platzieren</h4>
+                        <p>
+                            - Klicken Sie im Parts Selector am linken Bildschirmrand mit der linken Maustaste auf das gewünschte Bauteil.<br />
+                            - Lassen Sie die Taste nach dem Klick los und ziehen Sie das Bauteil mit der Mausbewegung an die gewünschte Stelle (die Taste wird dabei nicht gehalten).<br />
+                            - Ein weiterer Klick an der gewünschten Stelle setzt das Bauteil dort ab.<br />
+                            - Platzieren Sie ein Bauteil nahe an einem bereits gesetzten, rastet es ein und wird automatisch verbunden.
+</p>
+                        <p>Die Durchmesser-Reiter oben im Parts Selector (1,25 m / 2,5 m / 3,5 m / 5,0 m / 7,5 m / 10,0 m) beschränken die Liste auf Bauteile dieses Durchmessers. Das Aufklappmenü darunter (Engine und so weiter) wechselt zwischen Bauteilarten wie Tank und Fairing.</p>
+
+                        <h4>Ein gesetztes Bauteil verschieben</h4>
+                        <p>Bereits gesetzte Bauteile greifen Sie genauso wie neue: mit der linken Maustaste greifen, bei losgelassener Taste bewegen und mit einem erneuten Linksklick die neue Position festlegen. Greifen Sie ein verbundenes Bauteil, bewegen sich alle dahinter angeschlossenen Bauteile mit.</p>
+
+                        <h4>Bauteile verbinden</h4>
+                        <p>Bringen Sie ein bewegtes Bauteil mit einem anderen in Berührung, wird es automatisch mit diesem als übergeordnetem Bauteil verbunden. Nahe der Mittelachse des Fahrzeugs rastet es auf der Achse ein, wodurch Tanks und Triebwerke sauber ausgerichtet bleiben.</p>
+                        <p>Vom Fahrzeug getrennt liegende Bauteile gelten nicht als Teil eines gültigen Entwurfs. Beim Speichern werden nur die gültigen, bis zum Wurzelbauteil verbundenen Bauteile abgelegt.</p>
+
+                        <h4>Ein Bauteil löschen</h4>
+                        <p>Wenn Sie ein Bauteil mit der linken Maustaste greifen, erscheint am rechten Bildschirmrand ein Löschbereich. Ziehen Sie das gegriffene Bauteil dorthin, um es zu entfernen. Alternativ drücken Sie bei gegriffenem Bauteil die Entf-Taste.</p>
+                        <img src="./img/vab-delete-parts-en.jpg" alt="Der Löschbereich, der bei gegriffenem Bauteil am rechten Bildschirmrand erscheint">
+
+                        <h3 id="vab-toolbar">Obere Werkzeugleiste</h3>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Schaltfläche</th>
+                                    <th>Beschreibung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Move Adjustment (Umschalter)</td>
+                                    <td>Ändert, wie die Tiefe beim Ziehen eines Bauteils behandelt wird. Normalerweise (AUS) behält ein Bauteil die Tiefe, die es beim Greifen hatte, und bewegt sich in dieser Tiefe über den Bildschirm. Mit EIN wird es mit auf die Mittelachse des Fahrzeugs ausgerichteter Tiefe bewegt, was es erleichtert, ein weit hinten liegendes Bauteil wieder zur Mitte der Rakete zu holen.</td>
+                                </tr>
+                                <tr>
+                                    <td>AUTO ASSY (Umschalter)</td>
+                                    <td>Bei EIN wird ein angeklicktes Bauteil automatisch links vom aktuell gesetzten Bauteil platziert (das erste Bauteil kommt in den Ursprung). Bei AUS bestimmen Sie die Position nach dem Klick selbst durch Ziehen mit der Maus, wie oben unter der grundlegenden Bedienung beschrieben.</td>
+                                </tr>
+                                <tr>
+                                    <td>New</td>
+                                    <td>Entfernt alle derzeit gesetzten Bauteile und beginnt den Zusammenbau einer neuen Rakete.</td>
+                                </tr>
+                                <tr>
+                                    <td>Save</td>
+                                    <td>Speichert die Rakete, die Sie gerade zusammenbauen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Load</td>
+                                    <td>Lädt eine gespeicherte Rakete.</td>
+                                </tr>
+                                <tr>
+                                    <td>Texture</td>
+                                    <td>Öffnet ein Fenster zur Verwaltung der Bilder (eigene Texturen), die Sie auf eine Rakete auftragen können. Selbst erstellte Bilder lassen sich dort hinterlegen, ansehen, hinzufügen und löschen.</td>
+                                </tr>
+                                <tr>
+                                    <td>x1 bis x6</td>
+                                    <td>Legt fest, wie viele Kopien eines Bauteils radial gesetzt werden. Nützlich für seitlich montierte Bauteile wie Booster. Ab x2 entstehen beim Ansetzen an die Seite eines Zielbauteils mehrere Kopien in gleichmäßigem Abstand um dessen Mittelachse. Nach dem Platzieren gelten die Kopien als eine Gruppe.</td>
+                                </tr>
+                                <tr>
+                                    <td>Horizontal / Vertical (Umschalter)</td>
+                                    <td>Wechselt die Darstellung der Rakete im Zusammenbau. Horizontal legt sie hin, Vertical stellt sie auf.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="vab-stage-information">Stufeninformationen</h3>
+                        <p>Über „Show Stage Information“ am unteren Bildschirmrand werden die Leistungsdaten des aktuellen Fahrzeugs nach Stufen aufgeschlüsselt angezeigt. Eine eingesetzte Zwischenstufe teilt die Stufen an dieser Stelle automatisch. Ein erneuter Klick auf die Schaltfläche schließt das Feld.</p>
+                        <img src="./img/vab-stage-information-en.png" alt="Das Feld mit den Stufeninformationen: Bauteilzahl, Kosten, Delta-v, spezifischer Impuls, Schub, Masse und Schub-Gewichts-Verhältnis je Stufe">
+                        <table class="desc" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>Eintrag</th>
+                                    <th>Beschreibung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PARTS</td>
+                                    <td>Die Zahl der Bauteile, aus denen die Stufe besteht.</td>
+                                </tr>
+                                <tr>
+                                    <td>COST</td>
+                                    <td>Die Gesamtkosten der Bauteile in der Stufe.</td>
+                                </tr>
+                                <tr>
+                                    <td>DELTA-V</td>
+                                    <td>Ein Anhaltspunkt dafür, wie viel Geschwindigkeitsänderung die Stufe liefern kann. Je größer der Wert, desto stärker lässt sich die Bahn verändern.</td>
+                                </tr>
+                                <tr>
+                                    <td>ISP</td>
+                                    <td>Der spezifische Impuls der Triebwerke in Sekunden. Er gibt an, wie wirkungsvoll Treibmittel in Schub umgesetzt wird.</td>
+                                </tr>
+                                <tr>
+                                    <td>THRUST</td>
+                                    <td>Der Gesamtschub der Triebwerke in der Stufe.</td>
+                                </tr>
+                                <tr>
+                                    <td>MASS</td>
+                                    <td>Angegeben als „Stufenmasse / Gesamtmasse“: die Masse der Stufe allein und die Gesamtmasse einschließlich der Oberstufen, die sie beschleunigen muss.</td>
+                                </tr>
+                                <tr>
+                                    <td>Schub-Gewichts-Verhältnis (TWR)</td>
+                                    <td>Das Wievielfache des Gewichts der Schub beträgt. Liegt der Wert in der ersten Stufe bei 1,0 oder darunter, übersteigt der Schub das Gewicht nicht und die Rakete hebt nicht ab.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>In der aktuellen Version gibt es keine Schaltfläche, um zwischen den Leistungsdaten auf Meereshöhe und im Vakuum umzuschalten.</p>
+
+                        <h3 id="vab-save-load">Speichern und Laden</h3>
+                        <p><b>Save</b> lässt Sie einen Namen und eine Beschreibung eingeben und das aktuelle Fahrzeug speichern. Bearbeiten Sie ein geladenes Fahrzeug und speichern es, werden dessen Daten aktualisiert. Speichern Sie ein neu zusammengebautes Fahrzeug über <b>New</b>, wird es als eigenes Fahrzeug angelegt.</p>
+                        <p><b>Load</b> lässt Sie ein gespeichertes Fahrzeug aus einer Liste auswählen und in das VAB laden. Gespeichert werden nur die gültigen, bis zum Wurzelbauteil verbundenen Bauteile.</p>
+
+                        <h3 id="vab-parts-editor">Parts Editor</h3>
+                        <p>Ein Rechtsklick auf ein gesetztes Bauteil öffnet rechts den Parts Editor. Dort ändern Sie Farbe, Materialwirkung, Oberflächenmuster und Ausrichtung des Bauteils. Änderungen erscheinen sofort am Bauteil im Bild und werden beim Speichern des Fahrzeugs je Bauteil abgelegt.</p>
+                        <img src="./img/vab-parts-editor-en.png" alt="Der Parts Editor zum Ändern von Oberflächenmaterial, Farbe, Textur, Normal Map und Ausrichtung des Bauteils">
+                        <table class="desc" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>Eintrag</th>
+                                    <th>Beschreibung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Copy Color</td>
+                                    <td>Kopiert vorübergehend Farbe und Oberflächenmaterial des aktuellen Bauteils. Damit übertragen Sie dasselbe Aussehen auf ein anderes Bauteil.</td>
+                                </tr>
+                                <tr>
+                                    <td>Paste Color</td>
+                                    <td>Überträgt die mit Copy Color kopierten Einstellungen auf das bearbeitete Bauteil. Vor dem Kopieren ist die Schaltfläche nicht wählbar.</td>
+                                </tr>
+                                <tr>
+                                    <td>Metallic</td>
+                                    <td>Stellt ein, wie metallisch die Oberfläche wirkt. Höhere Werte lassen sie das Umgebungslicht wie Metall spiegeln.</td>
+                                </tr>
+                                <tr>
+                                    <td>Roughness</td>
+                                    <td>Stellt die Rauheit der Oberfläche ein. Niedrige Werte ergeben starken Glanz, hohe Werte eine weichere, diffuse Spiegelung.</td>
+                                </tr>
+                                <tr>
+                                    <td>Unpainted / White / Black / Orange</td>
+                                    <td>Die vorgegebenen Farbvorlagen. Unpainted setzt das Bauteil auf seine ursprüngliche Farbe zurück.</td>
+                                </tr>
+                                <tr>
+                                    <td>Red / Green / Blue</td>
+                                    <td>Mischen Sie mit den Reglern für Rot, Grün und Blau Ihre eigene Oberflächenfarbe.</td>
+                                </tr>
+                                <tr>
+                                    <td>Surface Texture</td>
+                                    <td>Wählt ein Bild aus, das über die Oberfläche des Bauteils gelegt wird. None verwendet kein Bild. Auch eigene Texturen, die über Texture in der oberen Werkzeugleiste hinterlegt wurden, lassen sich hier wählen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Surface Normal Map</td>
+                                    <td>Wählt das feine Oberflächenrelief. Flat fügt kein Relief hinzu; die übrigen Einträge ergänzen die Schattierung eines Oberflächenmusters, ohne die Form zu verändern.</td>
+                                </tr>
+                                <tr>
+                                    <td>Invert</td>
+                                    <td>Kehrt die Ausrichtung des Bauteils vorn/hinten um. Nützlich, wenn ein Triebwerk, eine Spitzenverkleidung oder Ähnliches andersherum montiert werden soll.</td>
+                                </tr>
+                                <tr>
+                                    <td>Edit End</td>
+                                    <td>Beendet die Bearbeitung und schließt den Parts Editor.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="note">
+                            <strong>Wie die Oberflächeneinstellungen angewendet werden:</strong>
+                            Farbe und Material werden auf die Flächen des Bauteilmodells angewendet, die als veränderbar gekennzeichnet sind. Bei manchen Bauteilen behalten einzelne Flächen ihr ursprüngliches Material oder ihre Farbe.
+</div>
+                    </section>
+
+                    <section id="launch-and-flight">
+                        <h2>5. Start und Flug</h2>
+
+                        <h3 id="launch-preparation">Startvorbereitung</h3>
+                        <p>Wählen Sie einen Startplatz und öffnen Sie „STARTVORBEREITUNG“, um Trägerrakete und Nutzlast auszuwählen und die Zielbahn sowie das Flugprofil für den automatischen Start festzulegen.</p>
+                        <img src="./img/launch-preparation-en.jpg" alt="Der Bildschirm der Startvorbereitung, auf dem Trägerrakete und Nutzlast gewählt und die Startsequenzparameter eingestellt werden">
+
+                        <p>Wählen Sie Trägerrakete und Nutzlast aus den Listen links. Der Eintrag der Trägerrakete zeigt ihre Startkosten, die Zahl der bisherigen Flüge und das Datum des letzten Flugs. Oben können Sie Trägerrakete und Nutzlast umbenennen sowie Startkosten, Ihr aktuelles Guthaben und Ihr Guthaben nach dem Start einsehen. In der aktuellen Version können Sie auch dann starten, wenn das Guthaben danach negativ wäre.</p>
+
+                        <h4>Startsequenzparameter</h4>
+                        <p>Damit legen Sie die Zielwerte für den automatischen Start fest. Die Werte werden je Trägerrakete gespeichert und beim nächsten Mal wiederverwendet.</p>
+
+                        <svg class="figure" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema einer Startbahn: Zusammenhang von Start drehen, Ende drehen, Pitchover Angle und Apogäumhöhe">
+                            <defs>
+                                <marker id="launch-arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M 0 0 L 8 4 L 0 8 z" fill="#00d060" />
+                                </marker>
+                                <marker id="launch-arrow-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M 0 0 L 8 4 L 0 8 z" fill="#aaa" />
+                                </marker>
+                            </defs>
+                            <line x1="25" y1="335" x2="655" y2="335" stroke="#ddd" stroke-width="3" />
+                            <text x="28" y="360" fill="#bbb" font-size="14">Oberfläche</text>
+                            <circle cx="115" cy="335" r="5" fill="#fff" />
+                            <text x="115" y="382" fill="#ddd" font-size="14" text-anchor="middle">Startrampe</text>
+
+                            <path d="M 115 335 C 116 270, 126 212, 162 160 C 213 87, 313 63, 440 65 C 520 66, 585 55, 628 50" fill="none" stroke="#00d060" stroke-width="3" marker-end="url(#launch-arrow-green)" />
+                            <text x="135" y="245" fill="#00d060" font-size="14">Schwerkraftwende</text>
+                            <text x="338" y="88" fill="#00d060" font-size="14">Beschleunigung zur Horizontalen</text>
+
+                            <circle cx="120" cy="250" r="5" fill="#ffcc00" />
+                            <line x1="45" y1="250" x2="120" y2="250" stroke="#ffcc00" stroke-dasharray="5,4" />
+                            <line x1="45" y1="335" x2="45" y2="250" stroke="#aaa" marker-end="url(#launch-arrow-gray)" />
+                            <text x="54" y="288" fill="#ffcc00" font-size="14">Start drehen</text>
+
+                            <circle cx="270" cy="74" r="5" fill="#ff9800" />
+                            <line x1="45" y1="74" x2="270" y2="74" stroke="#ff9800" stroke-dasharray="5,4" />
+                            <line x1="45" y1="246" x2="45" y2="74" stroke="#aaa" marker-end="url(#launch-arrow-gray)" />
+                            <text x="54" y="102" fill="#ff9800" font-size="14">Ende drehen</text>
+
+                            <line x1="120" y1="250" x2="120" y2="205" stroke="#888" stroke-dasharray="4,3" />
+                            <path d="M 120 222 A 28 28 0 0 1 135 228" fill="none" stroke="#5bc0eb" stroke-width="2" />
+                            <text x="142" y="218" fill="#5bc0eb" font-size="14">Pitchover Angle</text>
+
+                            <circle cx="628" cy="50" r="6" fill="#f06" />
+                            <line x1="628" y1="50" x2="628" y2="25" stroke="#f06" />
+                            <text x="620" y="20" fill="#f06" font-size="14" text-anchor="end">Apoapsis der geplanten Bahn erreicht die Zielhöhe</text>
+                            <text x="620" y="38" fill="#ddd" font-size="13" text-anchor="end">Triebwerk aus, Freiflug</text>
+
+                            <text x="340" y="385" fill="#888" font-size="13" text-anchor="middle">Schema: Höhen, Entfernungen und Bahn nicht maßstabsgetreu</text>
+                        </svg>
+
+                        <svg class="figure" viewBox="0 -20 680 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema einer Bahn: Zusammenhang von Ziel-Apogäumhöhe und Ziel-Perigäumhöhe">
+                            <ellipse cx="330" cy="184" rx="250" ry="200" fill="none" stroke="#00d060" stroke-width="3" />
+                            <circle cx="180" cy="184" r="45" fill="#3a6ea5" stroke="#7ac0ff" stroke-width="2" />
+                            <text x="180" y="190" fill="#fff" font-size="14" text-anchor="middle">Zentralkörper</text>
+
+                            <circle cx="580" cy="184" r="6" fill="#ff9800" />
+                            <line x1="580" y1="184" x2="580" y2="112" stroke="#ff9800" stroke-width="2" />
+                            <text x="570" y="102" fill="#ff9800" font-size="15" text-anchor="end">Apogäumhöhe (Ziel)</text>
+
+                            <circle cx="80" cy="184" r="6" fill="#ffcc00" />
+                            <line x1="80" y1="184" x2="80" y2="274" stroke="#ffcc00" stroke-width="2" />
+                            <text x="90" y="295" fill="#ffcc00" font-size="15">Perigäumhöhe (Ziel)</text>
+                            <text x="340" y="395" fill="#888" font-size="13" text-anchor="middle">Schema: Bahnform und Höhen nicht maßstabsgetreu</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Eintrag</th>
+                                    <th>Beschreibung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Apogäumhöhe</td>
+                                    <td>Die angestrebte Apoapsishöhe der Zielbahn. Erreicht die Apoapsis der geplanten Bahn im Aufstieg diese Höhe, wird das Triebwerk abgeschaltet und das Fahrzeug fliegt antriebslos zur Apoapsis.</td>
+                                </tr>
+                                <tr>
+                                    <td>Perigäumhöhe</td>
+                                    <td>Die angestrebte Periapsishöhe der Zielbahn. Nahe der Apoapsis wird das Triebwerk erneut gezündet und hebt die Bahn an, bis die Periapsis diese Höhe erreicht.</td>
+                                </tr>
+                                <tr>
+                                    <td>Azimut</td>
+                                    <td>Die waagerechte Richtung, in die das Fahrzeug nach dem Start eindreht. Angegeben wird 0° für Norden, 90° für Osten, 180° für Süden und 270° für Westen. Die Breite des Startplatzes und der Azimut bestimmen gemeinsam, welche Bahnneigung erreichbar ist.</td>
+                                </tr>
+                                <tr>
+                                    <td>Start drehen</td>
+                                    <td>Die Höhe, in der die Schwerkraftwende beginnt. Bis dorthin steigt das Fahrzeug nahezu senkrecht, dreht dann auf den Azimut ein und beginnt, sich allmählich zu neigen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Ende drehen</td>
+                                    <td>Die Höhe, in der die Schwerkraftwende endet. Zu dieser Höhe hin wird das Fahrzeug allmählich der Waagerechten angenähert. Erreicht die Apoapsis der geplanten Bahn vorher die Zielhöhe, geht es an dieser Stelle zur Apoapsisanpassung über.</td>
+                                </tr>
+                                <tr>
+                                    <td>Pitchover Angle</td>
+                                    <td>Der Winkel, um den sich das Fahrzeug zu Beginn der Schwerkraftwende erstmals aus der Senkrechten neigt. Werte nahe 0° leiten die Wende aus fast senkrechter Lage sanft ein; größere Werte neigen das Fahrzeug schon früh deutlich stärker.</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximalehöhe</td>
+                                    <td>Die höchste während der Periapsisanpassung zugelassene Apoapsishöhe. Übersteigt die Apoapsis diesen Wert und liegt die Periapsis zugleich über „Mindesthöhe“, wird das Triebwerk abgeschaltet und der Bahneintritt abgeschlossen, auch wenn das Ziel „Perigäumhöhe“ nicht erreicht wurde.</td>
+                                </tr>
+                                <tr>
+                                    <td>Mindesthöhe</td>
+                                    <td>Wird zusammen mit „Maximalehöhe“ verwendet: die niedrigste Periapsishöhe, bei der der Bahneintritt abgeschlossen werden darf. Die eigentliche Zielperiapsis stellen Sie mit „Perigäumhöhe“ ein.</td>
+                                </tr>
+                                <tr>
+                                    <td>Erzwungene Trennung der ersten Stufe</td>
+                                    <td>Ist „Force the first stage to separate when the specified apoapsis altitude is reached“ aktiviert, wird die erste Stufe abgeworfen, sobald die Apoapsis der geplanten Bahn die angegebene Höhe erreicht – auch dann, wenn noch Treibmittel vorhanden ist.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note">
+                            <strong>Hinweis zur Einstellung:</strong>
+                            Starten Sie mit einer Trägerrakete, die Sie zum ersten Mal verwenden, zunächst mit den Vorgabewerten und sehen Sie sich die erreichte Bahn an. Wird die Zielbahn nicht erreicht, prüfen Sie auch Schub, Treibmittel und Stufung des Fahrzeugs, und ändern Sie Starthöhe der Wende und Pitchover-Winkel nicht gleichzeitig in großen Schritten.
+</div>
+
+                        <p>Sind die Einstellungen fertig, wählen Sie „Zur Startrampe“. Die gewählte Trägerrakete und die Nutzlast werden zur Startrampe gebracht und Sie gelangen zum Startbildschirm.</p>
+
+                        <h3 id="launch-auto">Automatischer Start</h3>
+                        <p>Ein Start läuft automatisch bis zum Bahneintritt ab; anzugeben ist lediglich die Zielbahn. Die Abfolge entspricht der einer echten Rakete.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Phase</th>
+                                    <th>Was geschieht</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. Abheben</td>
+                                    <td>Die Triebwerke zünden. Das Fahrzeug verlässt die Rampe in dem Moment, in dem der Schub sein Gewicht übersteigt.</td>
+                                </tr>
+                                <tr>
+                                    <td>2. Senkrechter Steigflug</td>
+                                    <td>Das Fahrzeug steigt bis etwa 1 km senkrecht auf.</td>
+                                </tr>
+                                <tr>
+                                    <td>3. Rollen (Azimutausrichtung)</td>
+                                    <td>Das Fahrzeug rollt, um sich auf den Startazimut auszurichten.</td>
+                                </tr>
+                                <tr>
+                                    <td>4. Schwerkraftwende</td>
+                                    <td>Mit zunehmender Höhe neigt sich das Fahrzeug allmählich und beginnt, zur Horizontalen hin zu beschleunigen.</td>
+                                </tr>
+                                <tr>
+                                    <td>5. Apoapsisanpassung und MECO</td>
+                                    <td>Sobald die Apoapsis (Ap) die Zielhöhe erreicht, wird das Haupttriebwerk abgeschaltet, anschließend erfolgt die Stufentrennung.</td>
+                                </tr>
+                                <tr>
+                                    <td>6. Freiflug</td>
+                                    <td>Das Fahrzeug steigt antriebslos zur Apoapsis. In dieser Phase wird die Zeit automatisch beschleunigt und kehrt vor der erneuten Zündung von selbst auf Echtzeit zurück.</td>
+                                </tr>
+                                <tr>
+                                    <td>7. Erneute Zündung und Periapsisanpassung</td>
+                                    <td>Kurz vor der Apoapsis wird das Triebwerk erneut gezündet, hebt die Periapsis (Pe) auf die Zielhöhe und rundet die Bahn.</td>
+                                </tr>
+                                <tr>
+                                    <td>8. Bahneintritt abgeschlossen</td>
+                                    <td>Sobald die Periapsis die Zielhöhe erreicht, wird das Triebwerk abgeschaltet. Die Startsequenz ist beendet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Zusätzlich laufen während des Flugs die folgenden Ereignisse automatisch ab.</p>
+                        <p>
+                            -<b>Boostertrennung</b> … die Booster werden abgeworfen, sobald ihr Treibmittel verbraucht ist.<br />
+                            -<b>Verkleidungstrennung</b> … die Nutzlastverkleidung wird bei etwa 100 km abgeworfen, sobald das Fahrzeug die Atmosphäre verlassen hat.
+</p>
+                        <p>Während eines automatischen Starts können Sie die Zeitbeschleunigung jederzeit ändern und die Kamera frei bewegen. Kurz vor den sehenswerten Momenten – etwa einer Trennung oder einer erneuten Zündung – kehrt die Zeitbeschleunigung automatisch auf Echtzeit zurück.</p>
+
+                        <h3 id="launch-manual-control">Manuelle Steuerung</h3>
+                        <p>Wählen Sie ein Raumfahrzeug aus und wechseln Sie in den Steuermodus, um es direkt über die Tastatur zu fliegen.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Aktion</th>
+                                    <th>Taste</th>
+                                    <th>Beschreibung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gaspedal auf / ab</td>
+                                    <td>Left Shift / Left Ctrl</td>
+                                    <td>Erhöht und verringert den Schub in kleinen Schritten.</td>
+                                </tr>
+                                <tr>
+                                    <td>Gaspedal auf Maximum</td>
+                                    <td>Z</td>
+                                    <td>Setzt den Schub sofort auf 100 %.</td>
+                                </tr>
+                                <tr>
+                                    <td>Gaspedal aus</td>
+                                    <td>X</td>
+                                    <td>Setzt den Schub auf 0 (Triebwerk aus).</td>
+                                </tr>
+                                <tr>
+                                    <td>Nicken</td>
+                                    <td>W / S</td>
+                                    <td>Richtet die Spitze nach oben und unten.</td>
+                                </tr>
+                                <tr>
+                                    <td>Gieren</td>
+                                    <td>A / D</td>
+                                    <td>Richtet die Spitze nach links und rechts.</td>
+                                </tr>
+                                <tr>
+                                    <td>Rollen</td>
+                                    <td>Q / E</td>
+                                    <td>Dreht das Fahrzeug um seine eigene Achse.</td>
+                                </tr>
+                                <tr>
+                                    <td>Stufentrennung</td>
+                                    <td>Space</td>
+                                    <td>Wirft die aktuelle Stufe ab.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Wie schnell die Lage reagiert, hängt vom Trägheitsmoment und vom Schub des Fahrzeugs ab. Beachten Sie, dass ein schweres Fahrzeug oder eine Oberstufe mit wenig Schub die Lage nur langsam ändert.</p>
+
+                        <h3 id="launch-sas">SAS (Lageregelung)</h3>
+                        <p>SAS hält das Fahrzeug automatisch in einer von Ihnen gewählten Richtung. Es stehen die folgenden Modi zur Verfügung.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Modus</th>
+                                    <th>Richtung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Prograde</td>
+                                    <td>Die Bewegungsrichtung. Verwenden Sie sie, wenn Sie beschleunigen, um die Bahn anzuheben.</td>
+                                </tr>
+                                <tr>
+                                    <td>Retrograde</td>
+                                    <td>Die Gegenrichtung zur Bewegung. Verwenden Sie sie, wenn Sie abbremsen, um die Bahn abzusenken.</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal</td>
+                                    <td>Senkrecht zur Bahnebene. Damit ändern Sie die Bahnneigung.</td>
+                                </tr>
+                                <tr>
+                                    <td>Antinormal</td>
+                                    <td>Die Gegenrichtung zu Normal.</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenit</td>
+                                    <td>Vom Mittelpunkt des Zentralkörpers weg (senkrecht nach oben).</td>
+                                </tr>
+                                <tr>
+                                    <td>Nadir</td>
+                                    <td>Zum Mittelpunkt des Zentralkörpers hin (senkrecht nach unten).</td>
+                                </tr>
+                                <tr>
+                                    <td>Target</td>
+                                    <td>Die Richtung des als Ziel festgelegten Objekts.</td>
+                                </tr>
+                                <tr>
+                                    <td>Antitarget</td>
+                                    <td>Die Gegenrichtung zum Ziel.</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>Die Brennrichtung des eingestellten Manövers.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Geschwindigkeitsbezogene Richtungen wie Prograde und Retrograde wechseln automatisch:<b>vor dem Bahneintritt bezogen auf die Eigengeschwindigkeit gegenüber der Luft, danach auf die Inertialgeschwindigkeit</b>. Das stimmt stets mit den <a href="#main-screen-navball">auf dem NavBall angezeigten Markierungen</a> überein.</p>
+
+                        <h3 id="launch-time-acceleration">Regeln der Zeitbeschleunigung</h3>
+                        <p>Die höchste Zeitbeschleunigung ergibt sich automatisch aus Höhe und Flugzustand des ausgewählten Raumfahrzeugs. Die Bedingungen werden von oben nach unten geprüft; die erste zutreffende gilt.</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Zustand</th>
+                                    <th>Höchstrate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ein anderes Raumfahrzeug innerhalb von 200 m</td>
+                                    <td>×1 (nur Echtzeit)</td>
+                                </tr>
+                                <tr>
+                                    <td>Ein anderes Raumfahrzeug innerhalb von 1 km</td>
+                                    <td>Bis ×4</td>
+                                </tr>
+                                <tr>
+                                    <td>Unter 1 km (außer während des Starts)</td>
+                                    <td>×1 (nur Echtzeit)</td>
+                                </tr>
+                                <tr>
+                                    <td>Von 1 km bis zum Rand der Atmosphäre, oder bei brennendem Triebwerk</td>
+                                    <td>Bis ×4</td>
+                                </tr>
+                                <tr>
+                                    <td>Deutlich außerhalb der Atmosphäre und ohne Brennphase</td>
+                                    <td>Automatisch aus der Umlaufzeit berechnet (bis zu einer Rate, die einen Umlauf in etwa 10 Sekunden zurücklegt)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            - Hatten Sie eine Rate über der Grenze eingestellt, wird sie automatisch auf die Grenze abgesenkt.<br />
+                            - Aufsetzen und Berührungen zwischen Raumfahrzeugen werden nur in Echtzeit erkannt; deshalb sinkt die Grenze in geringer Höhe und bei enger Annäherung. Ein Start unterliegt keiner Berührungserkennung, sodass Sie schon ab dem Abheben bis ×4 beschleunigen können.<br />
+                            - Während eines automatischen Starts wird je Phase automatisch eine passende Rate gesetzt (×2 in der Schwerkraftwende, ×4 bei der Apoapsisanpassung, bis ×60 im Freiflug und so weiter). Ändern Sie die Rate selbst, hat Ihre Einstellung Vorrang.<br />
+                            - Kurz vor Ereignissen wie Stufentrennung, Verkleidungstrennung und erneuter Zündung kehrt die Rate automatisch auf Echtzeit zurück, damit Sie sie nicht verpassen.
+</p>
+                    </section>
+
+                    <section id="contract">
+                        <h2>6. Verträge</h2>
+                        <p>Verträge sind die Ziele, die Sie erfüllen – ein bestimmter Flug oder eine bestimmte Mission –, um Belohnungen zu erhalten. Mit dem verdienten Kapital und den Punkten bauen Sie Ihre Organisation aus und gehen zu anspruchsvolleren Missionen über.</p>
+                        <img src="./img/contract-management-en.jpg" alt="Der Bildschirm des Vertragsmanagements mit dem ausgewählten Vertrag &quot;Machen Sie den ersten Schritt&quot;">
+
+                        <h3 id="contract-acceptance">Einen Vertrag annehmen</h3>
+                        <ol>
+                            <li>Öffnen Sie das Menü unten rechts und wählen Sie „Vertragsmanagement“.</li>
+                            <li>Wählen Sie in der „Vertragsliste“ den Vertrag aus, den Sie sich ansehen möchten.</li>
+                            <li>Prüfen Sie die Beschreibung des Vertrags, seine „&lt;Bedingungen&gt;“ und seine „&lt;Belohnungen&gt;“.</li>
+                            <li>Mit „Einen Vertrag abschließen“ nehmen Sie den Vertrag an.</li>
+                        </ol>
+                        <p>Mit „Nur akzeptierte Verträge anzeigen“ sehen Sie nur die Verträge, die Sie gerade haben. Um einen aufzugeben, wählen Sie ihn aus und dann „Vertragskündigung“.</p>
+
+                        <h3 id="contract-progress">Bedingungen und Abschluss</h3>
+                        <p>Der Fortschritt eines angenommenen Vertrags wird automatisch geprüft, auch während des Flugs. Hat ein Vertrag mehrere Bedingungen, müssen alle erfüllt sein.</p>
+                        <p>Wenn Sie einen Vertrag erfüllen, erscheint ein Abschlussbildschirm. Wählen Sie „BELOHNUNGEN ABHOLEN“, um das Ergebnis zu sehen. Beim ersten Vertrag, „Machen Sie den ersten Schritt“, besteht das Ziel darin, eine Rakete auf die Startrampe zu bringen und eine Höhe von mindestens 15 km zu erreichen.</p>
+                        <img src="./img/contract-completion-en.jpg" alt="Ein erfüllter Vertrag, bei dem die Belohnung abgeholt werden kann">
+                        <p>Über „BELOHNUNGEN ABHOLEN“ werden die erhaltenen Punkte und Ihre aktuellen Stufen angezeigt. Prüfen Sie sie und schließen Sie den Bildschirm mit „OK“.</p>
+                        <img src="./img/contract-reward-en.jpg" alt="Der Belohnungsbildschirm nach dem Abschluss eines Vertrags">
+
+                        <div class="note">
+                            <strong>Tipp:</strong>
+                            Prüfen Sie vor dem Annehmen eines Vertrags, welches Fahrzeug er verlangt, welchen Himmelskörper er betrifft und welche Höhe er fordert.
+</div>
+
+                        <h3 id="contract-rewards">Belohnungen</h3>
+                        <p>Jeder Vertrag bringt die folgenden Belohnungen. Einzelne davon können 0 Punkte betragen.</p>
+                        <table class="desc contract-rewards-table">
+                            <thead>
+                                <tr>
+                                    <th>Belohnung</th>
+                                    <th>Wofür sie dient</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kapital</td>
+                                    <td>Wird als Kosten eines Starts ausgegeben. Für den Bau eines Fahrzeugs selbst wird es nicht benötigt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Ingenieurwesen</td>
+                                    <td>Nötig, um Ihre Ingenieursstufe anzuheben und fortschrittlichere Bauteile freizuschalten.</td>
+                                </tr>
+                                <tr>
+                                    <td>Wissenschaft</td>
+                                    <td>Nötig, um Ihre Wissenschaftsstufe anzuheben und bestimmte Bauteile und Ziele verfügbar zu machen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Betrieb</td>
+                                    <td>Hebt Ihre Betriebsstufe an. Mit ihr werden nach und nach mehr Startplätze verfügbar.</td>
+                                </tr>
+                                <tr>
+                                    <td>Vertrauen</td>
+                                    <td>Hebt Ihre Vertrauensstufe an. Mit ihr stehen mehr Arten von Verträgen zur Auswahl.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note">
+                            <strong>Zum Kapital:</strong>
+                            In der aktuellen Version können Sie auch ohne ausreichendes Kapital starten, und Ihr Kontostand darf negativ werden. Geldmangel kann Sie also nicht am Weiterkommen hindern.
+</div>
+
+                        <div class="note">
+                            <strong>Denselben Vertrag wiederholen:</strong>
+                            Beim ersten Abschluss einer Vertragsart erhalten Sie die volle Belohnung, beim zweiten Mal 75 % und ab dem dritten Mal 50 %. Die tatsächlichen Werte sehen Sie unter „&lt;Belohnungen&gt;“ im Vertragsmanagement.
+</div>
+                    </section>
+
+                    <section id="orbital-basics">
+                        <h2>7. Grundlagen der Bahnmechanik</h2>
+
+                        <h3 id="keplerian-orbital-elements">Keplersche Bahnelemente</h3>
+                        <p>Die Bahn eines Raumfahrzeugs oder Himmelskörpers wird durch sechs Zahlen beschrieben, die keplerschen Bahnelemente. Von ihnen hat dieses Spiel seinen Namen, und sie liegen allen Bahnangaben darin zugrunde. Die sechs Elemente lassen sich leichter erfassen, wenn man sie nach ihrer Aufgabe in drei Gruppen einteilt.</p>
+
+                        <svg class="figure" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema der Elemente, die die Form einer elliptischen Bahn bestimmen">
+                            <ellipse cx="320" cy="170" rx="220" ry="130" fill="none" stroke="#7ac0ff" stroke-width="2" />
+                            <line x1="100" y1="170" x2="540" y2="170" stroke="#666" stroke-dasharray="5,4" />
+                            <circle cx="498" cy="170" r="18" fill="#3a6ea5" stroke="#7ac0ff" />
+                            <text x="498" y="205" fill="#ddd" font-size="14" text-anchor="middle">Zentralkörper</text>
+                            <circle cx="210" cy="57" r="5" fill="#fff" />
+                            <text x="210" y="40" fill="#ddd" font-size="14" text-anchor="middle">Raumfahrzeug</text>
+                            <circle cx="540" cy="170" r="4" fill="#f80" />
+                            <text x="546" y="152" fill="#f80" font-size="14">Periapsis (Pe)</text>
+                            <circle cx="100" cy="170" r="4" fill="#f80" />
+                            <text x="95" y="152" fill="#f80" font-size="14" text-anchor="end">Apoapsis (Ap)</text>
+                            <line x1="316" y1="166" x2="324" y2="174" stroke="#ddd" />
+                            <line x1="316" y1="174" x2="324" y2="166" stroke="#ddd" />
+                            <text x="310" y="196" fill="#999" font-size="13" text-anchor="end">Mittelpunkt der Ellipse</text>
+                            <line x1="328" y1="215" x2="532" y2="215" stroke="#ddd" />
+                            <polygon points="320,215 330,211 330,219" fill="#ddd" />
+                            <polygon points="540,215 530,211 530,219" fill="#ddd" />
+                            <text x="430" y="238" fill="#ddd" font-size="14" text-anchor="middle">a (große Halbachse)</text>
+                            <text x="320" y="330" fill="#999" font-size="13" text-anchor="middle">Je größer die Exzentrizität e, desto weiter liegt der Mittelpunkt vom Brennpunkt (e = 0 ergibt einen Kreis)</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+                                    <th>Bedeutung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">Form und Größe der Bahn</td>
+                                </tr>
+                                <tr>
+                                    <td>Große Halbachse a</td>
+                                    <td>Die Größe der Bahn: die Hälfte des längeren Durchmessers der Ellipse. Je größer sie ist, desto höher die Bahn; auch die Umlaufzeit ergibt sich aus diesem Wert.</td>
+                                </tr>
+                                <tr>
+                                    <td>Exzentrizität e</td>
+                                    <td>Wie stark die Bahn abgeflacht ist. 0 ist ein exakter Kreis, Werte zwischen 0 und 1 ergeben eine Ellipse. Ab 1 schließt sich die Bahn nicht mehr und das Objekt entkommt der Schwerkraft des Zentralkörpers.</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">Ausrichtung der Bahnebene</td>
+                                </tr>
+                                <tr>
+                                    <td>Bahnneigung i</td>
+                                    <td>Die Neigung der Bahnebene gegenüber der Äquatorebene. 0° verläuft über dem Äquator; 90° ist eine Polarbahn über Nord- und Südpol. Über 90° ist die Bahn rückläufig und verläuft entgegen der Eigendrehung des Körpers.</td>
+                                </tr>
+                                <tr>
+                                    <td>Länge des aufsteigenden Knotens Ω</td>
+                                    <td>Die von der Bezugsrichtung aus gemessene Richtung des Punktes, an dem die Bahn die Äquatorebene von Süd nach Nord durchstößt (der aufsteigende Knoten). Sie legt fest, wohin die geneigte Bahnebene weist.</td>
+                                </tr>
+                                <tr>
+                                    <td>Argument der Periapsis ω</td>
+                                    <td>Wo die Periapsis liegt, entlang der Bahn vom aufsteigenden Knoten aus gemessen. Es legt die Ausrichtung der Ellipse innerhalb der Bahnebene fest.</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">Position auf der Bahn</td>
+                                </tr>
+                                <tr>
+                                    <td>Mittlere Anomalie M</td>
+                                    <td>Ein Winkel, der angibt, wo Sie sich innerhalb eines Umlaufs befinden. Er wächst gleichmäßig mit der Zeit; 360° sind ein voller Umlauf.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <svg class="figure" viewBox="0 0 640 455" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema der drei Winkel, die die Ausrichtung der Bahnebene bestimmen">
+                            <!-- 3Dモデル: 傾斜角35°・昇交点方位角50°の円軌道(半径225)を仰角約17°のカメラで正射影 -->
+                            <!-- 赤道面（軌道と同じ半径225。半径を揃えることで2つの楕円が昇交点・降交点で正確に交差する） -->
+                            <ellipse cx="320" cy="230" rx="225" ry="65.6" fill="none" stroke="#888" stroke-dasharray="6,4" />
+                            <text x="280" y="318" fill="#888" font-size="14">Äquatorebene</text>
+                            <!-- 軌道面 -->
+                            <ellipse cx="320" cy="230" rx="225" ry="133" fill="none" stroke="#7ac0ff" stroke-width="2" transform="rotate(33 320 230)" />
+                            <text x="68" y="170" fill="#7ac0ff" font-size="14">Bahnebene</text>
+                            <!-- 交線（昇交点(465,180)と降交点(175,280)を結ぶ線。両点とも2つの楕円の交差点上） -->
+                            <line x1="93" y1="309" x2="547" y2="151" stroke="#ddd" stroke-dasharray="3,3" />
+                            <text x="87" y="320" fill="#999" font-size="13" text-anchor="end">Abst. Kn.</text>
+                            <circle cx="320" cy="230" r="26" fill="#3a6ea5" />
+                            <text x="320" y="276" fill="#ddd" font-size="14" text-anchor="middle">Zentralkörper</text>
+                            <text x="553" y="156" fill="#ddd" font-size="14">Aufst. Kn.</text>
+                            <!-- 基準方向（赤道面内の矢印） -->
+                            <line x1="320" y1="230" x2="467" y2="304" stroke="#ddd" />
+                            <polygon points="467,304 454,304 459,295" fill="#ddd" />
+                            <text x="450" y="330" fill="#ddd" font-size="13" text-anchor="middle">Bezugsrichtung</text>
+                            <path d="M 382 262 A 70 70 0 0 0 386 207" fill="none" stroke="#ff0" stroke-width="2" />
+                            <text x="406" y="240" fill="#ff0" font-size="15" text-anchor="middle">Ω</text>
+                            <!-- 近点（軌道上、昇交点から55°）と中心からの動径線（ωの終端を示す） -->
+                            <line x1="320" y1="230" x2="287" y2="72" stroke="#ddd" />
+                            <circle cx="287" cy="72" r="5" fill="#f80" />
+                            <text x="287" y="54" fill="#f80" font-size="14" text-anchor="middle">Periapsis</text>
+                            <path d="M 410 199 A 95 95 0 0 0 301 137" fill="none" stroke="#f80" stroke-width="2" />
+                            <text x="378" y="140" fill="#f80" font-size="15" text-anchor="middle">ω</text>
+                            <!-- 傾斜角i（手前側＝降交点付近で、赤道面と軌道面の曲線をつなぐ弧で示す。両端は各楕円上） -->
+                            <path d="M 139 269 A 39 39 0 0 1 150 248" fill="none" stroke="#0f0" stroke-width="2" />
+                            <text x="128" y="252" fill="#0f0" font-size="15" text-anchor="middle">i</text>
+                            <text x="320" y="442" fill="#999" font-size="13" text-anchor="middle">Bahnneigung i, Länge des aufst. Knotens Ω und Argument der Periapsis ω legen Ebene und Ellipse fest</text>
+                        </svg>
+
+                        <p>
+                            - Die Höhen von Apoapsis (Ap) und Periapsis (Pe) ergeben sich aus der großen Halbachse a und der Exzentrizität e. Auch die Zielbahn für einen <a href="#launch-auto">automatischen Start</a> wird als Apoapsis- und Periapsishöhe angegeben.<br />
+                            - Die niedrigste unmittelbar von einem Start aus erreichbare Bahnneigung ist <b>die Breite des Startplatzes</b>. Je näher ein Startplatz am Äquator liegt, desto mehr Freiheit haben Sie bei der Wahl der Bahn.<br />
+                            - Ein Start nach Osten setzt die Eigendrehung des Körpers unmittelbar in zusätzliche Beschleunigung um (am Äquator der Erde etwa 465 m/s). Deshalb liegen so viele Startplätze mit offener See im Osten.
+</p>
+
+                    </section>
+
+                    <section id="reference">
+                        <h2>8. Referenz</h2>
+
+                        <h3 id="control-keys">Control Keys</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aktion</th>
+                                    <th>Tastatur</th>
+                                    <th>Maus</th>
+                                    <th>Gamepad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kamera drehen</td>
+                                    <td>I/K/J/L</td>
+                                    <td>Rechte Maustaste + Ziehen</td>
+                                    <td>Rechter Stick</td>
+                                </tr>
+                                <tr>
+                                    <td>Kamera verschieben</td>
+                                    <td>-</td>
+                                    <td>Mittlere Maustaste + Ziehen</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Kamera näher / weiter</td>
+                                    <td>Home/End</td>
+                                    <td>Mausrad</td>
+                                    <td>L/R-Trigger</td>
+                                </tr>
+                                <tr>
+                                    <td>Bildwinkel der Kamera</td>
+                                    <td>Page Up/Down</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Belichtung der Kamera</td>
+                                    <td>Insert/Delete</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Kameramodus wechseln</td>
+                                    <td>V</td>
+                                    <td>Mittlere + rechte Maustaste</td>
+                                    <td>Back-Taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Kameraausrichtung *1</td>
+                                    <td>-</td>
+                                    <td>Linke Maustaste + Ziehen</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Kamera rollen *1</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>L/R-Schultertaste</td>
+                                </tr>
+                                <tr>
+                                    <td>Kamera zurücksetzen</td>
+                                    <td>-</td>
+                                    <td>Linke + rechte Maustaste</td>
+                                    <td>Rechter Stick (drücken)</td>
+                                </tr>
+                                <tr>
+                                    <td>Map View</td>
+                                    <td>M</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>UI ein-/ausblenden</td>
+                                    <td>F2</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SOI ein-/ausblenden</td>
+                                    <td>F3</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Schnellspeichern</td>
+                                    <td>F5</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Schnellladen</td>
+                                    <td>F9</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Verfolgung starten</td>
+                                    <td>O</td>
+                                    <td>Rechtsklick in der Liste</td>
+                                    <td>Y-Taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Menü öffnen</td>
+                                    <td>ESC</td>
+                                    <td>-</td>
+                                    <td>Start-Taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Steuerungsfeld öffnen *2</td>
+                                    <td>C</td>
+                                    <td>-</td>
+                                    <td>X-Taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Gaspedal auf Maximum *3</td>
+                                    <td>Z</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Gaspedal aus *3</td>
+                                    <td>X</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Gaspedal auf *3</td>
+                                    <td>Left Shift</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Gaspedal ab *3</td>
+                                    <td>Left Ctrl</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Stufentrennung *3</td>
+                                    <td>Space</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Rollen *3</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Nicken *3</td>
+                                    <td>W/S</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Gieren *3</td>
+                                    <td>A/D</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Debug-Konsole</td>
+                                    <td>ALT + F12</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>*1 : Wenn der Kameramodus nicht „Chase“ ist.</p>
+                        <p>*2 : Nur bei ausgewähltem Raumfahrzeug.</p>
+                        <p>*3 : Nur im Steuermodus des Raumfahrzeugs.</p>
+
+                        <h3 id="launch-sites">Startplätze</h3>
+                        <p>Die im Spiel verfügbaren Startplätze. Gründungsdaten und Koordinaten sind die in den Spieldaten hinterlegten Werte.</p>
+                        <div class="note">
+                            <strong>Startplätze freischalten:</strong>
+                            Nicht alle Startplätze werden von Anfang an angezeigt. Je mehr Betriebspunkte Sie über Vertragsbelohnungen erhalten und je höher Ihre Betriebsstufe steigt, desto mehr Startplätze werden nach und nach verfügbar.
+</div>
+                        <table class="desc launch-sites-table">
+                            <thead>
+                                <tr>
+                                    <th>Startplatz</th>
+                                    <th>Gegründet</th>
+                                    <th>Breite</th>
+                                    <th>Länge</th>
+                                    <th>Anmerkungen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kepler Space Center</td>
+                                    <td>1950/01/01</td>
+                                    <td>0,00° N</td>
+                                    <td>1,00° O</td>
+                                    <td>Ein fiktives Raumfahrtzentrum, das nur in diesem Spiel vorkommt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Kennedy Space Center</td>
+                                    <td>1962/07/01</td>
+                                    <td>28,52° N</td>
+                                    <td>80,65° W</td>
+                                    <td>Ein großer Startplatz, der lange als Basis für die Mondforschung, das Space Shuttle und die bemannte Raumfahrt diente.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cape Canaveral Space Force Station</td>
+                                    <td>1950/07/24</td>
+                                    <td>28,49° N</td>
+                                    <td>80,58° W</td>
+                                    <td>Ein großer Startplatz, von dem seit den Anfängen der Raumfahrt bis heute die unterschiedlichsten Raketen starten.</td>
+                                </tr>
+                                <tr>
+                                    <td>SpaceX Starbase</td>
+                                    <td>2002/05/06</td>
+                                    <td>26,00° N</td>
+                                    <td>97,15° W</td>
+                                    <td>Ein eigener Standort für Entwicklung, Bau, Erprobung und Start von Starship und Super Heavy.</td>
+                                </tr>
+                                <tr>
+                                    <td>Vandenberg Space Force Base</td>
+                                    <td>1941/01/01</td>
+                                    <td>34,73° N</td>
+                                    <td>120,56° W</td>
+                                    <td>Mit offener See im Süden eignet sich dieser Platz für Starts in polare und sonnensynchrone Bahnen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Wallops Flight Facility</td>
+                                    <td>1945/01/01</td>
+                                    <td>37,94° N</td>
+                                    <td>75,46° W</td>
+                                    <td>Ein Forschungs- und Erprobungsstandort für Höhenforschungsraketen, Wissenschaftsballons und kleine Orbitalmissionen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Kodiak Launch Complex</td>
+                                    <td>1998/01/01</td>
+                                    <td>57,44° N</td>
+                                    <td>152,34° W</td>
+                                    <td>Ein von See umgebener Startplatz, geeignet für stark geneigte und polare Bahnen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Guiana Space Centre</td>
+                                    <td>1964/04/14</td>
+                                    <td>5,23° N</td>
+                                    <td>52,76° W</td>
+                                    <td>Die Nähe zum Äquator macht diesen Platz günstig für geostationäre Transferbahnen, die die Eigendrehung der Erde ausnutzen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Jiuquan Satellite Launch Center</td>
+                                    <td>1958/01/01</td>
+                                    <td>40,95° N</td>
+                                    <td>100,29° O</td>
+                                    <td>Ein Startplatz im Landesinneren, bekannt für bemannte Raumschiffe und Satelliten im niedrigen Erdorbit.</td>
+                                </tr>
+                                <tr>
+                                    <td>Taiyuan Satellite Launch Center</td>
+                                    <td>1966/01/01</td>
+                                    <td>38,84° N</td>
+                                    <td>111,60° O</td>
+                                    <td>Ein Startplatz im Landesinneren mit vielen Satellitenstarts in polare und sonnensynchrone Bahnen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Wenchang Space Launch Site</td>
+                                    <td>2014/10/18</td>
+                                    <td>19,61° N</td>
+                                    <td>110,95° O</td>
+                                    <td>Ein küstennaher Platz in niedriger Breite, genutzt für große Raketen und Missionen in den tiefen Weltraum.</td>
+                                </tr>
+                                <tr>
+                                    <td>Xichang Satellite Launch Center</td>
+                                    <td>1982/01/01</td>
+                                    <td>28,24° N</td>
+                                    <td>102,02° O</td>
+                                    <td>Ein Startplatz für Satelliten in geostationäre Transferbahnen sowie für Mond- und Planetensonden.</td>
+                                </tr>
+                                <tr>
+                                    <td>Tanegashima Space Center</td>
+                                    <td>1969/10/01</td>
+                                    <td>30,40° N</td>
+                                    <td>130,98° O</td>
+                                    <td>Ein Platz an der Küste mit Anlagen für Montage, Erprobung und Start großer Raketen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Uchinoura Space Center</td>
+                                    <td>1963/12/09</td>
+                                    <td>31,25° N</td>
+                                    <td>131,07° O</td>
+                                    <td>Ein Startplatz im Bergland, von dem Höhenforschungsraketen, Wissenschaftssatelliten und Sonden starten und verfolgt werden.</td>
+                                </tr>
+                                <tr>
+                                    <td>Hokkaido Spaceport</td>
+                                    <td>2021/04/20</td>
+                                    <td>42,50° N</td>
+                                    <td>143,44° O</td>
+                                    <td>Ein kommerzieller Weltraumbahnhof für private Nutzer, der Höhenforschungsraketen und künftige Orbitalstarts unterstützt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Spaceport Kii</td>
+                                    <td>2021/01/01</td>
+                                    <td>33,54° N</td>
+                                    <td>135,89° O</td>
+                                    <td>Ein eigens errichteter Platz als Startbasis für die kleine Feststoffrakete KAIROS.</td>
+                                </tr>
+                                <tr>
+                                    <td>Naro Space Center</td>
+                                    <td>2009/06/11</td>
+                                    <td>34,43° N</td>
+                                    <td>127,53° O</td>
+                                    <td>Ein Raumfahrtzentrum an der Küste für die Entwicklung und den Start von Raketen wie Naro und Nuri.</td>
+                                </tr>
+                                <tr>
+                                    <td>Sohae Satellite Launching Station</td>
+                                    <td>2012/03/01</td>
+                                    <td>39,66° N</td>
+                                    <td>124,71° O</td>
+                                    <td>Ein Platz an der Küste mit Anlagen für Satellitenstarts und Prüfständen für große Raketen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Baikonur Cosmodrome</td>
+                                    <td>1955/06/02</td>
+                                    <td>45,96° N</td>
+                                    <td>63,30° O</td>
+                                    <td>Der seit langem genutzte Kosmodrom, von dem der erste künstliche Satellit und der erste bemannte Raumflug starteten.</td>
+                                </tr>
+                                <tr>
+                                    <td>Plesetsk Cosmodrome</td>
+                                    <td>1957/07/15</td>
+                                    <td>62,92° N</td>
+                                    <td>40,57° O</td>
+                                    <td>Ein Kosmodrom in hoher Breite, gut geeignet für polare und stark geneigte Bahnen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Vostochny Cosmodrome</td>
+                                    <td>2011/08/01</td>
+                                    <td>51,88° N</td>
+                                    <td>128,33° O</td>
+                                    <td>Ein verhältnismäßig neuer Kosmodrom für Starts von Sojus, Angara und anderen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Rocket Lab Launch Complex 1</td>
+                                    <td>2016/09/26</td>
+                                    <td>39,26° S</td>
+                                    <td>177,87° O</td>
+                                    <td>Ein privater Startplatz für die Electron-Rakete, ausgelegt auf häufige Starts kleiner Satelliten.</td>
+                                </tr>
+                                <tr>
+                                    <td>Satish Dhawan Space Centre</td>
+                                    <td>1971/10/09</td>
+                                    <td>13,71° N</td>
+                                    <td>80,23° O</td>
+                                    <td>Ein großes Raumfahrtzentrum mit mehreren Startrampen, von dem PSLV, GSLV und LVM3 starten.</td>
+                                </tr>
+                                <tr>
+                                    <td>Andøya Space</td>
+                                    <td>1962/08/18</td>
+                                    <td>69,29° N</td>
+                                    <td>16,02° O</td>
+                                    <td>Ein Platz mit langer Erfahrung in Höhenforschungsraketen sowie Atmosphären- und Polarlichtforschung, inzwischen auch mit Anlagen für Orbitalstarts.</td>
+                                </tr>
+                                <tr>
+                                    <td>Semnan Space Center</td>
+                                    <td>2006/11/02</td>
+                                    <td>35,23° N</td>
+                                    <td>53,92° O</td>
+                                    <td>Ein Platz im Landesinneren für Start und Erprobung kleiner Satellitenträger.</td>
+                                </tr>
+                                <tr>
+                                    <td>Palmachim Airbase</td>
+                                    <td>1988/09/19</td>
+                                    <td>31,90° N</td>
+                                    <td>34,69° O</td>
+                                    <td>Bekannt für Starts in rückläufige Bahnen, da die Raketen nach Westen über das Meer geschickt werden.</td>
+                                </tr>
+                                <tr>
+                                    <td>Aunt Effie's Farm</td>
+                                    <td>1926/03/16</td>
+                                    <td>42,22° N</td>
+                                    <td>71,81° W</td>
+                                    <td>Kein Startplatz im eigentlichen Sinn, sondern das Feld, auf dem Robert Goddard 1926 die weltweit erste Flüssigkeitsrakete startete.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="glossary">Glossar</h3>
+                        <p>Die wichtigsten Begriffe aus diesem Handbuch und aus dem Spiel.</p>
+                        <table class="desc glossary-table">
+                            <thead>
+                                <tr>
+                                    <th>Begriff</th>
+                                    <th>Bedeutung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">Bahn und Flug</td>
+                                </tr>
+                                <tr>
+                                    <td>Apoapsis (Ap)</td>
+                                    <td>Der Punkt einer Bahn, der am weitesten vom Zentralkörper entfernt liegt. Beim Start hebt die Beschleunigung im Aufstieg die Apoapsis der geplanten Bahn auf die Zielhöhe.</td>
+                                </tr>
+                                <tr>
+                                    <td>Periapsis (Pe)</td>
+                                    <td>Der Punkt einer Bahn, der dem Zentralkörper am nächsten liegt. Beschleunigt man nahe der Apoapsis, um die Periapsis aus der Atmosphäre herauszuheben, entsteht eine stabile Umlaufbahn.</td>
+                                </tr>
+                                <tr>
+                                    <td>Keplersche Bahnelemente</td>
+                                    <td>Die sechs Zahlen, die Größe, Form und Ausrichtung einer Bahn sowie die Position darauf beschreiben. Ausführlich unter „<a href="#keplerian-orbital-elements">Keplersche Bahnelemente</a>“.</td>
+                                </tr>
+                                <tr>
+                                    <td>Große Halbachse (a)</td>
+                                    <td>Der Wert, der die Größe einer Bahn beschreibt. Er entspricht der Hälfte des längeren Durchmessers der Ellipse und bestimmt zugleich die Umlaufzeit.</td>
+                                </tr>
+                                <tr>
+                                    <td>Exzentrizität (e)</td>
+                                    <td>Wie stark eine Bahn abgeflacht ist. 0 ist ein Kreis, Werte über 0 und unter 1 ergeben eine Ellipse, ab 1 eine offene Fluchtbahn.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bahnneigung (i)</td>
+                                    <td>Die Neigung der Bahnebene gegenüber der Äquatorebene des Zentralkörpers. 0° ist eine Äquatorbahn, 90° eine Polarbahn.</td>
+                                </tr>
+                                <tr>
+                                    <td>Länge des aufsteigenden Knotens (LAN / Ω)</td>
+                                    <td>Die Richtung des aufsteigenden Knotens, an dem die Bahn die Äquatorebene von Süd nach Nord durchstößt. Sie legt fest, wohin die Bahnebene weist.</td>
+                                </tr>
+                                <tr>
+                                    <td>Argument der Periapsis (ω)</td>
+                                    <td>Der entlang der Bahn gemessene Winkel vom aufsteigenden Knoten bis zur Periapsis. Er legt fest, wohin die Ellipse innerhalb der Bahnebene zeigt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Mittlere Anomalie (M)</td>
+                                    <td>Ein Winkel, der die Position eines Körpers oder Raumfahrzeugs innerhalb eines Umlaufs mit der Zeit in Beziehung setzt.</td>
+                                </tr>
+                                <tr>
+                                    <td>SOI (Sphere of Influence, Einflusssphäre)</td>
+                                    <td>Der Bereich, in dem die Schwerkraft eines Körpers bei der Bahnberechnung als zentral behandelt wird. Beim Eintritt in die SOI eines anderen Körpers wechselt der Zentralkörper Ihrer Bahn.</td>
+                                </tr>
+                                <tr>
+                                    <td>Kármán-Linie</td>
+                                    <td>Die Höhe, die als Grenze zwischen Atmosphäre und Weltraum gilt. In diesem Spiel gilt der Bahneintritt als abgeschlossen, sobald die Periapsishöhe die Kármán-Linie des Zentralkörpers übersteigt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bahneintritt</td>
+                                    <td>Ein Raumfahrzeug auf eine Bahn zu bringen, auf der es den Zentralkörper dauerhaft umkreisen kann. In diesem Spiel bedeutet es, dass die Periapsishöhe über der Kármán-Linie liegt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Ballistischer Flug</td>
+                                    <td>Flug allein unter der Schwerkraft, mit abgeschalteten Triebwerken, vor dem Bahneintritt. So belassen, fällt das Raumfahrzeug zum Zentralkörper zurück.</td>
+                                </tr>
+                                <tr>
+                                    <td>Freiflug</td>
+                                    <td>Ein Flugabschnitt mit abgeschaltetem Triebwerk, in dem sich das Raumfahrzeug allein durch seine Geschwindigkeit und die Schwerkraft bewegt. Beim automatischen Start ist damit der Abschnitt zwischen Apoapsisanpassung und erneuter Zündung gemeint.</td>
+                                </tr>
+                                <tr>
+                                    <td>Schwerkraftwende</td>
+                                    <td>Ein Startverfahren, bei dem das Fahrzeug im Steigflug allmählich geneigt wird und mithilfe der Schwerkraft gleitend vom senkrechten Steigflug zur waagerechten Beschleunigung übergeht.</td>
+                                </tr>
+                                <tr>
+                                    <td>Azimut</td>
+                                    <td>Der Winkel, der eine Bewegungsrichtung in der Waagerechten angibt. In den Starteinstellungen dieses Spiels ist Norden 0°, Osten 90°, Süden 180° und Westen 270°.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bahnrundung</td>
+                                    <td>Nahe der Apoapsis in Bewegungsrichtung zu beschleunigen, um die Periapsis anzuheben und den Unterschied zwischen beiden Höhen zu verringern.</td>
+                                </tr>
+                                <tr>
+                                    <td>Rendezvous</td>
+                                    <td>Sich einem anderen Raumfahrzeug oder Objekt in der Umlaufbahn zu nähern und Position und Geschwindigkeit anzugleichen.</td>
+                                </tr>
+                                <tr>
+                                    <td>ΔV (Delta-v)</td>
+                                    <td>Die Geschwindigkeitsänderung, die ein Raumfahrzeug mit seinem Treibmittel erzeugen kann, oder die für ein Bahnmanöver nötige Geschwindigkeitsänderung. Je größer sie ist, desto stärker lässt sich die Bahn verändern.</td>
+                                </tr>
+                                <tr>
+                                    <td>Inertialgeschwindigkeit / Eigengeschwindigkeit gegenüber der Luft</td>
+                                    <td>Die Inertialgeschwindigkeit wird gegen den Raum selbst gemessen, die Eigengeschwindigkeit gegenüber der Luft gegen die mitrotierende Atmosphäre. Aerodynamik beim Start und der NavBall verwenden die Luftgeschwindigkeit, Bahnberechnungen die Inertialgeschwindigkeit.</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">Fahrzeuge</td>
+                                </tr>
+                                <tr>
+                                    <td>Schub</td>
+                                    <td>Die Kraft, mit der ein Triebwerk ein Raumfahrzeug beschleunigt. Zum Abheben muss der Schub das auf das Fahrzeug wirkende Gewicht übersteigen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Spezifischer Impuls (ISP)</td>
+                                    <td>Ein Maß in Sekunden dafür, wie wirkungsvoll ein Triebwerk Treibmittel in Schub umsetzt. Je höher der Wert, desto wirkungsvoller das Triebwerk.</td>
+                                </tr>
+                                <tr>
+                                    <td>Schub-Gewichts-Verhältnis (TWR)</td>
+                                    <td>Das Verhältnis von Schub zum Gewicht des Fahrzeugs. Bei 1,0 oder darunter am Boden übersteigt der Schub das Gewicht nicht und das Fahrzeug hebt nicht ab.</td>
+                                </tr>
+                                <tr>
+                                    <td>Stufe</td>
+                                    <td>Ein Abschnitt einer Rakete, der im Flug abgeworfen wird. Das Abtrennen verbrauchter Triebwerke und Tanks macht das verbleibende Fahrzeug leichter.</td>
+                                </tr>
+                                <tr>
+                                    <td>Booster</td>
+                                    <td>Ein zusätzliches Triebwerk an der Seite eines Fahrzeugs, vor allem für mehr Schub im ersten Teil des Starts. Es wird abgeworfen, sobald sein Treibmittel verbraucht ist.</td>
+                                </tr>
+                                <tr>
+                                    <td>Decoupler</td>
+                                    <td>Ein Bauteil, das Stufen miteinander verbindet und im Flug voneinander löst. Im VAB werden die Stufen an der Position jedes Decouplers geteilt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Nutzlastverkleidung</td>
+                                    <td>Eine Hülle, die die Nutzlast beim Start vor Luftwiderstand und Aufheizung schützt. Sie wird abgeworfen, sobald das Fahrzeug die Atmosphäre verlassen hat.</td>
+                                </tr>
+                                <tr>
+                                    <td>Nutzlast</td>
+                                    <td>Der Satellit, die Sonde oder die sonstige Fracht, die eine Rakete befördert.</td>
+                                </tr>
+                                <tr>
+                                    <td>MECO</td>
+                                    <td>Kurz für Main Engine Cut Off (Hauptriebwerksabschaltung). Beim automatischen Start erfolgt sie, wenn die Apoapsis der geplanten Bahn die Zielhöhe erreicht.</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Q</td>
+                                    <td>Der Punkt im Flug, an dem der Staudruck seinen Höchstwert erreicht. Die aerodynamische Belastung des Fahrzeugs aus Luftdichte und Luftgeschwindigkeit ist hier am größten.</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">Bildschirm und Bedienung</td>
+                                </tr>
+                                <tr>
+                                    <td>NavBall</td>
+                                    <td>Das Instrument, das die Lage des Raumfahrzeugs auf einer Kugel zeigt, zusammen mit Bezugsrichtungen wie Bewegungsrichtung, Bahnebene und Ziel.</td>
+                                </tr>
+                                <tr>
+                                    <td>SAS</td>
+                                    <td>Die Lagehaltung, die das Raumfahrzeug automatisch in einer von Ihnen gewählten Richtung hält.</td>
+                                </tr>
+                                <tr>
+                                    <td>Prograde / Retrograde</td>
+                                    <td>Prograde ist die Bewegungsrichtung, Retrograde die Gegenrichtung. Beschleunigen in Prograde hebt die Bahn an, Beschleunigen in Retrograde senkt sie ab.</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal / Antinormal</td>
+                                    <td>Die beiden Richtungen senkrecht zur Bahnebene. Beschleunigen entlang dieser Richtungen ändert die Bahnneigung.</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith / Nadir</td>
+                                    <td>Senkrecht nach oben, vom Mittelpunkt des Zentralkörpers weg, und senkrecht nach unten, auf ihn zu.</td>
+                                </tr>
+                                <tr>
+                                    <td>Target / Antitarget</td>
+                                    <td>Die Richtung zum Verfolgungsziel und die Gegenrichtung dazu.</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>Die Brennrichtung eines von Ihnen eingestellten Bahnmanövers. Sie lässt sich auf dem NavBall und mit SAS als Zielrichtung verwenden.</td>
+                                </tr>
+                                <tr>
+                                    <td>Map View</td>
+                                    <td>Die Ansicht, in der Sie die gesamte Bahn des ausgewählten Objekts, seine Apoapsis und Periapsis sowie seine Lage zu anderen Objekten prüfen.</td>
+                                </tr>
+                                <tr>
+                                    <td>Zeitbeschleunigung</td>
+                                    <td>Die Funktion, die den Ablauf der Spielzeit beschleunigt. Die höchste verfügbare Rate hängt von Höhe und Flugzustand ab.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kugelblitz. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

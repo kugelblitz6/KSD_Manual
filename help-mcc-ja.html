@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keplerian Space Discovery マニュアル</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Keplerian Space Discovery マニュアル</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <nav class="sidebar-contents">
+                    <ul>
+                        <li><a href="#introduction">1. はじめに</a></li>
+                <li><a href="#quick-start">2. クイックスタート</a></li>
+                        <li><a href="#main-screen">3. メインスクリーン</a>
+                            <ul>
+                                <li><a href="#main-screen-object-selector">Object Selector</a></li>
+                                <li><a href="#main-screen-time-controls">Time Controls</a></li>
+                                <li><a href="#main-screen-spacecraft-controls">宇宙機操作パネル</a></li>
+                                <li><a href="#main-screen-selected-object-information">選択オブジェクト情報</a></li>
+                                <li><a href="#main-screen-tracking-object-information">追跡オブジェクト情報</a></li>
+                                <li><a href="#main-screen-filter">Filter</a></li>
+                                <li><a href="#main-screen-camera-controls">Camera Controls</a></li>
+                                <li><a href="#main-screen-navball">NavBall の見方</a></li>
+                                <li><a href="#main-screen-map-view">Map View</a></li>
+                                <li><a href="#orbit-lines">軌道線の見方</a></li>
+                                <li><a href="#main-screen-soi">SOI 表示</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#vehicle-assembly-building">4. ロケット組立棟（VAB）</a>
+                            <ul>
+                                <li><a href="#vab-basic-operation">基本操作</a></li>
+                                <li><a href="#vab-toolbar">上部ツールバー</a></li>
+                                <li><a href="#vab-stage-information">ステージ情報</a></li>
+                                <li><a href="#vab-save-load">保存と読み込み</a></li>
+                                <li><a href="#vab-parts-editor">Parts Editor</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#launch-and-flight">5. 打ち上げと飛行</a>
+                            <ul>
+                                <li><a href="#launch-preparation">打ち上げ準備</a></li>
+                                <li><a href="#launch-auto">自動打ち上げ</a></li>
+                                <li><a href="#launch-manual-control">手動操縦</a></li>
+                                <li><a href="#launch-sas">SAS</a></li>
+                                <li><a href="#launch-time-acceleration">時間加速のルール</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contract">6. 契約</a>
+                            <ul>
+                                <li><a href="#contract-acceptance">契約を受諾する</a></li>
+                                <li><a href="#contract-progress">達成条件と完了</a></li>
+                                <li><a href="#contract-rewards">報酬</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#orbital-basics">7. 軌道の基礎知識</a>
+                            <ul>
+                                <li><a href="#keplerian-orbital-elements">ケプラー軌道要素</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#reference">8. リファレンス</a>
+                            <ul>
+                                <li><a href="#control-keys">Control Keys</a></li>
+                                <li><a href="#launch-sites">射場一覧</a></li>
+                                <li><a href="#glossary">用語集</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main">
+                <div class="content">
+
+                    <section id="introduction">
+                        <h2>1. はじめに</h2>
+                        <p>『Keplerian Space Discovery』は、実在の太陽系と世界各地の実在する射場を舞台に、ロケットの組み立て・打ち上げ・軌道投入を行う宇宙飛行シミュレーションゲームです。天体と宇宙機の運動はケプラー軌道力学に基づいて計算されます。</p>
+                    </section>
+
+        <section id="quick-start">
+            <h2>2. クイックスタート</h2>
+            <p>ニューゲームを開始すると、カメラ操作から最初のロケット打ち上げまでを案内するチュートリアルが始まります。画面上で次に操作する場所が示されるため、初めてプレイするときはチュートリアルに沿って進めることをおすすめします。</p>
+
+            <h3>最初の目標</h3>
+            <p>チュートリアルでは、契約「最初の一歩」を受注し、簡単なロケットを組み立てて高度15 kmへ到達します。主な流れは次のとおりです。</p>
+            <ol>
+                <li>カメラの回転・ズーム・平行移動・位置リセットを試します。</li>
+                <li>「契約管理」で契約「最初の一歩」を受注します。</li>
+                <li>「ロケット組立棟（VAB）」で、エンジン・タンク・ノーズコーンを組み合わせて機体を保存します。</li>
+                <li>ケプラー宇宙センターを選択し、「打ち上げ準備」から機体を射点へ移動します。</li>
+                <li>「打ち上げ実行」で自動打ち上げを開始し、高度15 kmへ到達したら契約報酬を受け取ります。</li>
+            </ol>
+            <p>ここまででゲームの基本的な流れは完了です。契約を達成して報酬を獲得し、新しい機体を開発しながら、より高い高度や周回軌道を目指しましょう。</p>
+        </section>
+
+                    <section id="main-screen">
+                        <h2>3. メインスクリーン</h2>
+                        <img src="./img/main_screen-jp.jpg" alt="メインスクリーン">
+
+                        <h3 id="main-screen-object-selector">天体／宇宙機選択</h3>
+                        <p>画面左側の項目をマウス左クリックすることで、注目選択の切り替えを行うことができます。<br />
+                            マウス中ボタンクリックで、対象をターゲットすることができます。</p>
+
+                        <h3 id="main-screen-time-controls">時間制御</h3>
+                        <p>
+                            ・高度1km以上から時間加速を行うことができます。<br />
+                            ・"<span style="color: red;">||</span>" は時間停止、"<span style="color: #0F0;">▶</span>" は等倍速、"<span style="color: orange;">▶▶▶</span>" は×10倍となります。<br />
+                            ・"<span style="color: orange;">▶▶▶</span>" は続けて押すことで、効果を重ねることができます。1回押すごとに×10倍され、3回押すと×1000倍になります。<br />
+                            ・ただし状況ごとに倍率の上限があり、それを超える倍率にはなりません。たとえば大気圏内やエンジン噴射中は上限が×4なので、"<span style="color: orange;">▶▶▶</span>" を押しても×4までしか上がりません。上限のルールは「<a href="#launch-time-acceleration">時間加速のルール</a>」を参照してください。
+                        </p>
+
+                        <h3 id="main-screen-spacecraft-controls">宇宙機操作パネル</h3>
+                        <img src="./img/spacecraft-controls-navball-jp.jpg" alt="操作可能な宇宙機を選択し、宇宙機操作パネルとNavBallを表示した画面">
+                        <p>操作可能な宇宙機を選択すると、宇宙機操作パネルが開きます。パネルではSAS（姿勢自動保持）、姿勢目標、ステージ分離など、飛行に必要な操作をまとめて行います。</p>
+                        <p>宇宙機を直接操縦する場合は操縦モードへ切り替えます。スロットルや姿勢をキーボードで操作する方法は「<a href="#launch-manual-control">手動操縦</a>」、SAS の各モードは「<a href="#launch-sas">SAS（姿勢自動保持）</a>」を参照してください。</p>
+
+                        <h3 id="main-screen-selected-object-information">選択オブジェクト情報</h3>
+                        <p>画面右上には、現在選択している天体・宇宙機・地上施設の情報が表示されます。選択オブジェクトはカメラの注目先となり、宇宙機を選択した場合は飛行操作や時間加速上限の基準にもなります。</p>
+                        <p>天体や軌道上のオブジェクトでは、遠点・近点、軌道長半径、離心率、軌道傾斜角、公転周期、速度などの軌道情報を確認できます。地上付近では緯度・経度・海抜高度、宇宙機では飛行状態に応じた速度や高度なども表示されます。表示項目はオブジェクトの種類によって異なります。</p>
+
+                        <h3 id="main-screen-tracking-object-information">追跡オブジェクト情報</h3>
+                        <p>追跡対象を指定すると、画面右下に選択オブジェクトとの相対情報が表示されます。距離、高度差、接近速度、交差角、位相角などを使って、ランデブーや接近状況を確認できます。計算できない項目は <b>n/a</b> と表示されます。</p>
+                        <p>また、各ボタンの機能は以下の通りです。</p>
+                        <table class="desc">
+                            <tbody>
+                                <tr><td>注視する</td><td>追跡対象へ注目先を切り替えます。</td></tr>
+                                <tr><td>詳細を表示</td><td>追跡対象の詳細情報を開きます。</td></tr>
+                                <tr><td>追跡を終了</td><td>現在の追跡を終了します。</td></tr>
+                            </tbody>
+                        </table>
+                        <p>天体／宇宙機をマウス中ボタンクリックするか O キーで追跡を開始できます。</p>
+
+                        <h3 id="main-screen-filter">Filter</h3>
+                        <p>Object Selector 上部の <b>Filter</b> を開くと、宇宙機や地上施設など、天体以外のオブジェクトを一覧から選んで表示・非表示にできます。非表示にしたオブジェクトは Object Selector と画面上のマーカーから除外され、設定はセーブデータに保存されます。</p>
+                        <p>ゲーム進行上まだ利用できないオブジェクトや、打ち上げ予定時刻に達していないオブジェクトは、フィルターの対象一覧に表示されません。</p>
+
+                        <h3 id="main-screen-camera-controls">Camera Controls</h3>
+                        <p>画面上部の <b>Camera Control</b> からカメラ設定を開けます。基本操作は、右ドラッグで回転、中ドラッグで平行移動、ホイールで接近・後退です。V キー（または中ボタン＋右ボタン）でカメラモードを切り替えます。</p>
+                        <table class="desc">
+                            <thead><tr><th>モード</th><th>説明</th></tr></thead>
+                            <tbody>
+                                <tr><td>Chase</td><td>選択オブジェクトを基準に追従する通常のカメラです。</td></tr>
+                                <tr><td>Free</td><td>カメラの向きやロールを自由に調整できます。</td></tr>
+                                <tr><td>Orbital</td><td>軌道全体を確認しやすい距離と向きに切り替えます。地上施設の選択中は使用できません。</td></tr>
+                            </tbody>
+                        </table>
+                        <p>Home / End でも接近・後退、I / K / J / L でも回転できます。Page Up / Page Down は画角、Insert / Delete は露出を調整します。全操作は「<a href="#control-keys">Control Keys</a>」を参照してください。</p>
+
+                        <h3 id="main-screen-navball">NavBall の見方</h3>
+                        <p>NavBall は、宇宙機の姿勢と基準方向を球面上に表示します。Prograde は進行方向、Retrograde はその反対、Normal / Antinormal は軌道面に垂直な方向、Radial-Out / Radial-In は親天体から見た真上／真下（Zenith / Nadir）を示します。Target / Antitarget は追跡対象の方向とその反対、Maneuver は設定した噴射方向です。</p>
+                        <p>Prograde / Retrograde などの速度基準マーカーは、<b>軌道投入前は対気速度基準、軌道投入後は慣性速度基準</b>です。軌道投入の判定は、近点高度が親天体の大気圏界面（カーマンライン）を超えたときに行われます。この切り替えは SAS の姿勢目標および軌道線の表示基準と一致します。</p>
+                        <p>各方向の用途は「<a href="#launch-sas">SAS（姿勢自動保持）</a>」を参照してください。</p>
+
+                        <h3 id="main-screen-map-view">Map View</h3>
+                        <p>M キーで Map View（Orbital カメラ）へ切り替えると、選択オブジェクトの軌道全体を広い視野で確認できます。もう一度 M キーを押すと通常の Chase カメラへ戻ります。双曲線軌道では親天体の SOI を基準に表示範囲が決まり、地上施設を選択している間は Map View に切り替わりません。</p>
+                        <p>Map View では、軌道の形、遠点・近点、他オブジェクトとの位置関係を確認しながら飛行計画を立てます。軌道投入前後で軌道線の表示基準が変わる点は「<a href="#orbit-lines">軌道線の見方</a>」を参照してください。</p>
+                        <img src="./img/map-view-soi-jp.jpg" alt="月を選択し、緑色の軌道線と点で構成された球状のSOIを表示したMap View">
+
+                        <h3 id="orbit-lines">軌道線の見方</h3>
+                        <p>画面には2種類の軌道線が表示されます。</p>
+                        <p>
+                            ・<b>予定軌道</b> … 現在の位置と速度から計算した、これから飛ぶ経路。エンジン噴射中は加速に合わせて刻々と形が変わります。<br />
+                            ・<b>実績軌道</b> … 実際に通ってきた経路の記録（飛行の軌跡）。
+                        </p>
+                        <p>軌道線の表示のしかたは、飛行の状態によって自動的に切り替わります。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>状態</th>
+                                    <th>表示のしかた</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>打ち上げ中・弾道飛行中（軌道投入前）</td>
+                                    <td>地面に固定した表示。軌跡の根元は発射台に留まり続け、天体の自転を含めた対地の経路（このまま飛ぶとどこに落ちるか）が読み取れます。</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道投入後</td>
+                                    <td>慣性空間に固定した表示。天体の自転に関係なく、軌道そのものの形（楕円）が表示されます。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>切り替わるタイミングは「近点高度が大気圏界面（カーマンライン）を超えたとき」で、これは軌道投入の判定と同じです。<a href="#main-screen-navball">NavBall</a> の Prograde などのマーカーの基準も、これと同時に対気基準から慣性基準へ切り替わります。</p>
+                        <p>複数のオブジェクトの軌道線が重なる場合は、色で対象を識別できます。</p>
+                        <img src="./img/orbit-line-colors-jp.jpg" alt="選択中、追跡中、ホバー中、その他のオブジェクトの軌道線を色分けしたMap View">
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>軌道線の色</th>
+                                    <th>対象</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-selected"></span>緑</td>
+                                    <td>現在選択している天体または宇宙機</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-tracking"></span>黄</td>
+                                    <td>追跡オブジェクト</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-hover"></span>赤</td>
+                                    <td>左側のオブジェクト一覧または画面上のマーカーに、ポインターを合わせているオブジェクト</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="orbit-color orbit-color-other"></span>その他</td>
+                                    <td>選択・追跡・ホバーのいずれにも該当しないオブジェクト</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="main-screen-soi">SOI 表示</h3>
+                        <p>F3 キーで SOI（Sphere of Influence：重力圏）の表示を切り替えます。SOI は、宇宙機の軌道計算上、その天体を中心天体として扱う範囲です。</p>
+                        <p>上の画面では月を選択しており、月を囲む点で構成された球が SOI、緑色の線が選択中の月の軌道を表しています。</p>
+                        <p>宇宙機が現在の親天体の SOI を出ると、より上位の天体を中心とする軌道へ移ります。反対に、月や惑星など別の天体の SOI に入ると、その天体を中心とする軌道へ切り替わります。惑星間飛行や月遷移では、SOI の境界と予定軌道の接続を確認すると航路を把握しやすくなります。</p>
+                    </section>
+
+                    <section id="vehicle-assembly-building">
+                        <h2>4. ロケット組立棟（VAB）</h2>
+                        <p>ロケット組立棟（VAB）では、パーツを組み合わせて自分だけのロケットを設計・保存できます。</p>
+                        <img src="./img/vab-jp.jpg" alt="ロケット組立棟（VAB）の画面">
+
+                        <h3 id="vab-basic-operation">基本操作</h3>
+                        <h4>パーツを配置する</h4>
+                        <p>
+                            ・画面左の Parts Selector から、配置したいパーツをマウス左クリックで選びます。<br />
+                            ・クリックしたらボタンを離し、マウスを動かして配置したい位置までドラッグします（クリックしたまま動かすのではありません）。<br />
+                            ・目的の位置で再度クリックすると、その位置にパーツが確定配置されます。<br />
+                            ・すでに配置されているパーツの近くに配置しようとすると、スナップして自動的に接続されます。
+                        </p>
+                        <p>Parts Selector 上部の直径タブ（1.25m / 2.5m / 3.5m / 5.0m / 7.5m / 10.0m）を切り替えると、その直径に対応するパーツだけが一覧に表示されます。また、その下のプルダウン（Engine など）を切り替えることで、Tank・Fairing といったパーツ種別を切り替えられます。</p>
+
+                        <h4>配置済みパーツを移動する</h4>
+                        <p>配置済みのパーツも、新規配置と同じように左クリックで掴み、ボタンを離した状態で移動させ、もう一度左クリックすると位置が確定します。接続済みパーツを掴んだ場合は、そのパーツより先に接続されている子パーツもまとめて移動します。</p>
+
+                        <h4>パーツを接続する</h4>
+                        <p>移動中のパーツを別のパーツへ接触させると、そのパーツを親として自動的に接続されます。機体の中心軸付近へ配置すると中心線へスナップし、タンクやエンジンなどをまっすぐ揃えられます。</p>
+                        <p>機体から切り離したままのパーツは有効な機体構成とみなされません。保存時には、ルートパーツから接続されている有効なパーツだけが保存されます。</p>
+
+                        <h4>パーツを削除する</h4>
+                        <p>パーツを左クリックで掴むと、画面右端に削除エリアが表示されます。掴んだパーツを削除エリアまで移動すると、そのパーツを削除できます。パーツを掴んでいる状態で Delete キーを押しても削除できます。</p>
+                        <img src="./img/vab-delete-parts-jp.jpg" alt="パーツを掴んだときに画面右端へ表示される削除エリア">
+
+                        <h3 id="vab-toolbar">上部ツールバー</h3>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>ボタン</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Move Adjustment （トグル）</td>
+                                    <td>パーツをドラッグで移動させるときの、奥方向の距離の扱いを切り替えます。通常（OFF）は、パーツは掴んだときの奥方向の距離を保ったまま画面に沿って動きます。ONにすると、パーツの奥方向の距離が機体の中心軸上に揃えられた状態で移動するようになり、奥まった位置にあるパーツを機体中心付近へ寄せ直す操作がしやすくなります。</td>
+                                </tr>
+                                <tr>
+                                    <td>AUTO ASSY （トグル）</td>
+                                    <td>ONの時は、パーツをクリックすると、今置かれているパーツの左側に自動で配置されます（最初のパーツは原点に配置されます）。OFFの時は、クリック後に自分でマウスドラッグして配置場所を決めます（上記の基本操作の通り）。</td>
+                                </tr>
+                                <tr>
+                                    <td>New</td>
+                                    <td>現在配置されているパーツをすべて削除し、新しいロケットの組み立てを開始します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Save</td>
+                                    <td>組み立て中のロケットを保存します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Load</td>
+                                    <td>保存したロケットを呼び出します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Texture</td>
+                                    <td>ロケットに貼り付ける画像（カスタムテクスチャ）を管理するダイアログを開きます。プレイヤーが自作した画像を登録しておき、閲覧・削除・追加ができます。</td>
+                                </tr>
+                                <tr>
+                                    <td>x1～x6</td>
+                                    <td>パーツを放射状に複数配置する数を切り替えます。ブースターなど側面パーツの配置に使います。x2以上に設定した状態で、貼り付け先パーツの側面にパーツを配置すると、貼り付け先パーツの中心軸を基準に、等間隔で複数個同時配置されます。配置後は複製されたパーツが1つのグループとして扱われます。</td>
+                                </tr>
+                                <tr>
+                                    <td>Horizontal / Vertical （トグル）</td>
+                                    <td>組み立て中のロケットの表示向きを切り替えます。Horizontalで水平配置、Verticalで垂直配置になります。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="vab-stage-information">ステージ情報</h3>
+                        <p>画面下部の「Show Stage Information」を選択すると、現在の機体をステージごとに分けた性能情報が表示されます。インターステージを配置すると、その位置を境界としてステージが自動的に分けられます。もう一度ボタンを選択するとパネルを閉じます。</p>
+                        <img src="./img/vab-stage-information-jp.png" alt="ステージごとのパーツ数、費用、デルタV、比推力、推力、質量、推力重量比を表示するステージ情報パネル">
+                        <table class="desc" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PARTS</td>
+                                    <td>そのステージを構成するパーツ数です。</td>
+                                </tr>
+                                <tr>
+                                    <td>COST</td>
+                                    <td>そのステージに含まれるパーツの合計費用です。</td>
+                                </tr>
+                                <tr>
+                                    <td>DELTA-V</td>
+                                    <td>そのステージが発揮できる速度変化量の目安です。値が大きいほど、より大きく軌道を変更できます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ISP</td>
+                                    <td>エンジンの比推力です。推進剤をどれだけ効率よく推力へ変換できるかを秒単位で示します。</td>
+                                </tr>
+                                <tr>
+                                    <td>THRUST</td>
+                                    <td>そのステージのエンジンが発生する合計推力です。</td>
+                                </tr>
+                                <tr>
+                                    <td>MASS</td>
+                                    <td>そのステージ単体の質量と、そのステージが加速する上段を含めた合計質量を「ステージ質量 / 合計質量」で表示します。</td>
+                                </tr>
+                                <tr>
+                                    <td>推力重量比（TWR）</td>
+                                    <td>推力が重量の何倍かを表します。第1段で1.0以下の場合は推力が重量を上回らず、地上から離床できません。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>現行バージョンには、海面上と真空中の性能表示を切り替えるボタンはありません。</p>
+
+                        <h3 id="vab-save-load">保存と読み込み</h3>
+                        <p><b>Save</b> を選択すると、機体名と説明を入力して現在の機体を保存できます。読み込んだ機体を編集して保存した場合は、その機体の保存内容が更新されます。<b>New</b> から新しく組み立てた機体を保存すると、別の機体として登録されます。</p>
+                        <p><b>Load</b> を選択すると、保存済みの機体を一覧から選んでVABへ読み込めます。保存対象になるのは、ルートパーツから接続されている有効なパーツだけです。</p>
+
+                        <h3 id="vab-parts-editor">Parts Editor</h3>
+                        <p>配置済みのパーツ上でマウスを右クリックすると、画面右側にParts Editorが表示されます。パーツの色、材質の見え方、表面模様、向きを編集できます。変更内容は画面上のパーツへすぐに反映され、機体を保存するとパーツごとの設定として保存されます。</p>
+                        <img src="./img/vab-parts-editor-jp.png" alt="表面材質、色、テクスチャ、ノーマルマップ、パーツの向きを変更するParts Editor">
+                        <table class="desc" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Copy Color</td>
+                                    <td>現在のパーツの色と表面材質設定を一時的にコピーします。別のパーツへ同じ外観を適用するときに使用します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Paste Color</td>
+                                    <td>Copy Colorでコピーした色と表面材質設定を、編集中のパーツへ適用します。設定がコピーされていない間は選択できません。</td>
+                                </tr>
+                                <tr>
+                                    <td>Metallic</td>
+                                    <td>表面の金属らしさを調整します。値を大きくすると、周囲の光を金属のように反射する見え方になります。</td>
+                                </tr>
+                                <tr>
+                                    <td>Roughness</td>
+                                    <td>表面の粗さを調整します。値を小さくすると光沢が強くなり、値を大きくすると反射がぼやけた落ち着いた見え方になります。</td>
+                                </tr>
+                                <tr>
+                                    <td>Unpainted / White / Black / Orange</td>
+                                    <td>用意されている色のプリセットです。Unpaintedはパーツ本来の色へ戻します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Red / Green / Blue</td>
+                                    <td>赤・緑・青の成分をスライダーで調整し、任意の表面色を作ります。</td>
+                                </tr>
+                                <tr>
+                                    <td>Surface Texture</td>
+                                    <td>パーツ表面に重ねる画像を選択します。Noneでは画像を使用しません。上部ツールバーのTextureから登録したカスタムテクスチャも選択できます。</td>
+                                </tr>
+                                <tr>
+                                    <td>Surface Normal Map</td>
+                                    <td>表面の細かな凹凸表現を選択します。Flatでは凹凸を追加せず、その他の項目では形状を変えずに表面模様の陰影を加えます。</td>
+                                </tr>
+                                <tr>
+                                    <td>Invert</td>
+                                    <td>パーツの前後方向を反転します。エンジンやノーズコーンなど、取り付け方向を逆にしたい場合に使用します。</td>
+                                </tr>
+                                <tr>
+                                    <td>Edit End</td>
+                                    <td>編集を終了してParts Editorを閉じます。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="note">
+                            <strong>表面設定の適用範囲：</strong>
+                            色や材質は、パーツモデルに設定されている変更可能な表面へ適用されます。パーツによっては一部の面に元の材質や色が残ることがあります。
+                        </div>
+                    </section>
+
+                    <section id="launch-and-flight">
+                        <h2>5. 打ち上げと飛行</h2>
+
+                        <h3 id="launch-preparation">打ち上げ準備</h3>
+                        <p>射場を選択して「打上準備」を開くと、使用する打上機とペイロードを選び、自動打ち上げの目標軌道と飛行経路を設定できます。</p>
+                        <img src="./img/launch-preparation-jp.jpg" alt="打上機とペイロードを選択し、打上シーケンスパラメータを設定する打ち上げ準備画面">
+
+                        <p>左側の一覧から打上機とペイロードを選択します。打上機の欄には打ち上げ費用、打ち上げ回数、最終飛行日が表示されます。画面上部では打上機名称とペイロード名称を変更でき、打ち上げ費用、現在の資金、打ち上げ後の資金を確認できます。現在のバージョンでは、打ち上げ後の資金がマイナスになる場合も打ち上げられます。</p>
+
+                        <h4>打上シーケンスパラメータ</h4>
+                        <p>自動打ち上げで使用する目標値を設定します。設定値は打上機ごとに保存され、次回同じ打上機を選択したときにも使用されます。</p>
+
+                        <svg class="figure" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ターン開始高度、ターン終了高度、初期ピッチ角と遠点高度の関係を示す打ち上げ経路の概念図">
+                            <defs>
+                                <marker id="launch-arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M 0 0 L 8 4 L 0 8 z" fill="#00d060" />
+                                </marker>
+                                <marker id="launch-arrow-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M 0 0 L 8 4 L 0 8 z" fill="#aaa" />
+                                </marker>
+                            </defs>
+                            <line x1="25" y1="335" x2="655" y2="335" stroke="#ddd" stroke-width="3" />
+                            <text x="28" y="360" fill="#bbb" font-size="14">地表</text>
+                            <circle cx="115" cy="335" r="5" fill="#fff" />
+                            <text x="115" y="382" fill="#ddd" font-size="14" text-anchor="middle">射点</text>
+
+                            <path d="M 115 335 C 116 270, 126 212, 162 160 C 213 87, 313 63, 440 65 C 520 66, 585 55, 628 50" fill="none" stroke="#00d060" stroke-width="3" marker-end="url(#launch-arrow-green)" />
+                            <text x="135" y="245" fill="#00d060" font-size="14">重力ターン</text>
+                            <text x="338" y="88" fill="#00d060" font-size="14">水平方向への加速</text>
+
+                            <circle cx="120" cy="250" r="5" fill="#ffcc00" />
+                            <line x1="45" y1="250" x2="120" y2="250" stroke="#ffcc00" stroke-dasharray="5,4" />
+                            <line x1="45" y1="335" x2="45" y2="250" stroke="#aaa" marker-end="url(#launch-arrow-gray)" />
+                            <text x="54" y="288" fill="#ffcc00" font-size="14">ターン開始高度</text>
+
+                            <circle cx="270" cy="74" r="5" fill="#ff9800" />
+                            <line x1="45" y1="74" x2="270" y2="74" stroke="#ff9800" stroke-dasharray="5,4" />
+                            <line x1="45" y1="246" x2="45" y2="74" stroke="#aaa" marker-end="url(#launch-arrow-gray)" />
+                            <text x="54" y="102" fill="#ff9800" font-size="14">ターン終了高度</text>
+
+                            <line x1="120" y1="250" x2="120" y2="205" stroke="#888" stroke-dasharray="4,3" />
+                            <path d="M 120 222 A 28 28 0 0 1 135 228" fill="none" stroke="#5bc0eb" stroke-width="2" />
+                            <text x="142" y="218" fill="#5bc0eb" font-size="14">初期ピッチ角</text>
+
+                            <circle cx="628" cy="50" r="6" fill="#f06" />
+                            <line x1="628" y1="50" x2="628" y2="25" stroke="#f06" />
+                            <text x="620" y="20" fill="#f06" font-size="14" text-anchor="end">予定軌道の遠点が目標高度へ到達</text>
+                            <text x="620" y="38" fill="#ddd" font-size="13" text-anchor="end">エンジン停止・慣性飛行へ</text>
+
+                            <text x="340" y="385" fill="#888" font-size="13" text-anchor="middle">概念図：高度・距離・経路の縮尺は一定ではありません</text>
+                        </svg>
+
+                        <svg class="figure" viewBox="0 -20 680 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="目標遠点高度と目標近点高度の関係を示す軌道の概念図">
+                            <ellipse cx="330" cy="184" rx="250" ry="200" fill="none" stroke="#00d060" stroke-width="3" />
+                            <circle cx="180" cy="184" r="45" fill="#3a6ea5" stroke="#7ac0ff" stroke-width="2" />
+                            <text x="180" y="190" fill="#fff" font-size="14" text-anchor="middle">親天体</text>
+
+                            <circle cx="580" cy="184" r="6" fill="#ff9800" />
+                            <line x1="580" y1="184" x2="580" y2="112" stroke="#ff9800" stroke-width="2" />
+                            <text x="570" y="102" fill="#ff9800" font-size="15" text-anchor="end">遠点高度（目標）</text>
+
+                            <circle cx="80" cy="184" r="6" fill="#ffcc00" />
+                            <line x1="80" y1="184" x2="80" y2="274" stroke="#ffcc00" stroke-width="2" />
+                            <text x="90" y="295" fill="#ffcc00" font-size="15">近点高度（目標）</text>
+                            <text x="340" y="395" fill="#888" font-size="13" text-anchor="middle">概念図：軌道の形と高度の縮尺は一定ではありません</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>遠点高度</td>
+                                    <td>投入する軌道の目標遠点高度です。上昇中に予定軌道の遠点がこの高度へ達するとエンジンを停止し、遠点付近まで慣性飛行します。</td>
+                                </tr>
+                                <tr>
+                                    <td>近点高度</td>
+                                    <td>投入する軌道の目標近点高度です。遠点付近でエンジンを再点火し、近点がこの高度へ達するまで軌道を持ち上げます。</td>
+                                </tr>
+                                <tr>
+                                    <td>方位角</td>
+                                    <td>打ち上げ後に機体を倒していく水平方向です。北を0°、東を90°、南を180°、西を270°として指定します。射場の緯度と方位角によって、投入できる軌道傾斜角が決まります。</td>
+                                </tr>
+                                <tr>
+                                    <td>ターン開始高度</td>
+                                    <td>重力ターンを開始する高度です。この高度まではほぼ鉛直に上昇し、到達すると方位角に合わせてロールした後、機体を徐々に倒し始めます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ターン終了高度</td>
+                                    <td>重力ターンを終える高度です。この高度へ向けて機体を徐々に水平へ近づけます。到達前に予定軌道の遠点が目標高度へ達した場合は、その時点で遠点調整へ移ります。</td>
+                                </tr>
+                                <tr>
+                                    <td>初期ピッチ角</td>
+                                    <td>重力ターン開始時に、鉛直姿勢から機体を倒し始める角度です。0°に近いほど鉛直に近い姿勢から緩やかにターンを開始し、値を大きくすると早い段階から強く機体を傾けます。</td>
+                                </tr>
+                                <tr>
+                                    <td>最大高度</td>
+                                    <td>近点調整中に許容する遠点高度の上限です。遠点がこの値を超え、同時に近点が「最低高度」を超えた場合は、「近点高度」の目標へ届いていなくてもエンジンを停止して軌道投入を完了します。</td>
+                                </tr>
+                                <tr>
+                                    <td>最低高度</td>
+                                    <td>「最大高度」と組み合わせて使う、軌道投入完了を許可する近点高度の下限です。通常の目標近点高度は「近点高度」で指定します。</td>
+                                </tr>
+                                <tr>
+                                    <td>第1段強制分離</td>
+                                    <td>「指定した遠点高度に到達したとき、第1段目を強制的に分離する」を有効にすると、推進剤が残っている場合でも、予定軌道の遠点が指定高度へ達した時点で第1段を分離します。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note">
+                            <strong>設定の目安：</strong>
+                            初めて使用する打上機では、まず初期値のまま打ち上げて軌道を確認してください。目標軌道へ届かない場合は機体の推力・推進剤・段構成も確認し、ターン開始高度や初期ピッチ角だけを一度に大きく変更しないことをおすすめします。
+                        </div>
+
+                        <p>設定が終わったら「射場へ行く」を選択します。選択した打上機とペイロードが射点へ配置され、打ち上げ実行画面へ進みます。</p>
+
+                        <h3 id="launch-auto">自動打ち上げ</h3>
+                        <p>打ち上げは、目標軌道を指定するだけで軌道投入まで自動で行われます。シーケンスは実際のロケットと同じ流れで進みます。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>フェーズ</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. リフトオフ</td>
+                                    <td>エンジン点火。推力が機体重量を上回った瞬間に発射台を離れます。</td>
+                                </tr>
+                                <tr>
+                                    <td>2. 垂直上昇</td>
+                                    <td>高度約1kmまでまっすぐ上昇します。</td>
+                                </tr>
+                                <tr>
+                                    <td>3. ロール（方位角合わせ）</td>
+                                    <td>機体をロールさせ、打ち上げ方位角に機体の向きを合わせます。</td>
+                                </tr>
+                                <tr>
+                                    <td>4. 重力ターン</td>
+                                    <td>高度が上がるにつれて機体を徐々に倒し、水平方向への加速に移っていきます。</td>
+                                </tr>
+                                <tr>
+                                    <td>5. 遠点調整・MECO</td>
+                                    <td>遠点（Ap）が目標高度に達したらメインエンジンをカットし、続いて段分離を行います。</td>
+                                </tr>
+                                <tr>
+                                    <td>6. 慣性飛行</td>
+                                    <td>遠点付近まで惰性で上昇します。この間は時間加速が自動で入り、再点火が近づくと自動で等倍に戻ります。</td>
+                                </tr>
+                                <tr>
+                                    <td>7. 再点火・近点調整</td>
+                                    <td>遠点の少し手前でエンジンを再点火し、近点（Pe）を目標高度まで持ち上げて軌道を円くします。</td>
+                                </tr>
+                                <tr>
+                                    <td>8. 軌道投入完了</td>
+                                    <td>近点が目標高度に達したらエンジンカット。打ち上げシーケンス終了です。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>このほか、飛行中には次のイベントが自動で実行されます。</p>
+                        <p>
+                            ・<b>ブースター分離</b> … ブースターの推進剤を使い切ったタイミングで分離します。<br />
+                            ・<b>フェアリング分離</b> … 大気圏を抜けた高度100km付近で分離します。
+                        </p>
+                        <p>自動打ち上げ中も、時間加速の変更やカメラ操作は自由に行えます。分離や再点火などの見どころの直前には、時間加速は自動的に等倍へ戻ります。</p>
+
+                        <h3 id="launch-manual-control">手動操縦</h3>
+                        <p>宇宙機を選択して操縦モードにすると、キーボードで直接操縦できます。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>操作</th>
+                                    <th>キー</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>スロットル増減</td>
+                                    <td>Left Shift / Left Ctrl</td>
+                                    <td>推力を少しずつ上げ下げします。</td>
+                                </tr>
+                                <tr>
+                                    <td>スロットル最大</td>
+                                    <td>Z</td>
+                                    <td>推力を一気に100%にします。</td>
+                                </tr>
+                                <tr>
+                                    <td>スロットルカット</td>
+                                    <td>X</td>
+                                    <td>推力を0にします（エンジンカット）。</td>
+                                </tr>
+                                <tr>
+                                    <td>ピッチ</td>
+                                    <td>W / S</td>
+                                    <td>機首を上下に向けます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ヨー</td>
+                                    <td>A / D</td>
+                                    <td>機首を左右に向けます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ロール</td>
+                                    <td>Q / E</td>
+                                    <td>機体軸まわりに回転させます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ステージ分離</td>
+                                    <td>Space</td>
+                                    <td>次のステージを切り離します。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>姿勢変更の応答は機体の慣性モーメントと推力によって決まります。重い機体や推力の小さい上段では、姿勢がゆっくりとしか変わらない点に注意してください。</p>
+
+                        <h3 id="launch-sas">SAS（姿勢自動保持）</h3>
+                        <p>SAS を使うと、指定した方向へ機体の姿勢を自動で向け続けることができます。以下のモードがあります。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>モード</th>
+                                    <th>向く方向</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Prograde（順行）</td>
+                                    <td>進行方向。加速して軌道を上げるときに使います。</td>
+                                </tr>
+                                <tr>
+                                    <td>Retrograde（逆行）</td>
+                                    <td>進行方向の反対。減速して軌道を下げるときに使います。</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal（法線）</td>
+                                    <td>軌道面に垂直な方向。軌道傾斜角を変えるときに使います。</td>
+                                </tr>
+                                <tr>
+                                    <td>Antinormal（反法線）</td>
+                                    <td>Normal の反対方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith（天頂）</td>
+                                    <td>親天体の中心から遠ざかる方向（真上）。</td>
+                                </tr>
+                                <tr>
+                                    <td>Nadir（天底）</td>
+                                    <td>親天体の中心へ向かう方向（真下）。</td>
+                                </tr>
+                                <tr>
+                                    <td>Target</td>
+                                    <td>ターゲットに指定したオブジェクトの方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Antitarget</td>
+                                    <td>ターゲットの反対方向。</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>設定したマニューバの噴射方向。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Prograde / Retrograde などの速度基準の方向は、<b>軌道投入前は対気速度（大気に対する速度）基準、軌道投入後は慣性速度基準</b>に自動で切り替わります。これは <a href="#main-screen-navball">NavBall のマーカー表示</a>と常に一致します。</p>
+
+                        <h3 id="launch-time-acceleration">時間加速のルール</h3>
+                        <p>時間加速の上限は、選択中の宇宙機の高度と飛行状態によって自動的に決まります。上から順に判定され、最初に当てはまったものが適用されます。</p>
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>状態</th>
+                                    <th>上限倍率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>他の宇宙機が200m以内にいるとき</td>
+                                    <td>×1（等倍のみ）</td>
+                                </tr>
+                                <tr>
+                                    <td>他の宇宙機が1km以内にいるとき</td>
+                                    <td>×4まで</td>
+                                </tr>
+                                <tr>
+                                    <td>高度1km未満（打ち上げ中を除く）</td>
+                                    <td>×1（等倍のみ）</td>
+                                </tr>
+                                <tr>
+                                    <td>高度1km〜大気圏内、またはエンジン噴射中</td>
+                                    <td>×4まで</td>
+                                </tr>
+                                <tr>
+                                    <td>大気圏を十分に離れ、噴射していないとき</td>
+                                    <td>軌道周期に応じて自動算出（およそ10秒で軌道を1周する倍率まで）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            ・上限を超える倍率を設定していた場合は、自動的に上限まで引き下げられます。<br />
+                            ・接地や宇宙機どうしの接触は等倍でのみ判定されるため、低高度や接近中は上限が下がります。打ち上げ中は接触の判定対象外なので、離昇直後から×4まで加速できます。<br />
+                            ・自動打ち上げ中は、フェーズに応じた倍率が自動で設定されます（重力ターン中×2、遠点調整中×4、慣性飛行中は最大×60など）。手動で倍率を変更した場合はそちらが優先されます。<br />
+                            ・ステージ分離・フェアリング分離・再点火などの直前には、見逃さないよう自動的に等倍へ戻ります。
+                        </p>
+                    </section>
+
+                    <section id="contract">
+                        <h2>6. 契約</h2>
+                        <p>契約は、指定された飛行やミッションを達成して報酬を獲得するための目標です。獲得した資金や各種ポイントを使って組織を成長させ、より高度なミッションへ進みます。</p>
+                        <img src="./img/contract-management-jp.jpg" alt="契約「最初の一歩」を選択した契約管理画面">
+
+                        <h3 id="contract-acceptance">契約を受諾する</h3>
+                        <ol>
+                            <li>画面右下のメニューを開き、「契約管理」を選択します。</li>
+                            <li>「契約一覧」から、内容を確認したい契約を選択します。</li>
+                            <li>契約の説明、「達成条件」、「報酬」を確認します。</li>
+                            <li>「受諾」を選択すると、その契約が受託中になります。</li>
+                        </ol>
+                        <p>「受託中の契約のみ表示」を有効にすると、現在進行中の契約だけを確認できます。受託を取りやめる場合は、対象の契約を選択して「契約解除」を選びます。</p>
+
+                        <h3 id="contract-progress">達成条件と完了</h3>
+                        <p>受託中の契約は、飛行中を含めて達成状況が自動的に判定されます。複数の達成条件がある契約では、すべての条件を満たす必要があります。</p>
+                        <p>契約を達成すると完了画面が表示されます。「報酬獲得」を選択して結果を確認してください。最初の契約「最初の一歩」では、ロケットを射点に配置し、高度15 km以上へ到達することが目標です。</p>
+                        <img src="./img/contract-completion-jp.jpg" alt="契約を達成し、報酬獲得を選択できる状態">
+                        <p>「報酬獲得」を選択すると、獲得した各ポイントと現在のレベルが表示されます。内容を確認し、「OK」を選択して画面を閉じます。</p>
+                        <img src="./img/contract-reward-jp.jpg" alt="契約達成後の報酬獲得画面">
+
+                        <div class="note">
+                            <strong>ヒント：</strong>
+                            契約を受諾する前に、必要な機体、対象となる天体、要求高度などを確認しましょう。
+                        </div>
+
+                        <h3 id="contract-rewards">報酬</h3>
+                        <p>契約ごとに、次の報酬が設定されています。報酬が0ポイントの項目もあります。</p>
+                        <table class="desc contract-rewards-table">
+                            <thead>
+                                <tr>
+                                    <th>報酬</th>
+                                    <th>主な役割</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>資金ポイント</td>
+                                    <td>打ち上げ時に費用として使用します。機体の製作自体には必要ありません。</td>
+                                </tr>
+                                <tr>
+                                    <td>工学ポイント</td>
+                                    <td>工学レベルを上げ、より高度な部品を利用するために必要です。</td>
+                                </tr>
+                                <tr>
+                                    <td>科学ポイント</td>
+                                    <td>科学レベルを上げ、一部の部品や対象を利用可能にするために必要です。</td>
+                                </tr>
+                                <tr>
+                                    <td>運用ポイント</td>
+                                    <td>運用レベルを上げます。運用レベルが上がると、表示される射場が増えていきます。</td>
+                                </tr>
+                                <tr>
+                                    <td>信頼ポイント</td>
+                                    <td>信頼レベルを上げます。信頼レベルが上がると、選択できる契約の種類が増えます。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="note">
+                            <strong>資金について：</strong>
+                            現在のバージョンでは、資金が不足していても打ち上げることができ、残高がマイナスになることも許容されています。そのため、資金不足によって進行不能になることはありません。
+                        </div>
+
+                        <div class="note">
+                            <strong>同じ契約を繰り返す場合：</strong>
+                            同じ種類の契約を初めて達成すると満額、2回目は75%、3回目以降は50%の報酬になります。実際に受け取れる値は、契約管理画面の「報酬」で確認してください。
+                        </div>
+                    </section>
+
+                    <section id="orbital-basics">
+                        <h2>7. 軌道の基礎知識</h2>
+
+                        <h3 id="keplerian-orbital-elements">ケプラー軌道要素</h3>
+                        <p>宇宙機や天体の軌道は、6つの数値の組「ケプラー軌道要素」で表されます。このゲームのタイトルの由来であり、ゲーム内のあらゆる軌道情報の基礎です。6つの要素は、役割ごとに3つのグループに分けると理解しやすくなります。</p>
+
+                        <svg class="figure" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="楕円軌道の形を決める要素の図">
+                            <ellipse cx="320" cy="170" rx="220" ry="130" fill="none" stroke="#7ac0ff" stroke-width="2" />
+                            <line x1="100" y1="170" x2="540" y2="170" stroke="#666" stroke-dasharray="5,4" />
+                            <circle cx="498" cy="170" r="18" fill="#3a6ea5" stroke="#7ac0ff" />
+                            <text x="498" y="205" fill="#ddd" font-size="14" text-anchor="middle">親天体</text>
+                            <circle cx="210" cy="57" r="5" fill="#fff" />
+                            <text x="210" y="40" fill="#ddd" font-size="14" text-anchor="middle">宇宙機</text>
+                            <circle cx="540" cy="170" r="4" fill="#f80" />
+                            <text x="546" y="152" fill="#f80" font-size="14">近点（Pe）</text>
+                            <circle cx="100" cy="170" r="4" fill="#f80" />
+                            <text x="95" y="152" fill="#f80" font-size="14" text-anchor="end">遠点（Ap）</text>
+                            <line x1="316" y1="166" x2="324" y2="174" stroke="#ddd" />
+                            <line x1="316" y1="174" x2="324" y2="166" stroke="#ddd" />
+                            <text x="310" y="196" fill="#999" font-size="13" text-anchor="end">楕円の中心</text>
+                            <line x1="328" y1="215" x2="532" y2="215" stroke="#ddd" />
+                            <polygon points="320,215 330,211 330,219" fill="#ddd" />
+                            <polygon points="540,215 530,211 530,219" fill="#ddd" />
+                            <text x="430" y="238" fill="#ddd" font-size="14" text-anchor="middle">a（軌道長半径）</text>
+                            <text x="320" y="330" fill="#999" font-size="13" text-anchor="middle">離心率 e が大きいほど、楕円の中心と親天体（焦点）のずれが大きくなる（e = 0 で円軌道）</text>
+                        </svg>
+
+                        <table class="desc">
+                            <thead>
+                                <tr>
+                                    <th>要素</th>
+                                    <th>意味</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">軌道の形と大きさ</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道長半径 a (Semi-major Axis)</td>
+                                    <td>軌道の大きさ。楕円の長い方の径の半分です。値が大きいほど高い軌道になり、公転周期もこの値で決まります。</td>
+                                </tr>
+                                <tr>
+                                    <td>離心率 e (Eccentricity)</td>
+                                    <td>軌道のつぶれ具合。0 で完全な円、0〜1 で楕円になります。1 以上になると軌道は閉じず、親天体の重力圏から脱出していきます。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">軌道面の向き</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道傾斜角 i (Inclination)</td>
+                                    <td>赤道面に対する軌道面の傾き。0°は赤道上空を回る軌道、90°は北極・南極の上空を通る極軌道です。90°を超えると、天体の自転と逆向きに回る逆行軌道になります。</td>
+                                </tr>
+                                <tr>
+                                    <td>昇交点経度 Ω (Longitude of the Ascending Node)</td>
+                                    <td>軌道が赤道面を南から北へ横切る点（昇交点）が、基準方向から測ってどの方角にあるか。傾いた軌道面がどちらを向いているかを決めます。</td>
+                                </tr>
+                                <tr>
+                                    <td>近点引数 ω (Argument of Periapsis)</td>
+                                    <td>昇交点から軌道に沿って測って、近点がどの位置に来るか。軌道面の中での楕円の向きを決めます。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">軌道上の位置</td>
+                                </tr>
+                                <tr>
+                                    <td>平均近点角 M (Mean Anomaly)</td>
+                                    <td>軌道1周のうち、今どこにいるかを表す角度。時間とともに一定の割合で増えていき、360°で1周です。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <svg class="figure" viewBox="0 0 640 455" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="軌道面の向きを決める3つの角度の図">
+                            <!-- 3Dモデル: 傾斜角35°・昇交点方位角50°の円軌道(半径225)を仰角約17°のカメラで正射影 -->
+                            <!-- 赤道面（軌道と同じ半径225。半径を揃えることで2つの楕円が昇交点・降交点で正確に交差する） -->
+                            <ellipse cx="320" cy="230" rx="225" ry="65.6" fill="none" stroke="#888" stroke-dasharray="6,4" />
+                            <text x="280" y="318" fill="#888" font-size="14">赤道面</text>
+                            <!-- 軌道面 -->
+                            <ellipse cx="320" cy="230" rx="225" ry="133" fill="none" stroke="#7ac0ff" stroke-width="2" transform="rotate(33 320 230)" />
+                            <text x="68" y="170" fill="#7ac0ff" font-size="14">軌道面</text>
+                            <!-- 交線（昇交点(465,180)と降交点(175,280)を結ぶ線。両点とも2つの楕円の交差点上） -->
+                            <line x1="93" y1="309" x2="547" y2="151" stroke="#ddd" stroke-dasharray="3,3" />
+                            <text x="87" y="320" fill="#999" font-size="13" text-anchor="end">降交点</text>
+                            <circle cx="320" cy="230" r="26" fill="#3a6ea5" />
+                            <text x="320" y="276" fill="#ddd" font-size="14" text-anchor="middle">親天体</text>
+                            <text x="553" y="156" fill="#ddd" font-size="14">昇交点</text>
+                            <!-- 基準方向（赤道面内の矢印） -->
+                            <line x1="320" y1="230" x2="467" y2="304" stroke="#ddd" />
+                            <polygon points="467,304 454,304 459,295" fill="#ddd" />
+                            <text x="450" y="330" fill="#ddd" font-size="13" text-anchor="middle">基準方向（春分点の方向）</text>
+                            <path d="M 382 262 A 70 70 0 0 0 386 207" fill="none" stroke="#ff0" stroke-width="2" />
+                            <text x="406" y="240" fill="#ff0" font-size="15" text-anchor="middle">Ω</text>
+                            <!-- 近点（軌道上、昇交点から55°）と中心からの動径線（ωの終端を示す） -->
+                            <line x1="320" y1="230" x2="287" y2="72" stroke="#ddd" />
+                            <circle cx="287" cy="72" r="5" fill="#f80" />
+                            <text x="287" y="54" fill="#f80" font-size="14" text-anchor="middle">近点</text>
+                            <path d="M 410 199 A 95 95 0 0 0 301 137" fill="none" stroke="#f80" stroke-width="2" />
+                            <text x="378" y="140" fill="#f80" font-size="15" text-anchor="middle">ω</text>
+                            <!-- 傾斜角i（手前側＝降交点付近で、赤道面と軌道面の曲線をつなぐ弧で示す。両端は各楕円上） -->
+                            <path d="M 139 269 A 39 39 0 0 1 150 248" fill="none" stroke="#0f0" stroke-width="2" />
+                            <text x="128" y="252" fill="#0f0" font-size="15" text-anchor="middle">i</text>
+                            <text x="320" y="442" fill="#999" font-size="13" text-anchor="middle">軌道傾斜角 i・昇交点経度 Ω・近点引数 ω の3つで、軌道面と楕円の向きが決まる</text>
+                        </svg>
+
+                        <p>
+                            ・遠点（Ap）・近点（Pe）の高度は、軌道長半径 a と離心率 e から決まります。<a href="#launch-auto">自動打ち上げ</a>の目標軌道も遠点・近点高度で指定します。<br />
+                            ・打ち上げでそのまま入れられる軌道傾斜角は、<b>射場の緯度が下限</b>です。低緯度の射場ほど狙える軌道の自由度が高くなります。<br />
+                            ・東向きの打ち上げでは天体の自転速度がそのまま加速のボーナスになります（地球の赤道で約465 m/s）。多くの射場が東側に海が開けた場所にあるのはこのためです。
+                        </p>
+
+                    </section>
+
+                    <section id="reference">
+                        <h2>8. リファレンス</h2>
+
+                        <h3 id="control-keys">Control Keys</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>操作</th>
+                                    <th>キーボード</th>
+                                    <th>マウス</th>
+                                    <th>ゲームパッド</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>カメラ回転</td>
+                                    <td>I/K/J/L</td>
+                                    <td>右ボタン＋ドラッグ</td>
+                                    <td>右スティック</td>
+                                </tr>
+                                <tr>
+                                    <td>カメラ平行移動</td>
+                                    <td>-</td>
+                                    <td>中ボタン＋ドラッグ</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>カメラ接近・後退</td>
+                                    <td>Home/End</td>
+                                    <td>ホイール</td>
+                                    <td>L/R トリガー</td>
+                                </tr>
+                                <tr>
+                                    <td>カメラ画角</td>
+                                    <td>Page Up/Down</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>カメラ露出</td>
+                                    <td>Insert/Delete</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>カメラモード切り替え</td>
+                                    <td>V</td>
+                                    <td>中ボタン＋右ボタン</td>
+                                    <td>Back ボタン</td>
+                                </tr>
+                                <tr>
+                                    <td>カメラの向き *1</td>
+                                    <td>-</td>
+                                    <td>左ボタン＋ドラッグ</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>カメラロール *1</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>L/R ショルダー</td>
+                                </tr>
+                                <tr>
+                                    <td>カメラリセット</td>
+                                    <td>-</td>
+                                    <td>左ボタン＋右ボタン</td>
+                                    <td>右スティック押し込み</td>
+                                </tr>
+                                <tr>
+                                    <td>Map View</td>
+                                    <td>M</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>UI 表示／非表示</td>
+                                    <td>F2</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SOI 表示／非表示</td>
+                                    <td>F3</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>クイックセーブ</td>
+                                    <td>F5</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>クイックロード</td>
+                                    <td>F9</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>追跡開始</td>
+                                    <td>O</td>
+                                    <td>一覧上で右クリック</td>
+                                    <td>Y ボタン</td>
+                                </tr>
+                                <tr>
+                                    <td>メニューを開く</td>
+                                    <td>ESC</td>
+                                    <td>-</td>
+                                    <td>Start ボタン</td>
+                                </tr>
+                                <tr>
+                                    <td>宇宙機操作パネルを開く *2</td>
+                                    <td>C</td>
+                                    <td>-</td>
+                                    <td>X ボタン</td>
+                                </tr>
+                                <tr>
+                                    <td>スロットル最大 *3</td>
+                                    <td>Z</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>スロットルカット *3</td>
+                                    <td>X</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>スロットル増加 *3</td>
+                                    <td>Left Shift</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>スロットル減少 *3</td>
+                                    <td>Left Ctrl</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>ステージ分離 *3</td>
+                                    <td>Space</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>ロール *3</td>
+                                    <td>Q/E</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>ピッチ *3</td>
+                                    <td>W/S</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>ヨー *3</td>
+                                    <td>A/D</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>デバッグコンソール</td>
+                                    <td>ALT + F12</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>*1 : カメラモードが「Chase」以外のとき。</p>
+                        <p>*2 : 宇宙機を選択しているときのみ。</p>
+                        <p>*3 : 宇宙機操縦モードのときのみ。</p>
+
+                        <h3 id="launch-sites">射場一覧</h3>
+                        <p>ゲーム内で利用できる射場の一覧です。設立日と緯度・経度は、ゲーム内データに登録されている値を示しています。</p>
+                        <div class="note">
+                            <strong>射場の解放：</strong>
+                            すべての射場が最初から表示されるわけではありません。契約の報酬で運用ポイントを獲得して運用レベルを上げると、表示される射場が段階的に増えていきます。
+                        </div>
+                        <table class="desc launch-sites-table">
+                            <thead>
+                                <tr>
+                                    <th>射場名</th>
+                                    <th>設立日</th>
+                                    <th>緯度</th>
+                                    <th>経度</th>
+                                    <th>備考</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ケプラー宇宙センター</td>
+                                    <td>1950/01/01</td>
+                                    <td>北緯 0.00°</td>
+                                    <td>東経 1.00°</td>
+                                    <td>ゲーム内にのみ登場する架空の宇宙センター。</td>
+                                </tr>
+                                <tr>
+                                    <td>ケネディ宇宙センター</td>
+                                    <td>1962/07/01</td>
+                                    <td>北緯 28.52°</td>
+                                    <td>西経 80.65°</td>
+                                    <td>月探査、スペースシャトル、有人宇宙飛行の拠点として使われてきた大型射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>ケープカナベラル宇宙軍基地</td>
+                                    <td>1950/07/24</td>
+                                    <td>北緯 28.49°</td>
+                                    <td>西経 80.58°</td>
+                                    <td>初期の宇宙開発から現在まで、多様なロケットの打ち上げに使われている大規模射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>SpaceXスターベース</td>
+                                    <td>2002/05/06</td>
+                                    <td>北緯 26.00°</td>
+                                    <td>西経 97.15°</td>
+                                    <td>StarshipとSuper Heavyの開発・製造・試験・打ち上げを行う専用拠点。</td>
+                                </tr>
+                                <tr>
+                                    <td>ヴァンデンバーグ宇宙軍基地</td>
+                                    <td>1941/01/01</td>
+                                    <td>北緯 34.73°</td>
+                                    <td>西経 120.56°</td>
+                                    <td>南側に外洋が開け、極軌道や太陽同期軌道への打ち上げに適した射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>ワロップス飛行施設</td>
+                                    <td>1945/01/01</td>
+                                    <td>北緯 37.94°</td>
+                                    <td>西経 75.46°</td>
+                                    <td>観測ロケット、科学気球、小型軌道ミッションなどを扱う研究・試験拠点。</td>
+                                </tr>
+                                <tr>
+                                    <td>コディアック打上げ基地</td>
+                                    <td>1998/01/01</td>
+                                    <td>北緯 57.44°</td>
+                                    <td>西経 152.34°</td>
+                                    <td>高緯度軌道や極軌道への打ち上げに適した、海に囲まれた射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>ギアナ宇宙センター</td>
+                                    <td>1964/04/14</td>
+                                    <td>北緯 5.23°</td>
+                                    <td>西経 52.76°</td>
+                                    <td>赤道に近く、地球の自転を生かした静止トランスファ軌道への打ち上げに有利な射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>酒泉衛星発射センター</td>
+                                    <td>1958/01/01</td>
+                                    <td>北緯 40.95°</td>
+                                    <td>東経 100.29°</td>
+                                    <td>有人宇宙船や低軌道衛星の打ち上げで知られる内陸の射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>太原衛星発射センター</td>
+                                    <td>1966/01/01</td>
+                                    <td>北緯 38.84°</td>
+                                    <td>東経 111.60°</td>
+                                    <td>極軌道や太陽同期軌道への衛星打ち上げを多く担う内陸の射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>文昌衛星発射場</td>
+                                    <td>2014/10/18</td>
+                                    <td>北緯 19.61°</td>
+                                    <td>東経 110.95°</td>
+                                    <td>低緯度の海沿いにあり、大型ロケットや深宇宙ミッションに使われる射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>西昌衛星発射センター</td>
+                                    <td>1982/01/01</td>
+                                    <td>北緯 28.24°</td>
+                                    <td>東経 102.02°</td>
+                                    <td>静止トランスファ軌道の衛星や月・惑星探査機の打ち上げに使われる射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>種子島宇宙センター</td>
+                                    <td>1969/10/01</td>
+                                    <td>北緯 30.40°</td>
+                                    <td>東経 130.98°</td>
+                                    <td>大型ロケットの組み立て・試験・打ち上げ設備を備える海沿いの射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>内之浦宇宙空間観測所</td>
+                                    <td>1963/12/09</td>
+                                    <td>北緯 31.25°</td>
+                                    <td>東経 131.07°</td>
+                                    <td>科学観測ロケット、科学衛星、探査機の打ち上げと追跡を行う山間の射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>北海道スペースポート</td>
+                                    <td>2021/04/20</td>
+                                    <td>北緯 42.50°</td>
+                                    <td>東経 143.44°</td>
+                                    <td>民間利用に開かれ、観測ロケットや将来の軌道打ち上げを支援する商業宇宙港。</td>
+                                </tr>
+                                <tr>
+                                    <td>スペースポート紀伊</td>
+                                    <td>2021/01/01</td>
+                                    <td>北緯 33.54°</td>
+                                    <td>東経 135.89°</td>
+                                    <td>小型固体燃料ロケットKAIROSの打ち上げ拠点として建設された専用射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>羅老宇宙センター</td>
+                                    <td>2009/06/11</td>
+                                    <td>北緯 34.43°</td>
+                                    <td>東経 127.53°</td>
+                                    <td>NaroやNuriなどのロケット開発・打ち上げに使われる海沿いの宇宙センター。</td>
+                                </tr>
+                                <tr>
+                                    <td>西海衛星発射場</td>
+                                    <td>2012/03/01</td>
+                                    <td>北緯 39.66°</td>
+                                    <td>東経 124.71°</td>
+                                    <td>人工衛星打ち上げ設備と大型ロケット試験設備を備える海沿いの射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>バイコヌール宇宙基地</td>
+                                    <td>1955/06/02</td>
+                                    <td>北緯 45.96°</td>
+                                    <td>東経 63.30°</td>
+                                    <td>世界初の人工衛星と初の有人宇宙飛行を送り出した、歴史の長い宇宙基地。</td>
+                                </tr>
+                                <tr>
+                                    <td>プレセツク宇宙基地</td>
+                                    <td>1957/07/15</td>
+                                    <td>北緯 62.92°</td>
+                                    <td>東経 40.57°</td>
+                                    <td>高緯度に位置し、極軌道や高傾斜角軌道への打ち上げに適した宇宙基地。</td>
+                                </tr>
+                                <tr>
+                                    <td>ボストチヌイ宇宙基地</td>
+                                    <td>2011/08/01</td>
+                                    <td>北緯 51.88°</td>
+                                    <td>東経 128.33°</td>
+                                    <td>ソユーズやアンガラなどの打ち上げに対応する、比較的新しい宇宙基地。</td>
+                                </tr>
+                                <tr>
+                                    <td>ロケット・ラボ第1発射施設</td>
+                                    <td>2016/09/26</td>
+                                    <td>南緯 39.26°</td>
+                                    <td>東経 177.87°</td>
+                                    <td>Electronロケットを運用し、小型衛星の高頻度打ち上げを想定した民間射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>サティシュ・ダワン宇宙センター</td>
+                                    <td>1971/10/09</td>
+                                    <td>北緯 13.71°</td>
+                                    <td>東経 80.23°</td>
+                                    <td>PSLV、GSLV、LVM3などを運用し、複数の発射台を備える大型宇宙センター。</td>
+                                </tr>
+                                <tr>
+                                    <td>アンドーヤロケット発射場</td>
+                                    <td>1962/08/18</td>
+                                    <td>北緯 69.29°</td>
+                                    <td>東経 16.02°</td>
+                                    <td>観測ロケットや大気・オーロラ観測で実績を持ち、軌道打ち上げ設備も備える射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>セムナーン衛星発射センター</td>
+                                    <td>2006/11/02</td>
+                                    <td>北緯 35.23°</td>
+                                    <td>東経 53.92°</td>
+                                    <td>小型衛星打ち上げ用ロケットの発射と試験に使われる内陸の射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>パルマヒム空軍基地</td>
+                                    <td>1988/09/19</td>
+                                    <td>北緯 31.90°</td>
+                                    <td>東経 34.69°</td>
+                                    <td>西側の海上へ向けて打ち上げるため、逆行軌道への投入で知られる射場。</td>
+                                </tr>
+                                <tr>
+                                    <td>エフィーおばさんの農場</td>
+                                    <td>1926/03/16</td>
+                                    <td>北緯 42.22°</td>
+                                    <td>西経 71.81°</td>
+                                    <td>射場ではなく、ロバート・ゴダードが1926年に世界初の液体燃料ロケットを打ち上げた試験地。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="glossary">用語集</h3>
+                        <p>マニュアルおよびゲーム内で使用する主な用語です。</p>
+                        <table class="desc glossary-table">
+                            <thead>
+                                <tr>
+                                    <th>用語</th>
+                                    <th>意味</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="group">
+                                    <td colspan="2">軌道・飛行</td>
+                                </tr>
+                                <tr>
+                                    <td>遠点（Ap / Apoapsis）</td>
+                                    <td>軌道上で親天体から最も遠い点です。打ち上げ時は、上昇中の加速によって予定軌道の遠点高度を目標まで持ち上げます。</td>
+                                </tr>
+                                <tr>
+                                    <td>近点（Pe / Periapsis）</td>
+                                    <td>軌道上で親天体に最も近い点です。遠点付近で加速して近点を大気圏外まで持ち上げると、安定した周回軌道になります。</td>
+                                </tr>
+                                <tr>
+                                    <td>ケプラー軌道要素</td>
+                                    <td>軌道の大きさ、形、向き、軌道上の位置を表す6つの数値です。詳しくは「<a href="#keplerian-orbital-elements">ケプラー軌道要素</a>」を参照してください。</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道長半径（a）</td>
+                                    <td>軌道の大きさを表す値です。楕円の長い方の径の半分に相当し、公転周期にも影響します。</td>
+                                </tr>
+                                <tr>
+                                    <td>離心率（e）</td>
+                                    <td>軌道のつぶれ具合を表す値です。0で円、0より大きく1未満で楕円、1以上では閉じない脱出軌道になります。</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道傾斜角（i）</td>
+                                    <td>親天体の赤道面に対する軌道面の傾きです。0°は赤道軌道、90°は極軌道です。</td>
+                                </tr>
+                                <tr>
+                                    <td>昇交点経度（LAN / Ω）</td>
+                                    <td>軌道が赤道面を南側から北側へ横切る昇交点の方向を表し、軌道面がどちらを向くかを決めます。</td>
+                                </tr>
+                                <tr>
+                                    <td>近点引数（ω）</td>
+                                    <td>昇交点から近点までを軌道に沿って測った角度です。軌道面内で楕円がどちらを向くかを決めます。</td>
+                                </tr>
+                                <tr>
+                                    <td>平均近点角（M）</td>
+                                    <td>天体や宇宙機が軌道1周のどの位置にいるかを時間に対応させて表す角度です。</td>
+                                </tr>
+                                <tr>
+                                    <td>SOI（Sphere of Influence）</td>
+                                    <td>軌道計算上、その天体の重力を中心として扱う範囲です。別の天体のSOIへ入ると、軌道の親天体が切り替わります。</td>
+                                </tr>
+                                <tr>
+                                    <td>カーマンライン</td>
+                                    <td>大気圏と宇宙空間の境界として扱う高度です。本ゲームでは、近点高度が親天体のカーマンラインを超えると軌道投入済みと判定します。</td>
+                                </tr>
+                                <tr>
+                                    <td>軌道投入</td>
+                                    <td>宇宙機を親天体の周囲を回り続けられる軌道へ入れることです。本ゲームでは、近点高度がカーマンラインを超えた状態を指します。</td>
+                                </tr>
+                                <tr>
+                                    <td>弾道飛行</td>
+                                    <td>軌道投入前に、推力を停止した宇宙機が重力に従って飛行している状態です。このままでは親天体へ落下します。</td>
+                                </tr>
+                                <tr>
+                                    <td>慣性飛行</td>
+                                    <td>エンジンを停止し、宇宙機が速度と重力によって飛行する区間です。自動打ち上げでは、遠点調整後から再点火までの間を指します。</td>
+                                </tr>
+                                <tr>
+                                    <td>重力ターン</td>
+                                    <td>上昇しながら機体を徐々に倒し、重力を利用して鉛直上昇から水平方向の加速へ滑らかに移る打ち上げ方法です。</td>
+                                </tr>
+                                <tr>
+                                    <td>方位角</td>
+                                    <td>水平面上の進行方向を表す角度です。本ゲームの打ち上げ設定では、北が0°、東が90°、南が180°、西が270°です。</td>
+                                </tr>
+                                <tr>
+                                    <td>円軌道化</td>
+                                    <td>遠点付近で順行方向へ加速し、近点を持ち上げて遠点高度との差を小さくする操作です。</td>
+                                </tr>
+                                <tr>
+                                    <td>ランデブー</td>
+                                    <td>軌道上で別の宇宙機や対象へ接近し、位置と速度を合わせることです。</td>
+                                </tr>
+                                <tr>
+                                    <td>ΔV（デルタV）</td>
+                                    <td>宇宙機が推進剤を使って発揮できる速度変化量、または軌道変更に必要な速度変化量です。値が大きいほど大きな軌道変更ができます。</td>
+                                </tr>
+                                <tr>
+                                    <td>慣性速度 / 対気速度</td>
+                                    <td>慣性速度は宇宙空間を基準とする速度、対気速度は自転する大気に対する速度です。打ち上げ中の空力とNavBallは対気速度、軌道計算は慣性速度を基準にします。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">機体</td>
+                                </tr>
+                                <tr>
+                                    <td>推力（Thrust）</td>
+                                    <td>エンジンが宇宙機を加速させる力です。地上から離床するには、機体に働く重力を上回る推力が必要です。</td>
+                                </tr>
+                                <tr>
+                                    <td>比推力（Isp）</td>
+                                    <td>エンジンが推進剤をどれだけ効率よく推力へ変換できるかを秒単位で表す指標です。値が大きいほど効率のよいエンジンです。</td>
+                                </tr>
+                                <tr>
+                                    <td>推力重量比（TWR）</td>
+                                    <td>機体重量に対する推力の比率です。地上で1.0以下の場合、推力が重量を上回らないため離床できません。</td>
+                                </tr>
+                                <tr>
+                                    <td>ステージ</td>
+                                    <td>ロケットを飛行中に切り離して使用する単位です。使用済みのエンジンやタンクを分離すると、残った機体を軽くできます。</td>
+                                </tr>
+                                <tr>
+                                    <td>ブースター</td>
+                                    <td>主に打ち上げ初期の推力を補うため、機体側面などへ追加する補助推進段です。推進剤を使い切ると分離します。</td>
+                                </tr>
+                                <tr>
+                                    <td>デカプラ</td>
+                                    <td>ステージ同士を接続し、飛行中に切り離すためのパーツです。VABではデカプラの位置を境界としてステージが分けられます。</td>
+                                </tr>
+                                <tr>
+                                    <td>フェアリング</td>
+                                    <td>打ち上げ中の空気抵抗や加熱からペイロードを保護する覆いです。大気圏を抜けると分離します。</td>
+                                </tr>
+                                <tr>
+                                    <td>ペイロード</td>
+                                    <td>ロケットで運ぶ人工衛星、探査機などの搭載物です。</td>
+                                </tr>
+                                <tr>
+                                    <td>MECO</td>
+                                    <td>Main Engine Cut Offの略で、メインエンジンの燃焼停止を指します。自動打ち上げでは、予定軌道の遠点が目標高度へ達したときに行われます。</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Q</td>
+                                    <td>飛行中の動圧が最大になる点です。大気密度と対気速度による機体への空力負荷が最も大きくなります。</td>
+                                </tr>
+                                <tr class="group">
+                                    <td colspan="2">画面・操作</td>
+                                </tr>
+                                <tr>
+                                    <td>NavBall</td>
+                                    <td>宇宙機の姿勢と、進行方向、軌道面、ターゲットなどの基準方向を球面上に示す計器です。</td>
+                                </tr>
+                                <tr>
+                                    <td>SAS</td>
+                                    <td>指定した方向へ宇宙機の姿勢を自動的に向け続ける姿勢保持機能です。</td>
+                                </tr>
+                                <tr>
+                                    <td>Prograde / Retrograde</td>
+                                    <td>Progradeは進行方向、Retrogradeはその反対方向です。順行方向へ加速すると軌道が上がり、逆行方向へ加速すると軌道が下がります。</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal / Antinormal</td>
+                                    <td>軌道面に垂直な方向とその反対方向です。この方向へ加速すると軌道傾斜角を変更できます。</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith / Nadir</td>
+                                    <td>親天体の中心から遠ざかる真上方向と、親天体の中心へ向かう真下方向です。</td>
+                                </tr>
+                                <tr>
+                                    <td>Target / Antitarget</td>
+                                    <td>追跡対象へ向かう方向と、その反対方向です。</td>
+                                </tr>
+                                <tr>
+                                    <td>Maneuver</td>
+                                    <td>設定した軌道変更の噴射方向です。NavBallとSASで目標方向として使用できます。</td>
+                                </tr>
+                                <tr>
+                                    <td>Map View</td>
+                                    <td>選択オブジェクトの軌道全体、遠点・近点、他オブジェクトとの位置関係を確認する表示です。</td>
+                                </tr>
+                                <tr>
+                                    <td>時間加速</td>
+                                    <td>ゲーム内時間の進行を速める機能です。利用できる最大倍率は高度や飛行状態によって変わります。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Kugelblitz. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

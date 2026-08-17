@@ -65,19 +65,7 @@ th {
 }
 
 thead th:nth-child(1) {
-    width: 30%;
-}
-
-thead th:nth-child(2) {
-    width: 20%;
-}
-
-thead th:nth-child(3) {
-    width: 15%;
-}
-
-thead th:nth-child(4) {
-    width: 35%;
+    width: 26rem;
 }
 
 th,
@@ -93,6 +81,12 @@ td {
 th:first-child,
 td:first-child {
     text-align: left;
+    white-space: nowrap;
+}
+
+th:first-child:not([colspan]),
+td:first-child:not([colspan]) {
+    width: 26rem;
 }
 
 .wip {
@@ -100,9 +94,43 @@ td:first-child {
     font-style: italic;
 }
 
+.orbit-color {
+    display: inline-block;
+    width: 2.5em;
+    margin-right: 0.6em;
+    border-top: 3px solid;
+    vertical-align: middle;
+}
+
+.orbit-color-selected {
+    border-color: #00c940;
+}
+
+.orbit-color-tracking {
+    border-color: #e5df18;
+}
+
+.orbit-color-hover {
+    border-color: #e52b35;
+}
+
+.orbit-color-other {
+    border-color: #888;
+}
+
 /* 説明文主体の表は2列目以降も左寄せにする */
+table.desc th,
 table.desc td:not(:first-child) {
     text-align: left;
+}
+
+table.launch-sites-table thead th:nth-child(2) {
+    width: 7rem;
+}
+
+table.launch-sites-table thead th:nth-child(3),
+table.launch-sites-table thead th:nth-child(4) {
+    width: 7rem;
 }
 
 /* 表内のグループ見出し行 */
@@ -134,6 +162,7 @@ tbody tr:nth-child(odd) {
 
 p {
     margin: 0.5em;
+    line-height: 1.8;
 }
 
 img {
